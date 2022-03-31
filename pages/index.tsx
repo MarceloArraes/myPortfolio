@@ -25,14 +25,13 @@ const Home: NextPage = () => {
           </p>
         </div>
       </main>
-      <div className="flex flex-wrap items-center justify-center">
+      <div className="flex flex-grow flex-wrap items-center justify-center">
         <div className="relative mx-2 mb-6 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-yellow-500 shadow-lg">
           <svg
             className="absolute bottom-0 left-0 mb-8"
             viewBox="0 0 375 283"
             fill="none"
           ></svg>
-
           <div className="relative flex items-center justify-center px-10 pt-10">
             <div className="absolute bottom-0 left-0 -mb-24 ml-3 block h-48 w-48"></div>
             <picture>
@@ -45,6 +44,7 @@ const Home: NextPage = () => {
               />
             </picture>
           </div>
+
           <div className="relative mt-6 px-6 pb-6 text-white">
             <span className="-mb-1 block opacity-75">Indoor</span>
             <div className="flex justify-between">
@@ -55,6 +55,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
+
         <div className="relative mx-2 mb-6 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-blue-500 shadow-lg ">
           <svg
             className="absolute bottom-0 left-0 mb-8"
@@ -105,7 +106,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <footer className="flex h-24 w-full items-center justify-center border-t ">
+      <footer className=" flex h-24 w-full items-center justify-center border-t ">
         <p className="flex items-center justify-center gap-2">
           Powered by{' '}
           <Image
