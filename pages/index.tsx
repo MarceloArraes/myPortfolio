@@ -6,15 +6,18 @@ const Home: NextPage = () => {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
       <Head>
-        <title>Create Next App</title>
+        <title>Marcelo Portfolio Page</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="py-10">
         <div className='className="flex text-center" w-full flex-1 flex-col items-center justify-center px-20'>
           <h1 className="text-6xl font-bold">
             Welcome to{' '}
-            <a className="text-blue-600" href="https://nextjs.org">
-              Next.js!
+            <a
+              className="text-blue-600"
+              href="https://www.linkedin.com/in/marcelo-arraes"
+            >
+              Marcelo's Portfolio
             </a>
           </h1>
           <p className="mt-3 text-2xl">
@@ -28,7 +31,7 @@ const Home: NextPage = () => {
 
       <div className="flex flex-grow flex-wrap items-center justify-center">
         <a href="https://Adaminter.org" target="_blank">
-          <div className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-cover-pic bg-cover bg-center shadow-lg">
+          <div className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-[url('/adaminterback.png')]  bg-cover bg-center shadow-lg">
             <div className="backdrop-blur-[3px]">
               <div className="relative flex flex-wrap items-center justify-center px-10 pt-3">
                 <img
@@ -37,7 +40,7 @@ const Home: NextPage = () => {
                   alt="Adaminter.org"
                 />
                 <div>Adaminter.org</div>
-                <span className="flex-wrap-2 flex items-center bg-transparent px-5 text-xs font-bold leading-none">
+                <span className="flex-wrap-2 flex items-center bg-transparent bg-white bg-opacity-50 px-5 text-xs font-bold leading-none ">
                   <img
                     className="relative w-8 animate-spin-slow"
                     src="/reacticon.png"
@@ -68,80 +71,122 @@ const Home: NextPage = () => {
             </div>
           </div>
         </a>
-        <div className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-blue-500 shadow-lg ">
-          <svg
-            className="absolute bottom-0 left-0 mb-8"
-            viewBox="0 0 375 283"
-            fill="none"
-          ></svg>
-          <div className="relative flex items-center justify-center px-10 pt-10">
-            <div className="absolute bottom-0 left-0 -mb-24 ml-3 block h-48 w-48"></div>
-            <img
-              className="relative w-40"
-              src="/images/object/6.png"
-              alt="shopping"
-            />
-          </div>
-          <div className="relative mt-6 px-6 pb-6 text-white">
-            <span className="-mb-1 block opacity-75">Outdoor</span>
-            <div className="flex justify-between">
-              <span className="block text-xl font-semibold">Monstera</span>
-              <span className="flex items-center rounded-full bg-white px-3 py-2 text-xs font-bold leading-none text-blue-500">
-                $45.00
-              </span>
+        <a href="https://nutri-notes.vercel.app/" target="_blank">
+          <div className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-[url('/nutrinotesbg.png')] bg-cover bg-center shadow-lg">
+            <div className="backdrop-blur-[3px]">
+              <div className="relative flex flex-col flex-wrap items-center justify-center px-10 pt-3">
+                <img
+                  className="relative w-10"
+                  src="/nutriNotes.png"
+                  alt="Nutri Notes icon"
+                />
+                <div> Nutri Notes </div>
+                <span className="flex-wrap-2 flex items-center bg-transparent bg-white bg-opacity-50 px-5 text-xs font-bold leading-none">
+                  <img
+                    className="relative w-8 animate-spin-slow"
+                    src="/nextjsicon.png"
+                    alt="nextjs"
+                  />
+                  <img
+                    className="relative w-9 animate-spin-slow"
+                    src="supabaseicon.png"
+                    alt="supabase"
+                  />
+                  <img
+                    className="relative w-6 animate-spin-slow"
+                    src="/muiicon.png"
+                    alt="material UI"
+                  />
+                </span>
+              </div>
+              <div className="relative px-2 pb-2 text-black">
+                <span className="-mb-1 block opacity-75">
+                  Nutritional Stats Project
+                </span>
+                <div className="flex justify-between">
+                  <span className="block break-normal text-lg font-semibold">
+                    Nextjs+Supabase+MUI
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-purple-500 shadow-lg">
-          <svg
-            className="absolute bottom-0 left-0 mb-8"
-            viewBox="0 0 375 283"
-            fill="none"
-          ></svg>
-          <div className="relative flex items-center justify-center px-10 pt-10">
-            <div className="absolute bottom-0 left-0 -mb-24 ml-3 block h-48 w-48"></div>
-            <img
-              className="relative w-40"
-              src="/images/object/7.png"
-              alt="shopping"
-            />
-          </div>
-          <div className="relative mt-6 px-6 pb-6 text-white">
-            <span className="-mb-1 block opacity-75">Outdoor</span>
-            <div className="flex justify-between">
-              <span className="block text-xl font-semibold">Oak Tree</span>
-              <span className="flex items-center rounded-full bg-white px-3 py-2 text-xs font-bold leading-none text-purple-500">
-                $68.50
-              </span>
+        </a>
+        <a href="https://bem-pago-form.vercel.app/" target="_blank">
+          <div className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-[url('/bempagobg.png')] bg-cover bg-center shadow-lg">
+            <div className="backdrop-blur-[3px]">
+              <div className="relative flex flex-wrap items-center justify-center px-10 pt-3">
+                <img
+                  className="relative w-12"
+                  src="/bempaggoicon2.png"
+                  alt="Adaminter.org"
+                />
+                <div>bem-pago-form</div>
+                <span className="flex-wrap-2 flex items-center gap-3 bg-transparent bg-black bg-opacity-20 py-1 px-5 text-xs font-bold leading-none">
+                  <img
+                    className="relative w-6 animate-spin-slow"
+                    src="/typescripticon.png"
+                    alt="typescript"
+                  />
+                  <img
+                    className="relative w-6 animate-spin-slow"
+                    src="/muiicon.png"
+                    alt="material UI"
+                  />
+                  <img
+                    className="relative w-7 animate-spin-slow"
+                    src="/styledcomponentsicon3.png"
+                    alt="Styled Components"
+                  />
+                </span>
+              </div>
+              <div className="relative px-2 pb-2 text-black">
+                <span className="-mb-1 block opacity-75">
+                  Technical Test Project
+                </span>
+                <div className="flex justify-between">
+                  <span className="block break-normal text-lg font-semibold">
+                    Typescript+MUI+StyledC
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
 
       <div className="flex w-full items-center justify-center border-t p-10">
-        <div className="max-w-sm overflow-hidden rounded shadow-lg">
-          <img className="w-full" src="/giphy.gif" alt="giphy.gif" />
+        <a
+          className="max-w-sm overflow-hidden rounded shadow-lg"
+          href="https://github.com/MarceloArraes"
+          target="_blank"
+        >
+          <img
+            className="w-full"
+            src="https://avatars.githubusercontent.com/u/6797670?v=4"
+            alt="Marcelo_profile"
+          />
           <div className="px-6 py-4">
-            <div className="mb-2 text-xl font-bold">Mountain</div>
+            <div className="mb-2 text-xl font-bold">GitHub</div>
             <p className="text-base text-gray-700">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatibus quia, Nonea! Maiores et perferendis eaque,
-              exercitationem praesentium nihil.
+              This is my github profile. Here i have partially been updating my
+              portfolio and my studies. I've been trying to make a commit
+              everyday. Even tho I've not been sucessfull every week, this
+              objective has been working for me as a incentive.
             </p>
           </div>
           <div className="px-6 pt-4 pb-2">
             <span className="mr-2 mb-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
-              #photography
+              #No day without a single line.
             </span>
             <span className="mr-2 mb-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
-              #travel
+              #nulla dies sine linea.
             </span>
             <span className="mr-2 mb-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
-              #winter
+              #Reactjs
             </span>
           </div>
-        </div>
+        </a>
       </div>
 
       <footer className=" flex h-24 w-full items-center justify-center border-t ">
