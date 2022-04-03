@@ -25,38 +25,50 @@ const Home: NextPage = () => {
           </p>
         </div>
       </main>
-      <div className="flex flex-grow flex-wrap items-center justify-center">
-        <div className="relative mx-2 mb-6 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-yellow-500 shadow-lg">
-          <svg
-            className="absolute bottom-0 left-0 mb-8"
-            viewBox="0 0 375 283"
-            fill="none"
-          ></svg>
-          <div className="relative flex items-center justify-center px-10 pt-10">
-            <div className="absolute bottom-0 left-0 -mb-24 ml-3 block h-48 w-48"></div>
-            <picture>
-              <source srcSet="/images/object/5.webp" type="image/webp" />
-              <source srcSet="/images/object/5.png" />
-              <img
-                className="relative w-40"
-                src="/images/object/5.png"
-                alt="shopping item"
-              />
-            </picture>
-          </div>
 
-          <div className="relative mt-6 px-6 pb-6 text-white">
-            <span className="-mb-1 block opacity-75">Indoor</span>
-            <div className="flex justify-between">
-              <span className="block text-xl font-semibold">Peace Lily</span>
-              <span className="flex items-center rounded-full bg-white px-3 py-2 text-xs font-bold leading-none text-yellow-500">
-                $36.00
-              </span>
+      <div className="flex flex-grow flex-wrap items-center justify-center">
+        <a href="https://Adaminter.org" target="_blank">
+          <div className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-cover-pic bg-cover bg-center shadow-lg">
+            <div className="backdrop-blur-[3px]">
+              <div className="relative flex flex-wrap items-center justify-center px-10 pt-3">
+                <img
+                  className="relative w-12"
+                  src="/adamintericon.svg"
+                  alt="Adaminter.org"
+                />
+                <div>Adaminter.org</div>
+                <span className="flex-wrap-2 flex items-center bg-transparent px-5 text-xs font-bold leading-none">
+                  <img
+                    className="relative w-8 animate-spin-slow"
+                    src="/reacticon.png"
+                    alt="reactjs"
+                  />
+                  <img
+                    className="relative w-9 animate-spin-slow"
+                    src="/djangoicon.png"
+                    alt="reactjs"
+                  />
+                  <img
+                    className="relative -ml-2 w-14 animate-spin-slow"
+                    src="/nodejsicon.png"
+                    alt="nodejs"
+                  />
+                </span>
+              </div>
+              <div className="relative px-2 pb-2 text-black">
+                <span className="-mb-1 block opacity-75">
+                  Havard Final Project
+                </span>
+                <div className="flex justify-between">
+                  <span className="block break-normal text-lg font-semibold">
+                    Reactjs+Django+Nodejs
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div className="relative mx-2 mb-6 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-blue-500 shadow-lg ">
+        </a>
+        <div className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-blue-500 shadow-lg ">
           <svg
             className="absolute bottom-0 left-0 mb-8"
             viewBox="0 0 375 283"
@@ -80,7 +92,8 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="relative mx-2 mb-6 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-purple-500 shadow-lg">
+
+        <div className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-purple-500 shadow-lg">
           <svg
             className="absolute bottom-0 left-0 mb-8"
             viewBox="0 0 375 283"
@@ -102,6 +115,31 @@ const Home: NextPage = () => {
                 $68.50
               </span>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex w-full items-center justify-center border-t p-10">
+        <div className="max-w-sm overflow-hidden rounded shadow-lg">
+          <img className="w-full" src="/giphy.gif" alt="giphy.gif" />
+          <div className="px-6 py-4">
+            <div className="mb-2 text-xl font-bold">Mountain</div>
+            <p className="text-base text-gray-700">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptatibus quia, Nonea! Maiores et perferendis eaque,
+              exercitationem praesentium nihil.
+            </p>
+          </div>
+          <div className="px-6 pt-4 pb-2">
+            <span className="mr-2 mb-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
+              #photography
+            </span>
+            <span className="mr-2 mb-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
+              #travel
+            </span>
+            <span className="mr-2 mb-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
+              #winter
+            </span>
           </div>
         </div>
       </div>

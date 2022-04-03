@@ -7,7 +7,10 @@ module.exports = {
     extend: {
       animation: {
         'spin-slow': 'spin 5s linear infinite',
-       }
+      },
+      backgroundImage: {
+        'cover-pic': "url('/adaminterback.png')",
+      },
     },
   },
   plugins: [],
