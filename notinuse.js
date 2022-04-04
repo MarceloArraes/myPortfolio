@@ -33,3 +33,11 @@
     </div>
   </div>
 </a>
+{
+  /* <button
+            className="mt-10 rounded-md bg-black py-5 text-lg font-bold text-white dark:bg-white dark:text-black"
+            onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+          >
+            Toggle to {theme === 'light' ? 'dark' : 'light'}
+          </button> */
+}

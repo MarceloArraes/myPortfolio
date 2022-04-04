@@ -9,12 +9,32 @@ const Home: NextPage = () => {
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
+      <label
+        htmlFor="toogleA"
+        className="fixed top-0 right-2 flex cursor-pointer items-center"
+      >
+        <div className="relative">
+          <input
+            id="toogleA"
+            type="checkbox"
+            className="mb-1 h-4 w-10 appearance-none rounded-full bg-gray-400 shadow-inner shadow transition"
+            onClick={() => {
+              setTheme(theme === 'light' ? 'dark' : 'light')
+            }}
+          />
+          {/*           <div className="h-4 w-10 rounded-full bg-gray-400 shadow-inner"></div> */}
+          <div className="dot absolute -left-1 -top-1 h-6 w-6 rounded-full bg-white shadow transition"></div>
+        </div>
+        <div className="mb-3 ml-3 font-medium text-gray-700 dark:text-gray-200">
+          {theme === 'light' ? 'Dark' : 'Light'}
+        </div>
+      </label>
       <Head>
         <title>Marcelo Portfolio Page</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="py-10">
-        <div className='text-center" flex w-full flex-1 flex-col items-center justify-center px-20'>
+        <div className='text-center" flex w-full flex-1 flex-col items-center justify-center'>
           <h1 className="text-6xl font-bold">
             Welcome to{' '}
             <a
@@ -31,12 +51,6 @@ const Home: NextPage = () => {
             </code>
           </p>
         </div>
-        <button
-          className="mt-10 rounded-md bg-black py-5 text-lg font-bold text-white dark:bg-white dark:text-black"
-          onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-        >
-          Toggle to {theme === 'light' ? 'dark' : 'light'}
-        </button>
       </main>
 
       <div className="flex flex-grow flex-wrap items-center justify-center">
