@@ -1,8 +1,12 @@
 import type { NextPage } from 'next'
+import { useTheme } from 'next-themes'
 import Head from 'next/head'
 import Image from 'next/image'
+import { useState } from 'react'
 
 const Home: NextPage = () => {
+  const { theme, setTheme } = useTheme()
+
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
       <Head>
@@ -10,7 +14,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="py-10">
-        <div className='className="flex text-center" w-full flex-1 flex-col items-center justify-center px-20'>
+        <div className='text-center" flex w-full flex-1 flex-col items-center justify-center px-20'>
           <h1 className="text-6xl font-bold">
             Welcome to{' '}
             <a
@@ -27,13 +31,19 @@ const Home: NextPage = () => {
             </code>
           </p>
         </div>
+        <button
+          className="mt-10 rounded-md bg-black py-5 text-lg font-bold text-white dark:bg-white dark:text-black"
+          onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+        >
+          Toggle to {theme === 'light' ? 'dark' : 'light'}
+        </button>
       </main>
 
       <div className="flex flex-grow flex-wrap items-center justify-center">
         <a href="https://Adaminter.org" target="_blank">
           <div className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-[url('/adaminterback.png')]  bg-cover bg-center shadow-lg">
             <div className="backdrop-blur-[3px]">
-              <div className="relative flex flex-wrap items-center justify-center px-10 pt-3">
+              <div className="relative flex flex-wrap items-center justify-center px-10 pt-3 dark:text-black">
                 <img
                   className="relative w-12"
                   src="/adamintericon.svg"
@@ -74,7 +84,7 @@ const Home: NextPage = () => {
         <a href="https://nutri-notes.vercel.app/" target="_blank">
           <div className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-[url('/nutrinotesbg.png')] bg-cover bg-center shadow-lg">
             <div className="backdrop-blur-[3px]">
-              <div className="relative flex flex-col flex-wrap items-center justify-center px-10 pt-3">
+              <div className="relative flex flex-col flex-wrap items-center justify-center px-10 pt-3 dark:text-black">
                 <img
                   className="relative w-10"
                   src="/nutriNotes.png"
@@ -115,11 +125,11 @@ const Home: NextPage = () => {
         <a href="https://bem-pago-form.vercel.app/" target="_blank">
           <div className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-[url('/bempagobg.png')] bg-cover bg-center shadow-lg">
             <div className="backdrop-blur-[3px]">
-              <div className="relative flex flex-wrap items-center justify-center px-10 pt-3">
+              <div className="relative flex flex-wrap items-center justify-center px-10 pt-3 dark:text-black">
                 <img
                   className="relative w-12"
                   src="/bempaggoicon2.png"
-                  alt="Adaminter.org"
+                  alt="BemPaggo icon"
                 />
                 <div>bem-pago-form</div>
                 <span className="flex-wrap-2 flex items-center gap-3 bg-transparent bg-black bg-opacity-20 py-1 px-5 text-xs font-bold leading-none">
@@ -157,7 +167,7 @@ const Home: NextPage = () => {
 
       <div className="flex w-full items-center justify-center border-t p-10">
         <a
-          className="max-w-sm overflow-hidden rounded shadow-lg"
+          className="max-w-sm overflow-hidden rounded bg-white shadow-lg dark:bg-gray-800 dark:text-white"
           href="https://github.com/MarceloArraes"
           target="_blank"
         >
@@ -168,7 +178,7 @@ const Home: NextPage = () => {
           />
           <div className="px-6 py-4">
             <div className="mb-2 text-xl font-bold">GitHub</div>
-            <p className="text-base text-gray-700">
+            <p className="text-base text-gray-700 dark:text-gray-200">
               This is my github profile. Here i have partially been updating my
               portfolio and my studies. I've been trying to make a commit
               everyday. Even tho I've not been sucessfull every week, this
