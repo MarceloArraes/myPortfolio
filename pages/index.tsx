@@ -46,9 +46,9 @@ const Home: NextPage = () => {
             </a>
           </h1>
           <p className="mt-3 text-2xl">
-            Get started by editing{' '}
-            <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-              pages/index.tsx
+            Fell free to contact me at{' '}
+            <code className="rounded-md bg-gray-200 p-3 font-mono text-lg dark:bg-gray-700">
+              marcelo.arraes@gmail.com
             </code>
           </p>
         </div>
@@ -56,8 +56,8 @@ const Home: NextPage = () => {
 
       <div className="flex flex-grow flex-wrap items-center justify-center">
         <a href="https://Adaminter.org" target="_blank">
-          <div className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-[url('/adaminterback.png')]  bg-cover bg-center shadow-lg">
-            <div className="backdrop-blur-[3px]">
+          <div className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-[url('/adaminterback.png')]  bg-cover bg-center shadow-lg ">
+            <div className="backdrop-blur-[3px] duration-300 hover:opacity-10 hover:backdrop-blur-0">
               <div className="relative flex flex-wrap items-center justify-center px-10 pt-3 dark:text-black">
                 <img
                   className="relative w-12"
@@ -98,7 +98,7 @@ const Home: NextPage = () => {
         </a>
         <a href="https://nutri-notes.vercel.app/" target="_blank">
           <div className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-[url('/nutrinotesbg.png')] bg-cover bg-center shadow-lg">
-            <div className="backdrop-blur-[3px]">
+            <div className="backdrop-blur-[3px] duration-300 hover:opacity-10 hover:backdrop-blur-0">
               <div className="relative flex flex-col flex-wrap items-center justify-center px-10 pt-3 dark:text-black">
                 <img
                   className="relative w-10"
@@ -139,7 +139,7 @@ const Home: NextPage = () => {
         </a>
         <a href="https://bem-pago-form.vercel.app/" target="_blank">
           <div className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-[url('/bempagobg.png')] bg-cover bg-center shadow-lg">
-            <div className="backdrop-blur-[3px]">
+            <div className="backdrop-blur-[3px] duration-300 hover:opacity-10 hover:backdrop-blur-0">
               <div className="relative flex flex-wrap items-center justify-center px-10 pt-3 dark:text-black">
                 <img
                   className="relative w-12"
