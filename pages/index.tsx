@@ -3,6 +3,7 @@ import { useTheme } from 'next-themes'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useState } from 'react'
+import Contact from '../components/contact'
 
 const Home: NextPage = () => {
   const { theme, setTheme } = useTheme()
@@ -211,6 +212,10 @@ const Home: NextPage = () => {
             </span>
           </div>
         </a>
+      </div>
+
+      <div className="w-full border-t p-10">
+        <Contact />
       </div>
 
       <footer className=" flex h-24 w-full items-center justify-center border-t ">
