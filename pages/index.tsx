@@ -28,15 +28,16 @@ const Home: NextPage = () => {
   return (
     <div className="isolate flex min-h-screen flex-col items-center justify-center py-2">
       <Header />
+
       <label
         htmlFor="toogleA"
-        className="fixed top-0 right-2 flex cursor-pointer items-center"
+        className="absolute right-2 top-6 flex cursor-pointer items-center"
       >
         <div className="relative">
           <input
             id="toogleA"
             type="checkbox"
-            className="mb-1 h-4 w-10 appearance-none rounded-full bg-gray-400 shadow-inner shadow transition"
+            className=" mb-1 h-4 w-10 appearance-none rounded-full bg-gray-400 shadow-inner shadow transition"
             onClick={() => {
               setTheme(theme === 'light' ? 'dark' : 'light')
             }}
@@ -48,6 +49,7 @@ const Home: NextPage = () => {
           {theme === 'light' ? 'Dark' : 'Light'}
         </div>
       </label>
+
       <Head>
         <title>Marcelo Portfolio Page</title>
         <link rel="icon" href="/favicon.ico" />
@@ -64,7 +66,7 @@ const Home: NextPage = () => {
             </a>
           </h1>
           <p className="mt-3 text-2xl">
-            Fell free to contact me at{' '}
+            Feel free to contact me at{' '}
             <code className="rounded-md bg-gray-200 p-3 font-mono text-lg dark:bg-gray-700">
               marcelo.arraes@gmail.com
             </code>
@@ -74,8 +76,11 @@ const Home: NextPage = () => {
 
       <div
         id="projects"
-        className="flex flex-grow flex-wrap items-center justify-center"
+        className=" flex w-full flex-grow flex-wrap items-center justify-center border-t"
       >
+        <div className="w-full text-center ">
+          <h1>PROJECTS</h1>
+        </div>
         <a href="https://Adaminter.org" target="_blank">
           <div className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-[url('/adaminterback.png')]  bg-cover bg-center shadow-lg ">
             <div className="backdrop-blur-[3px] duration-300 hover:opacity-10 hover:backdrop-blur-0">
