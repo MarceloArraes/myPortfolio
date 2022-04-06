@@ -2,14 +2,32 @@ import type { NextPage } from 'next'
 import { useTheme } from 'next-themes'
 import Head from 'next/head'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Contact from '../components/contact'
+import Header from '../components/header'
 
 const Home: NextPage = () => {
   const { theme, setTheme } = useTheme()
 
+  // find out the element that the user is currently scrolling to
+  const [indexElement, setIndexElement] = useState(null)
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true })
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+  const handleScroll = () => {
+    const position = window.pageYOffset
+    //console.log(position)
+  }
+
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
+      <Header />
       <label
         htmlFor="toogleA"
         className="fixed top-0 right-2 flex cursor-pointer items-center"
@@ -34,7 +52,7 @@ const Home: NextPage = () => {
         <title>Marcelo Portfolio Page</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="py-10">
+      <main id="home" className="py-10">
         <div className='text-center" flex w-full flex-1 flex-col items-center justify-center'>
           <h1 className="text-6xl font-bold">
             Welcome to{' '}
@@ -54,7 +72,10 @@ const Home: NextPage = () => {
         </div>
       </main>
 
-      <div className="flex flex-grow flex-wrap items-center justify-center">
+      <div
+        id="projects"
+        className="flex flex-grow flex-wrap items-center justify-center"
+      >
         <a href="https://Adaminter.org" target="_blank">
           <div className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-[url('/adaminterback.png')]  bg-cover bg-center shadow-lg ">
             <div className="backdrop-blur-[3px] duration-300 hover:opacity-10 hover:backdrop-blur-0">
@@ -147,7 +168,7 @@ const Home: NextPage = () => {
                   alt="BemPaggo icon"
                 />
                 <div>bem-pago-form</div>
-                <span className="flex-wrap-2 flex items-center gap-3 bg-transparent bg-black bg-opacity-20 py-1 px-5 text-xs font-bold leading-none">
+                <span className="flex-wrap-2 flex items-center gap-3 rounded-lg bg-transparent bg-black bg-opacity-20 py-1 px-5 text-xs font-bold leading-none">
                   <img
                     className="relative w-6 animate-spin-slow"
                     src="/typescripticon.png"
@@ -180,7 +201,10 @@ const Home: NextPage = () => {
         </a>
       </div>
 
-      <div className="flex w-full items-center justify-center border-t p-10">
+      <div
+        id="github"
+        className="flex w-full items-center justify-center border-t p-10"
+      >
         <a
           className="max-w-sm overflow-hidden rounded bg-white shadow-lg dark:bg-gray-800 dark:text-white"
           href="https://github.com/MarceloArraes"
@@ -214,11 +238,14 @@ const Home: NextPage = () => {
         </a>
       </div>
 
-      <div className="w-full border-t p-10">
+      <div id="contact" className="w-full border-t p-10">
         <Contact />
       </div>
 
-      <footer className=" flex h-24 w-full items-center justify-center border-t ">
+      <footer
+        id="footer"
+        className=" flex h-24 w-full items-center justify-center border-t "
+      >
         <p className="flex items-center justify-center gap-2">
           Powered by{' '}
           <Image
