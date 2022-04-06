@@ -26,7 +26,7 @@ const Home: NextPage = () => {
   }
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className="isolate flex min-h-screen flex-col items-center justify-center py-2">
       <Header />
       <label
         htmlFor="toogleA"
