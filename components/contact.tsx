@@ -6,11 +6,7 @@ function Contact(): JSX.Element {
       method="POST"
     >
       <div className="mb-6">
-        <input
-          type="hidden"
-          name="access_key"
-          value={process.env.NEXT_PUBLIC_EMAIL_KEY}
-        />
+        <input type="hidden" name="access_key" value={process.env.EMAIL_KEY} />
 
         <input
           type="text"

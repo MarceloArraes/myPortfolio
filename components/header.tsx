@@ -17,12 +17,51 @@ function Header() {
     }
   }
 
+  /*   function isScrolledIntoView(element: HTMLElement) {
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(element).offset().top;
+    var elemBottom = elemTop + $(element).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+} */
+
+  /* function isScrolledIntoView(el) {
+  var rect = el.getBoundingClientRect();
+  var elemTop = rect.top;
+  var elemBottom = rect.bottom;
+
+  // Only completely visible elements return true:
+  var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+
+
+  // Partially visible elements return true:
+  //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+  return isVisible;
+} */
+
   useEffect(() => {
     const home = document.getElementById('home')
     const projects = document.getElementById('projects')
     const github = document.getElementById('github')
     const contact = document.getElementById('contact')
     const footer = document.getElementById('footer')
+
+    const indexSessions = document.querySelectorAll(
+      '#home #projects #github #contact #footer'
+    )
+
+    const navhome = document.getElementById('nav-home')
+    const navprojects = document.getElementById('nav-projects')
+    const navgithub = document.getElementById('nav-github')
+    const navcontact = document.getElementById('nav-contact')
+    const navfooter = document.getElementById('nav-footer')
+
+    const navSessions = document.querySelectorAll(
+      '#nav-home #nav-projects #nav-github #nav-contact #nav-footer'
+    )
 
     const threshold = 0
     let lastScrollY = window.pageYOffset
@@ -49,6 +88,7 @@ function Header() {
           window.pageYOffset > home?.offsetTop - 60 &&
           window.pageYOffset < projects?.offsetTop
         ) {
+          navhome?.classList.add('active')
           console.log('home')
         } else if (
           projects &&
@@ -56,6 +96,7 @@ function Header() {
           window.pageYOffset > projects?.offsetTop - 60 &&
           window.pageYOffset < github?.offsetTop
         ) {
+          navprojects?.classList.add('active')
           console.log('projects')
         } else if (
           contact &&
@@ -63,6 +104,7 @@ function Header() {
           window.pageYOffset > github?.offsetTop - 60 &&
           window.pageYOffset < contact?.offsetTop
         ) {
+          navgithub?.classList.add('active')
           console.log('github')
         } else if (
           contact &&
@@ -70,8 +112,10 @@ function Header() {
           window.pageYOffset > contact?.offsetTop - 60 &&
           window.pageYOffset < footer?.offsetTop
         ) {
+          navcontact?.classList.add('active')
           console.log('contact')
         } else if (footer && window.pageYOffset > footer?.offsetTop - 150) {
+          navfooter?.classList.add('active')
           console.log('footer')
         } else {
           console.log('last else on header')
@@ -87,33 +131,32 @@ function Header() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [scrollDir])
 
-  //position: sticky;
-  //top: 0;
   return (
-    <nav className="fixed top-0 z-10">
-      <div className="container mx-10 flex w-screen justify-center bg-white px-10 text-black">
+    <nav className="fixed top-0 z-10 divide-x-2 ">
+      <div className="container flex w-screen justify-center rounded-lg bg-white py-5 text-black">
         <div className="flex flex-row justify-items-center space-x-4">
           <a
             href="#home"
+            id="nav-home"
             onClick={handleClick}
             className="::selection:bg-black"
           >
             Home
           </a>
 
-          <a href="#projects" onClick={handleClick}>
+          <a href="#projects" id="nav-projects" onClick={handleClick}>
             Projects
           </a>
 
-          <a href="#github" onClick={handleClick}>
+          <a href="#github" id="nav-github" onClick={handleClick}>
             Github
           </a>
 
-          <a href="#contact" onClick={handleClick}>
+          <a href="#contact" id="nav-contact" onClick={handleClick}>
             Contact
           </a>
 
-          <a href="#footer" onClick={handleClick}>
+          <a href="#footer" id="nav-footer" onClick={handleClick}>
             Footer
           </a>
         </div>

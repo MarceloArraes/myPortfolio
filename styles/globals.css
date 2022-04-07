@@ -7,3 +7,13 @@ input:checked ~ .dot {
   transform: translateX(100%);
   background-color: blue;
 }
+#nav-home:active,
+#nav-projects:active,
+#nav-github:active,
+#nav-contact:active,
+#nav-footer:active {
+  background-color: #3b49df;
+  border-radius: 30px;
+  transition: 0.3s;
+  color: #ffffff;
+}

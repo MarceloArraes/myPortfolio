@@ -11,11 +11,15 @@ const Home: NextPage = () => {
 
   return (
     <div className="isolate flex min-h-screen flex-col items-center justify-center py-2">
+      <Head>
+        <title>Marcelo Portfolio Page</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Header />
 
       <label
         htmlFor="toogleA"
-        className="absolute right-2 top-6 flex cursor-pointer items-center"
+        className="absolute top-16 right-2 flex cursor-pointer items-center"
       >
         <div className="relative">
           <input
@@ -34,11 +38,7 @@ const Home: NextPage = () => {
         </div>
       </label>
 
-      <Head>
-        <title>Marcelo Portfolio Page</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main id="home" className="py-10">
+      <main id="home" className="py-24">
         <div className="flex w-full flex-1 flex-col items-center justify-center text-center">
           <h1 className="text-6xl font-bold">
             Welcome to{' '}
