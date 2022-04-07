@@ -6,9 +6,15 @@ function Header() {
   const [scrollDir, setScrollDir] = useState('scrolling down')
   const { theme, setTheme } = useTheme()
 
-  const handleNavClick = (e: { preventDefault: () => void }) => {
+  const handleClick = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault()
     console.log(e)
+    e.currentTarget.classList.add('active:bg-blue-800')
+
+    const { target } = e
+    if (target) {
+      window.location.href = (target as HTMLLinkElement).href
+    }
   }
 
   useEffect(() => {
@@ -87,27 +93,27 @@ function Header() {
     <nav className="fixed top-0 z-10">
       <div className="container mx-10 flex w-screen justify-center bg-white px-10 text-black">
         <div className="flex flex-row justify-items-center space-x-4">
-          <a href="#home" className="::selection:bg-black">
+          <a
+            href="#home"
+            onClick={handleClick}
+            className="::selection:bg-black"
+          >
             Home
           </a>
 
-          <a href="#projects" className="active:bg-black">
+          <a href="#projects" onClick={handleClick}>
             Projects
           </a>
 
-          <a href="#github" className="active:bg-black">
+          <a href="#github" onClick={handleClick}>
             Github
           </a>
 
-          <a href="#contact" className="active:bg-black">
+          <a href="#contact" onClick={handleClick}>
             Contact
           </a>
 
-          <a
-            href="#footer"
-            onClick={handleNavClick}
-            className="active:bg-black"
-          >
+          <a href="#footer" onClick={handleClick}>
             Footer
           </a>
         </div>
