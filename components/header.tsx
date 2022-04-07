@@ -35,21 +35,9 @@ function Header() {
   }
 
   useEffect(() => {
-    /*     const home = document.getElementById('home')
-    const projects = document.getElementById('projects')
-    const github = document.getElementById('github')
-    const contact = document.getElementById('contact')
-    const footer = document.getElementById('footer') */
-
     const indexSessions = document.querySelectorAll(
       '#home, #projects, #github, #contact, #footer'
     )
-
-    /*     const navhome = document.getElementById('nav-home')
-    const navprojects = document.getElementById('nav-projects')
-    const navgithub = document.getElementById('nav-github')
-    const navcontact = document.getElementById('nav-contact')
-    const navfooter = document.getElementById('nav-footer') */
 
     const navSessions = document.querySelectorAll(
       '#nav-home, #nav-projects, #nav-github, #nav-contact, #nav-footer'
@@ -209,3 +197,13 @@ const onScroll = () => {
       lastScrollY = scrollY > 0 ? scrollY : 0
       ticking = false
     } */
+/*     const home = document.getElementById('home')
+    const projects = document.getElementById('projects')
+    const github = document.getElementById('github')
+    const contact = document.getElementById('contact')
+    const footer = document.getElementById('footer') */
+/*     const navhome = document.getElementById('nav-home')
+    const navprojects = document.getElementById('nav-projects')
+    const navgithub = document.getElementById('nav-github')
+    const navcontact = document.getElementById('nav-contact')
+    const navfooter = document.getElementById('nav-footer') */
