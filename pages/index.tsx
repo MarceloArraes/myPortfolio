@@ -9,22 +9,6 @@ import Header from '../components/header'
 const Home: NextPage = () => {
   const { theme, setTheme } = useTheme()
 
-  // find out the element that the user is currently scrolling to
-  const [indexElement, setIndexElement] = useState(null)
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true })
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
-
-  const handleScroll = () => {
-    const position = window.pageYOffset
-    //console.log(position)
-  }
-
   return (
     <div className="isolate flex min-h-screen flex-col items-center justify-center py-2">
       <Header />
@@ -55,7 +39,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main id="home" className="py-10">
-        <div className='text-center" flex w-full flex-1 flex-col items-center justify-center'>
+        <div className="flex w-full flex-1 flex-col items-center justify-center text-center">
           <h1 className="text-6xl font-bold">
             Welcome to{' '}
             <a
@@ -76,9 +60,9 @@ const Home: NextPage = () => {
 
       <div
         id="projects"
-        className=" flex w-full flex-grow flex-wrap items-center justify-center border-t"
+        className=" flex w-full flex-grow flex-wrap items-center justify-center border-t py-10"
       >
-        <div className="w-full text-center ">
+        <div className="mb-10 w-full text-center text-3xl font-bold">
           <h1>PROJECTS</h1>
         </div>
         <a href="https://Adaminter.org" target="_blank">
@@ -208,8 +192,11 @@ const Home: NextPage = () => {
 
       <div
         id="github"
-        className="flex w-full items-center justify-center border-t p-10"
+        className="flex w-full flex-wrap items-center justify-center border-t py-10"
       >
+        <div className="mb-10 w-full text-center text-3xl font-bold">
+          <h1>GITHUB</h1>
+        </div>
         <a
           className="max-w-sm overflow-hidden rounded bg-white shadow-lg dark:bg-gray-800 dark:text-white"
           href="https://github.com/MarceloArraes"
@@ -243,13 +230,16 @@ const Home: NextPage = () => {
         </a>
       </div>
 
-      <div id="contact" className="w-full border-t p-10">
+      <div id="contact" className="w-full border-t py-10">
+        <div className="mb-10 w-full text-center text-3xl font-bold">
+          <h1>CONTACT</h1>
+        </div>
         <Contact />
       </div>
 
       <footer
         id="footer"
-        className=" flex h-24 w-full items-center justify-center border-t "
+        className=" flex h-24 w-full items-center justify-center border-t py-10"
       >
         <p className="flex items-center justify-center gap-2">
           Powered by{' '}

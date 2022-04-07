@@ -2,7 +2,7 @@ function Contact(): JSX.Element {
   return (
     <form
       action="https://api.web3forms.com/submit"
-      className="flex flex-col flex-wrap items-center justify-center px-10 pt-3 dark:text-black"
+      className="flex flex-col flex-wrap items-center px-10 pt-3 dark:text-black"
       method="POST"
     >
       <div className="mb-6">
@@ -25,7 +25,8 @@ function Contact(): JSX.Element {
           bg-white bg-clip-padding
           px-3 py-1.5 text-base
           font-normal
-          text-gray-700
+          text-gray-300
+          placeholder-gray-500
           transition
           ease-in-out
           focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none"
@@ -46,13 +47,15 @@ function Contact(): JSX.Element {
           border
           border-solid
           border-gray-300
-          bg-white bg-clip-padding
-          px-3 py-1.5 text-base
-          font-normal
-          text-gray-700
+          bg-white
+          bg-clip-padding
+          px-3 py-1.5
+          text-base font-normal text-gray-700
+          placeholder-gray-500
           transition
           ease-in-out
-          focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none"
+          focus:border-blue-600
+          focus:bg-white focus:text-gray-700 focus:outline-none"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
           placeholder="Enter email"
@@ -67,10 +70,11 @@ function Contact(): JSX.Element {
           border
           border-solid
           border-gray-300
-          bg-white bg-clip-padding
-          px-3 py-1.5 text-base
-          font-normal
+          bg-white
+          bg-clip-padding px-3
+          py-1.5 text-base font-normal
           text-gray-700
+          placeholder-gray-500
           transition
           ease-in-out
           focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none"

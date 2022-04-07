@@ -6,25 +6,10 @@ function Header() {
   const [scrollDir, setScrollDir] = useState('scrolling down')
   const { theme, setTheme } = useTheme()
 
-  useEffect(() => {
-    //print offset
-    /*     const home = document.getElementById('home')
-    const projects = document.getElementById('projects')
-    const github = document.getElementById('github')
-    const contact = document.getElementById('contact')
-    const footer = document.getElementById('footer')
-
-    console.log(window.pageYOffset)
-    console.log('home.offsetTop', home?.offsetTop)
-    console.log('projects.offsetTo', projects?.offsetTop)
-    console.log('github.offsetTo', github?.offsetTop)
-    console.log('contact.offsetTop', contact?.offsetTop)
-    console.log('footer.offsetTop)', footer?.offsetTop) */
-
-    return () => {
-      //
-    }
-  }, [])
+  const handleNavClick = (e: { preventDefault: () => void }) => {
+    e.preventDefault()
+    console.log(e)
+  }
 
   useEffect(() => {
     const home = document.getElementById('home')
@@ -52,30 +37,35 @@ function Header() {
     const onScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(updateScrollDir)
-        //test if window.pageYOffset is inside the range of the home, projects, github, contact, footer
-        //if it is, set the theme to dark
-        //if it is not, set the theme to light
         if (
+          home &&
+          projects &&
           window.pageYOffset > home?.offsetTop - 60 &&
           window.pageYOffset < projects?.offsetTop
         ) {
           console.log('home')
         } else if (
+          projects &&
+          github &&
           window.pageYOffset > projects?.offsetTop - 60 &&
           window.pageYOffset < github?.offsetTop
         ) {
           console.log('projects')
         } else if (
+          contact &&
+          github &&
           window.pageYOffset > github?.offsetTop - 60 &&
           window.pageYOffset < contact?.offsetTop
         ) {
           console.log('github')
         } else if (
+          contact &&
+          footer &&
           window.pageYOffset > contact?.offsetTop - 60 &&
           window.pageYOffset < footer?.offsetTop
         ) {
           console.log('contact')
-        } else if (window.pageYOffset > footer?.offsetTop - 60) {
+        } else if (footer && window.pageYOffset > footer?.offsetTop - 150) {
           console.log('footer')
         } else {
           console.log('last else on header')
@@ -97,15 +87,29 @@ function Header() {
     <nav className="fixed top-0 z-10">
       <div className="container mx-10 flex w-screen justify-center bg-white px-10 text-black">
         <div className="flex flex-row justify-items-center space-x-4">
-          <a href="#home">Home</a>
+          <a href="#home" className="::selection:bg-black">
+            Home
+          </a>
 
-          <a href="#projects">Projects</a>
+          <a href="#projects" className="active:bg-black">
+            Projects
+          </a>
 
-          <a href="#github">Github</a>
+          <a href="#github" className="active:bg-black">
+            Github
+          </a>
 
-          <a href="#contact">Contact</a>
+          <a href="#contact" className="active:bg-black">
+            Contact
+          </a>
 
-          <a href="#footer">Footer</a>
+          <a
+            href="#footer"
+            onClick={handleNavClick}
+            className="active:bg-black"
+          >
+            Footer
+          </a>
         </div>
       </div>
     </nav>
