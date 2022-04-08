@@ -61,18 +61,20 @@ function Header() {
       })
       navSessions.forEach((li) => {
         li.classList.remove(
-          'bg-blue-800',
           'rounded-lg',
           'duration-300',
-          'text-white'
+          'text-green-400',
+          'border-b-4',
+          'border-green-400'
         )
 
         if (li.classList.contains(current)) {
           li.classList.add(
-            'bg-blue-800',
             'rounded-lg',
             'duration-300',
-            'text-white'
+            'text-green-400',
+            'border-b-4',
+            'border-green-400'
           )
         }
       })
@@ -86,14 +88,19 @@ function Header() {
 
   return (
     <nav className="fixed top-0 z-10 divide-x-2 ">
-      <div className="container flex w-screen justify-center rounded-lg bg-white py-5 text-black">
-        <div className="flex flex-row justify-items-center space-x-4">
-          <a href="#home" id="nav-home" onClick={handleClick} className="home">
+      <div className="container flex w-screen justify-center rounded-lg bg-white py-3 text-black">
+        <div className="flex flex-row justify-items-center">
+          <a
+            href="#home"
+            id="nav-home"
+            onClick={handleClick}
+            className="home p-2"
+          >
             Home
           </a>
           <a
             href="#projects"
-            className="projects"
+            className="projects p-2"
             id="nav-projects"
             onClick={handleClick}
           >
@@ -102,7 +109,7 @@ function Header() {
 
           <a
             href="#github"
-            className="github"
+            className="github p-2"
             id="nav-github"
             onClick={handleClick}
           >
@@ -111,7 +118,7 @@ function Header() {
 
           <a
             href="#contact"
-            className="contact"
+            className="contact p-2"
             id="nav-contact"
             onClick={handleClick}
           >
@@ -120,7 +127,7 @@ function Header() {
 
           <a
             href="#footer"
-            className="footer"
+            className="footer p-2"
             id="nav-footer"
             onClick={handleClick}
           >
