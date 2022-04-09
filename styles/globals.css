@@ -20,10 +20,6 @@ input:checked ~ .dot {
 canvas {
   background-color: #000;
 }
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
 html,
 body {
   margin: 0;
