@@ -65,7 +65,8 @@ function Header() {
           'duration-300',
           'text-green-400',
           'border-b-4',
-          'border-green-400'
+          'border-green-400',
+          'border-4'
         )
 
         if (li.classList.contains(current)) {
@@ -74,7 +75,8 @@ function Header() {
             'duration-300',
             'text-green-400',
             'border-b-4',
-            'border-green-400'
+            'border-green-400',
+            'border-4'
           )
         }
       })
@@ -87,20 +89,20 @@ function Header() {
   }, [scrollDir])
 
   return (
-    <nav className="fixed top-0 z-10 divide-x-2 ">
-      <div className="container flex w-screen justify-center rounded-lg bg-white py-3 text-black">
+    <nav className="fixed top-0 z-10">
+      <div className="container flex h-16 w-screen justify-center rounded-lg bg-gray-300 py-3 text-black bg-blend-multiply shadow-xl drop-shadow-xl">
         <div className="flex flex-row justify-items-center">
           <a
             href="#home"
             id="nav-home"
             onClick={handleClick}
-            className="home p-2"
+            className="home -mb-3 p-2"
           >
             Home
           </a>
           <a
             href="#projects"
-            className="projects p-2"
+            className="projects -mb-3 p-2"
             id="nav-projects"
             onClick={handleClick}
           >
@@ -109,7 +111,7 @@ function Header() {
 
           <a
             href="#github"
-            className="github p-2"
+            className="github -mb-3 p-2"
             id="nav-github"
             onClick={handleClick}
           >
@@ -118,7 +120,7 @@ function Header() {
 
           <a
             href="#contact"
-            className="contact p-2"
+            className="contact -mb-3 p-2"
             id="nav-contact"
             onClick={handleClick}
           >
@@ -127,7 +129,7 @@ function Header() {
 
           <a
             href="#footer"
-            className="footer p-2"
+            className="footer -mb-3 p-2"
             id="nav-footer"
             onClick={handleClick}
           >

@@ -17,3 +17,16 @@ input:checked ~ .dot {
   transition: 0.3s;
   color: #ffffff;
 }
+canvas {
+  background-color: #000;
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+}

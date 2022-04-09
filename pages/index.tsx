@@ -5,18 +5,26 @@ import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import Contact from '../components/contact'
 import Header from '../components/header'
+import Backgroundgraph from '../components/graphback'
 
 const Home: NextPage = () => {
   const { theme, setTheme } = useTheme()
 
+  useEffect(() => {
+    Backgroundgraph()
+  }, [])
+
   return (
-    <div className="isolate flex min-h-screen flex-col items-center justify-center py-2">
+    <div className="isolate flex min-h-screen flex-col items-center justify-center bg-gray-300 py-2 dark:bg-gray-900">
       <Head>
         <title>Marcelo Portfolio Page</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <canvas id="nokey" width="800" height="800">
+        Your Browser Don't Support Canvas, Please Download Chrome ^_^``
+      </canvas>
       <Header />
-      <div className="space-y-40 ">
+      <div className="space-y-40">
         <label
           htmlFor="toogleA"
           className="absolute top-16 right-2 flex cursor-pointer items-center"
