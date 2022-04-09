@@ -180,7 +180,7 @@ function Backgroundgraph() {
         if (fraction < 1) {
           if (ctx) {
             alpha = (1 - fraction).toString()
-
+            //COLOR OF LINES
             ctx.strokeStyle = 'rgba(150,150,150,' + alpha + ')'
             ctx.lineWidth = link_line_width
 

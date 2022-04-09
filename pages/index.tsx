@@ -15,12 +15,17 @@ const Home: NextPage = () => {
   }, [])
 
   return (
-    <div className="isolate flex min-h-screen flex-col items-center justify-center bg-gray-300 py-2 dark:bg-gray-900">
+    <div className="isolate flex min-h-screen flex-col items-center justify-center bg-gray-600 py-2 dark:bg-gray-900">
       <Head>
         <title>Marcelo Portfolio Page</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <canvas id="nokey" width="800" height="800">
+      <canvas
+        id="nokey"
+        className="z-index-30 absolute top-0 dark:bg-transparent"
+        width="800"
+        height="800"
+      >
         Your Browser Don't Support Canvas, Please Download Chrome ^_^``
       </canvas>
       <Header />
@@ -65,7 +70,6 @@ const Home: NextPage = () => {
             </p>
           </div>
         </main>
-
         <div
           id="projects"
           className=" flex w-full flex-grow flex-wrap items-center justify-center border-t py-10"

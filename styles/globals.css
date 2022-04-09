@@ -5,24 +5,23 @@
 /* Toggle B */
 input:checked ~ .dot {
   transform: translateX(100%);
-  background-color: blue;
+  background-color: grey;
 }
-#nav-home:active,
+/* #nav-home:active,
 #nav-projects:active,
 #nav-github:active,
 #nav-contact:active,
 #nav-footer:active {
-  background-color: #3b49df;
+  background-color: #1c1c1e;
   border-radius: 30px;
   transition: 0.3s;
   color: #ffffff;
-}
+} */
 canvas {
-  background-color: #000;
+  background-color: rgba(23, 23, 23, 0);
 }
 html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #333;
 }
