@@ -89,7 +89,7 @@ function Header() {
   }, [scrollDir])
 
   return (
-    <nav className="fixed top-0 z-10">
+    <nav className="fixed top-0 z-50">
       <div className="container flex h-16 w-screen justify-center rounded-lg bg-gray-300 py-3 text-black bg-blend-multiply shadow-xl drop-shadow-xl">
         <div className="flex flex-row justify-items-center">
           <a
