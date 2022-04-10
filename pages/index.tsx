@@ -72,13 +72,13 @@ const Home: NextPage = () => {
         </main>
         <div
           id="projects"
-          className=" flex w-full flex-grow flex-wrap items-center justify-center border-t py-10"
+          className="flex w-full flex-grow flex-wrap items-center justify-center border-t py-10 "
         >
           <div className="mb-10 w-full text-center text-3xl font-bold">
             <h1>PROJECTS</h1>
           </div>
           <a href="https://Adaminter.org" target="_blank">
-            <div className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-[url('/adaminterback.png')]  bg-cover bg-center shadow-lg ">
+            <div className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-[url('/adaminterback.png')]  bg-cover bg-center shadow-xl drop-shadow-xl">
               <div className="backdrop-blur-[3px] duration-300 hover:opacity-10 hover:backdrop-blur-0">
                 <div className="relative flex flex-wrap items-center justify-center px-10 pt-3 dark:text-black">
                   <img
@@ -119,7 +119,7 @@ const Home: NextPage = () => {
             </div>
           </a>
           <a href="https://nutri-notes.vercel.app/" target="_blank">
-            <div className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-[url('/nutrinotesbg.png')] bg-cover bg-center shadow-lg">
+            <div className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-[url('/nutrinotesbg.png')] bg-cover bg-center shadow-xl drop-shadow-xl">
               <div className="backdrop-blur-[3px] duration-300 hover:opacity-10 hover:backdrop-blur-0">
                 <div className="relative flex flex-col flex-wrap items-center justify-center px-10 pt-3 dark:text-black">
                   <img
@@ -160,7 +160,7 @@ const Home: NextPage = () => {
             </div>
           </a>
           <a href="https://bem-pago-form.vercel.app/" target="_blank">
-            <div className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-[url('/bempagobg.png')] bg-cover bg-center shadow-lg">
+            <div className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-[url('/bempagobg.png')] bg-cover bg-center shadow-xl drop-shadow-xl">
               <div className="backdrop-blur-[3px] duration-300 hover:opacity-10 hover:backdrop-blur-0">
                 <div className="relative flex flex-wrap items-center justify-center px-10 pt-3 dark:text-black">
                   <img
@@ -210,7 +210,7 @@ const Home: NextPage = () => {
             <h1>GITHUB</h1>
           </div>
           <a
-            className="w-72 overflow-hidden rounded bg-white shadow-lg dark:bg-gray-800 dark:text-white"
+            className="z-40 w-72 overflow-hidden rounded bg-white shadow-lg shadow-xl drop-shadow-xl dark:bg-gray-800 dark:text-white"
             href="https://github.com/MarceloArraes"
             target="_blank"
           >

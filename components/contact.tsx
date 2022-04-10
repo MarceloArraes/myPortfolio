@@ -5,7 +5,7 @@ function Contact(): JSX.Element {
       className="flex flex-col flex-wrap items-center px-10 pt-3 dark:text-black"
       method="POST"
     >
-      <div className="mb-6">
+      <div className="z-40 mb-6 shadow-xl drop-shadow-xl">
         <input
           type="hidden"
           name="access_key"
@@ -89,9 +89,9 @@ function Contact(): JSX.Element {
         <button
           type="submit"
           className="
+            w-full
             rounded
             bg-blue-600
-            px-6
             py-2.5
             text-xs
             font-medium
