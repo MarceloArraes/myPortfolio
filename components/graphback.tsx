@@ -1,11 +1,12 @@
-function Backgroundgraph() {
+function Backgroundgraph(theme: string) {
   var canvas = document.getElementById('nokey') as HTMLCanvasElement,
     can_w = parseInt(canvas.getAttribute('width') as string),
     can_h = parseInt(canvas.getAttribute('height') as string),
     ctx = canvas.getContext('2d')
 
+  var rgbaLineColor = 'rgba(150,150,150,'
   // console.log(typeof can_w);
-  var BALL_NUM = 30
+  var BALL_NUM = 60
 
   var ball = {
       x: 0,
@@ -180,8 +181,9 @@ function Backgroundgraph() {
         if (fraction < 1) {
           if (ctx) {
             alpha = (1 - fraction).toString()
+
             //COLOR OF LINES
-            ctx.strokeStyle = 'rgba(150,150,150,' + alpha + ')'
+            ctx.strokeStyle = rgbaLineColor + alpha + ')'
             ctx.lineWidth = link_line_width
 
             ctx.beginPath()
@@ -247,11 +249,21 @@ function Backgroundgraph() {
   // Init Canvas
   function initCanvas() {
     canvas.setAttribute('width', window.innerWidth.toString())
-    canvas.setAttribute('height', window.innerHeight.toString())
+    //canvas.setAttribute('height', window.innerHeight.toString())
+    canvas.setAttribute('height', '2500 px')
+    console.log(theme)
+    if (theme == 'dark') {
+      rgbaLineColor = 'rgba(150,150,150,'
+    } else {
+      rgbaLineColor = 'rgba(0,128,255,'
+    }
+
+    console.log(' window.innerHeight.toString()', window.innerHeight.toString())
 
     can_w = parseInt(canvas.getAttribute('width') as string)
     can_h = parseInt(canvas.getAttribute('height') as string)
   }
+
   window.addEventListener('resize', function (e) {
     console.log('Window Resize...')
     initCanvas()

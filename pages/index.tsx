@@ -10,21 +10,21 @@ import Backgroundgraph from '../components/graphback'
 const Home: NextPage = () => {
   const { theme, setTheme } = useTheme()
 
+  //Here im redrawing everytime i change the theme
+  //another way to do it is making a especial function on graphback that change only the colors.. maybe..
   useEffect(() => {
-    Backgroundgraph()
-  }, [])
+    Backgroundgraph(theme)
+  }, [theme])
 
   return (
-    <div className="isolate flex min-h-screen flex-col items-center justify-center bg-gray-600 py-2 dark:bg-gray-900">
+    <div className="isolate flex min-h-screen flex-col items-center justify-center bg-gray-200 py-2 dark:bg-gray-900">
       <Head>
         <title>Marcelo Portfolio Page</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <canvas
         id="nokey"
-        className="z-index-30 absolute top-0 dark:bg-transparent"
-        width="800"
-        height="800"
+        className="z-index-30 absolute top-0  w-full dark:bg-transparent"
       >
         Your Browser Don't Support Canvas, Please Download Chrome ^_^``
       </canvas>
