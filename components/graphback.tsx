@@ -255,7 +255,7 @@ function Backgroundgraph(theme: string) {
     if (theme == 'dark') {
       rgbaLineColor = 'rgba(150,150,150,'
     } else {
-      rgbaLineColor = 'rgba(0,128,255,'
+      rgbaLineColor = 'rgba(255,0,0,'
     }
 
     console.log(' window.innerHeight.toString()', window.innerHeight.toString())
