@@ -17,6 +17,32 @@ function Title() {
             marcelo.arraes@gmail.com
           </code>
         </p>
+
+        <div className="z-10 m-10 flex-row space-x-4">
+          <p className="mt-3 mb-5 text-2xl">download my resume here:</p>
+          <a
+            href="Curriculo Marcelo Arraes Teixeira.pdf"
+            download="Curriculum_Marcelo_Arraes"
+          >
+            <button
+              className="rounded-lg bg-white p-3 text-black"
+              type="button"
+            >
+              Resume pt-br
+            </button>
+          </a>
+          <a
+            href="Curriculum - en - Marcelo Arraes Teixeira.pdf"
+            download="Curriculum_en_Marcelo_Arraes"
+          >
+            <button
+              className="rounded-lg bg-white p-3 text-black "
+              type="button"
+            >
+              Resume en-us
+            </button>
+          </a>
+        </div>
       </div>
     </main>
   )
