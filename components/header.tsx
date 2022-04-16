@@ -63,20 +63,18 @@ function Header() {
         li.classList.remove(
           'rounded-lg',
           'duration-300',
-          'text-green-400',
+          'text-blue-600',
           'border-b-4',
-          'border-green-400',
-          'border-4'
+          'border-gray-400'
         )
 
         if (li.classList.contains(current)) {
           li.classList.add(
             'rounded-lg',
             'duration-300',
-            'text-green-400',
+            'text-blue-600',
             'border-b-4',
-            'border-green-400',
-            'border-4'
+            'border-gray-400'
           )
         }
       })
@@ -96,13 +94,13 @@ function Header() {
             href="#home"
             id="nav-home"
             onClick={handleClick}
-            className="home -mb-3 p-2"
+            className="home -mb-1 p-2"
           >
             Home
           </a>
           <a
             href="#projects"
-            className="projects -mb-3 p-2"
+            className="projects -mb-1 p-2"
             id="nav-projects"
             onClick={handleClick}
           >
@@ -111,7 +109,7 @@ function Header() {
 
           <a
             href="#github"
-            className="github -mb-3 p-2"
+            className="github -mb-1 p-2"
             id="nav-github"
             onClick={handleClick}
           >
@@ -120,7 +118,7 @@ function Header() {
 
           <a
             href="#contact"
-            className="contact -mb-3 p-2"
+            className="contact -mb-1 p-2"
             id="nav-contact"
             onClick={handleClick}
           >
@@ -129,7 +127,7 @@ function Header() {
 
           <a
             href="#footer"
-            className="footer -mb-3 p-2"
+            className="footer -mb-1 p-2"
             id="nav-footer"
             onClick={handleClick}
           >
