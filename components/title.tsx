@@ -122,14 +122,16 @@ function Title() {
               rounded-full
               border-2 
               border-gray-500
-              px-6 
+              bg-[length:300px] 
+              px-6
               py-2
+              backdrop-blur-lg
               transition
               duration-200
               ease-in
-              hover:bg-gray-800
               hover:text-white
-              focus:outline-none"
+              hover:dark:text-black
+              "
               >
                 <svg
                   aria-hidden="true"
@@ -146,7 +148,23 @@ function Title() {
                     d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"
                   ></path>
                 </svg>
-                CV en-US
+                <span
+                  className="
+                  absolute
+                  -z-10
+                  flex
+                  h-16
+                  w-40
+                  rounded-full
+                  duration-150
+                  ease-in-out
+                  hover:bg-gray-800
+                  hover:blur
+                  focus:outline-none
+                  hover:dark:bg-gray-200
+                  "
+                ></span>
+                <span className="pointer-events-none">CV en-US</span>
               </button>
             </a>
 
@@ -154,11 +172,7 @@ function Title() {
               href="Curriculum - en - Marcelo Arraes Teixeira.pdf"
               download="Curriculum_en_Marcelo_Arraes"
               className="
-              h-16
-              w-40
-              items-center
-              justify-center
-              rounded-lg
+
               "
             >
               <button
@@ -174,11 +188,13 @@ function Title() {
                 bg-[length:300px]
                 p-3
                 leading-tight
-                text-black
+                text-white
                 backdrop-blur-lg
                 transition
                 duration-150
                 ease-in-out
+                hover:text-white
+                dark:text-black
                 "
                 type="button"
               >
@@ -199,6 +215,7 @@ function Title() {
                 </svg>
                 <span
                   className="
+                  hover:
                   absolute
                   -z-10
                   flex
@@ -208,15 +225,24 @@ function Title() {
                   bg-gray-500
                   duration-150
                   ease-in-out
-                  hover:bg-white
-                hover:blur
+                  hover:bg-gray-800
+                  hover:blur
+                  hover:dark:bg-white
                   "
                 ></span>
-                <span className="pointer-events-none">Resume en-us</span>
+                <span className="pointer-events-none text-white dark:text-black">
+                  Resume en-us
+                </span>
               </button>
             </a>
           </div>
         </div>
+        <p className="m-16 p-10 font-serif text-xl font-normal">
+          Hi, I'm Marcelo and I'm a web developer based in Brazil. Reactjs,
+          Nextjs, Typescript, Tailwindcss and Nodejs are my favorite
+          technologies. I'm always open to learn new technologies and I'm always
+          looking for new challenges and opportunities to learn new things.
+        </p>
       </div>
     </main>
   )
