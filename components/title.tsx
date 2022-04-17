@@ -23,7 +23,7 @@ function Title() {
         <div className="z-10 m-10 flex-row space-x-4">
           <p className="mt-3 mb-5 text-2xl">download my resume here:</p>
           <div className="flex space-x-5">
-            <a
+            {/*             <a
               href="Curriculo Marcelo Arraes Teixeira.pdf"
               download="Curriculum_Marcelo_Arraes"
             >
@@ -67,7 +67,7 @@ function Title() {
                 Resume pt-br
                 <span className="absolute h-12 w-36 rounded-lg"></span>
               </button>
-            </a>
+            </a> */}
             <a
               href="Curriculo Marcelo Arraes Teixeira.pdf"
               download="Curriculum_Marcelo_Arraes"
@@ -82,7 +82,6 @@ function Title() {
               border-gray-500
               px-6
               py-2
-              uppercase
               transition
               duration-200
               ease-in
@@ -106,7 +105,7 @@ function Title() {
                     d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"
                   ></path>
                 </svg>
-                CV pt-br
+                CV pt-BR
                 <span className="absolute h-12 w-36 rounded-lg"></span>
               </button>
             </a>
@@ -125,7 +124,6 @@ function Title() {
               border-gray-500
               px-6 
               py-2
-              uppercase 
               transition
               duration-200
               ease-in
@@ -148,18 +146,40 @@ function Title() {
                     d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"
                   ></path>
                 </svg>
-                CV en-us
+                CV en-US
               </button>
             </a>
 
             <a
               href="Curriculum - en - Marcelo Arraes Teixeira.pdf"
               download="Curriculum_en_Marcelo_Arraes"
+              className="
+              h-16
+              w-40
+              items-center
+              justify-center
+              rounded-lg
+              "
             >
               <button
-                data-mdb-ripple="true"
-                data-mdb-ripple-color="light"
-                className="flex h-12 w-36 items-center justify-center rounded-lg bg-white p-3 leading-tight text-black transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+                id="download-button"
+                className="
+                flex
+                h-12
+                w-36
+                items-center
+                justify-center 
+                rounded-lg 
+                bg-white 
+                bg-[length:300px]
+                p-3
+                leading-tight
+                text-black
+                backdrop-blur-lg
+                transition
+                duration-150
+                ease-in-out
+                "
                 type="button"
               >
                 <svg
@@ -177,7 +197,22 @@ function Title() {
                     d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"
                   ></path>
                 </svg>
-                Resume en-us
+                <span
+                  className="
+                  absolute
+                  -z-10
+                  flex
+                  h-16
+                  w-40
+                  rounded-lg
+                  bg-gray-500
+                  duration-150
+                  ease-in-out
+                  hover:bg-white
+                hover:blur
+                  "
+                ></span>
+                <span className="pointer-events-none">Resume en-us</span>
               </button>
             </a>
           </div>

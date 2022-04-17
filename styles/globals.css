@@ -25,3 +25,21 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* #download-button:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 35px;
+  transition: 1s;
+} */
+
+/* #download-button:hover::before {
+  filter: blur(20px);
+} */
