@@ -15,42 +15,82 @@ const projects = [
   {
     name: 'Project 2',
     description: 'This is a project',
+    site: 'https://www.google.com',
     image: 'https://source.unsplash.com/random/400x200',
+    tecDescription: 'Typescript, Nextjs, Tailwindcss',
+    tecIcon1: 'https://source.unsplash.com/random/100x100',
+    tecIcon2: 'https://source.unsplash.com/random/100x100',
+    tecIcon3: 'https://source.unsplash.com/random/100x100',
   },
   {
     name: 'Project 3',
     description: 'This is a project',
+    site: 'https://www.google.com',
     image: 'https://source.unsplash.com/random/400x200',
+    tecDescription: 'Typescript, Nextjs, Tailwindcss',
+    tecIcon1: 'https://source.unsplash.com/random/100x100',
+    tecIcon2: 'https://source.unsplash.com/random/100x100',
+    tecIcon3: 'https://source.unsplash.com/random/100x100',
   },
   {
     name: 'Project 4',
     description: 'This is a project',
+    site: 'https://www.google.com',
     image: 'https://source.unsplash.com/random/400x200',
+    tecDescription: 'Typescript, Nextjs, Tailwindcss',
+    tecIcon1: 'https://source.unsplash.com/random/100x100',
+    tecIcon2: 'https://source.unsplash.com/random/100x100',
+    tecIcon3: 'https://source.unsplash.com/random/100x100',
   },
   {
     name: 'Project 5',
     description: 'This is a project',
+    site: 'https://www.google.com',
     image: 'https://source.unsplash.com/random/400x200',
+    tecDescription: 'Typescript, Nextjs, Tailwindcss',
+    tecIcon1: 'https://source.unsplash.com/random/100x100',
+    tecIcon2: 'https://source.unsplash.com/random/100x100',
+    tecIcon3: 'https://source.unsplash.com/random/100x100',
   },
   {
     name: 'Project 6',
     description: 'This is a project',
+    site: 'https://www.google.com',
     image: 'https://source.unsplash.com/random/400x200',
+    tecDescription: 'Typescript, Nextjs, Tailwindcss',
+    tecIcon1: 'https://source.unsplash.com/random/100x100',
+    tecIcon2: 'https://source.unsplash.com/random/100x100',
+    tecIcon3: 'https://source.unsplash.com/random/100x100',
   },
   {
     name: 'Project 7',
     description: 'This is a project',
+    site: 'https://www.google.com',
     image: 'https://source.unsplash.com/random/400x200',
+    tecDescription: 'Typescript, Nextjs, Tailwindcss',
+    tecIcon1: 'https://source.unsplash.com/random/100x100',
+    tecIcon2: 'https://source.unsplash.com/random/100x100',
+    tecIcon3: 'https://source.unsplash.com/random/100x100',
   },
   {
     name: 'Project 8',
     description: 'This is a project',
+    site: 'https://www.google.com',
     image: 'https://source.unsplash.com/random/400x200',
+    tecDescription: 'Typescript, Nextjs, Tailwindcss',
+    tecIcon1: 'https://source.unsplash.com/random/100x100',
+    tecIcon2: 'https://source.unsplash.com/random/100x100',
+    tecIcon3: 'https://source.unsplash.com/random/100x100',
   },
   {
     name: 'Project 9',
     description: 'This is a project',
+    site: 'https://www.google.com',
     image: 'https://source.unsplash.com/random/400x200',
+    tecDescription: 'Typescript, Nextjs, Tailwindcss',
+    tecIcon1: 'https://source.unsplash.com/random/100x100',
+    tecIcon2: 'https://source.unsplash.com/random/100x100',
+    tecIcon3: 'https://source.unsplash.com/random/100x100',
   },
 ]
 
@@ -262,11 +302,11 @@ function CarrouselCards() {
       <div className="relative flex w-full items-center justify-center">
         <button
           aria-label="slide backward"
-          className="absolute left-0 z-30 ml-10 cursor-pointer focus:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
+          className="absolute left-0 z-30 h-full w-1/12 cursor-pointer  focus:outline-none  focus:ring-offset-2"
           id="prev"
         >
           <svg
-            className="dark:text-gray-900"
+            className="ml-10 dark:text-gray-900"
             width="8"
             height="14"
             viewBox="0 0 8 14"
@@ -276,46 +316,51 @@ function CarrouselCards() {
             <path
               d="M7 1L1 7L7 13"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </button>
         <div className="mx-auto h-full w-full overflow-x-hidden overflow-y-hidden">
           <div
             id="slider"
-            className="flex h-full flex-row items-center justify-start transition duration-700 ease-out"
+            className="flex h-full flex-row items-center justify-start space-x-4 transition duration-700 ease-out"
           >
             {/* map projects here */}
             {projects.map((project, index) => (
-              <div className="relative flex w-full flex-shrink-0 sm:w-auto">
-                <img
-                  src={project.image}
-                  alt="black chair and white table"
-                  className="w-full object-cover object-center"
-                />
-                <div className="absolute h-full w-full bg-gray-800 bg-opacity-30 p-6">
-                  <h2 className="text-base leading-4 text-white dark:text-gray-900 lg:text-xl lg:leading-5">
-                    {project.name}
-                  </h2>
-                  <div className="flex h-full items-end pb-6">
-                    <h3 className="text-xl font-semibold leading-5 text-white dark:text-gray-900 lg:text-2xl lg:leading-6">
-                      {project.description}
-                    </h3>
+              <div
+                key={index}
+                className="relative flex w-full flex-shrink-0 sm:w-auto"
+              >
+                <a href={project.site} target="_blank">
+                  <img
+                    src={project.image}
+                    alt="black chair and white table"
+                    className="w-full object-cover object-center"
+                  />
+                  <div className="absolute h-full w-full bg-gray-800 bg-opacity-30 p-6">
+                    <h2 className="text-base leading-4 text-white dark:text-gray-900 lg:text-xl lg:leading-5">
+                      {project.name}
+                    </h2>
+                    <div className="flex h-full items-end pb-6">
+                      <h3 className="text-xl font-semibold leading-5 text-white dark:text-gray-900 lg:text-2xl lg:leading-6">
+                        {project.description}
+                      </h3>
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
             ))}
           </div>
         </div>
         <button
           aria-label="slide forward"
-          className="absolute right-0 z-30 mr-10 focus:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
+          className="absolute right-0 z-30 h-full w-1/12  focus:outline-none  focus:ring-offset-2"
           id="next"
         >
           <svg
-            className="dark:text-gray-900"
+            className="mr-10 dark:text-gray-900"
             width="8"
             height="14"
             viewBox="0 0 8 14"
@@ -325,9 +370,9 @@ function CarrouselCards() {
             <path
               d="M1 1L7 7L1 13"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </button>

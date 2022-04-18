@@ -68,7 +68,7 @@ function Backgroundgraph(theme: string) {
   function randomNumFrom(min: number, max: number) {
     return Math.random() * (max - min) + min
   }
-  console.log(randomNumFrom(0, 10))
+  //console.log(randomNumFrom(0, 10))
   // Random Ball
   function getRandomBall() {
     var pos = randomArrayItem(['top', 'right', 'bottom', 'left'])
