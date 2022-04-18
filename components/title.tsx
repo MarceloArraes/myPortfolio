@@ -2,7 +2,7 @@ import { Fragment } from 'react'
 
 function Title() {
   return (
-    <main id="home" className="py-44">
+    <main id="home" className="py-30">
       <div className="flex w-full flex-col items-center justify-center text-center">
         <h1 className="text-6xl font-bold">
           Welcome to{' '}
