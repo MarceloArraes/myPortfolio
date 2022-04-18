@@ -251,21 +251,21 @@ function Backgroundgraph(theme: string) {
     canvas.setAttribute('width', window.innerWidth.toString())
     //canvas.setAttribute('height', window.innerHeight.toString())
     canvas.setAttribute('height', '2500 px')
-    console.log(theme)
+    //console.log(theme)
     if (theme == 'dark') {
       rgbaLineColor = 'rgba(150,150,150,'
     } else {
       rgbaLineColor = 'rgba(255,0,0,'
     }
 
-    console.log(' window.innerHeight.toString()', window.innerHeight.toString())
+    //console.log(' window.innerHeight.toString()', window.innerHeight.toString())
 
     can_w = parseInt(canvas.getAttribute('width') as string)
     can_h = parseInt(canvas.getAttribute('height') as string)
   }
 
   window.addEventListener('resize', function (e) {
-    console.log('Window Resize...')
+    //console.log('Window Resize...')
     initCanvas()
   })
 
@@ -278,12 +278,12 @@ function Backgroundgraph(theme: string) {
 
   // Mouse effect
   canvas.addEventListener('mouseenter', function () {
-    console.log('mouseenter')
+    //console.log('mouseenter')
     mouse_in = true
     balls.push(mouse_ball)
   })
   canvas.addEventListener('mouseleave', function () {
-    console.log('mouseleave')
+    //console.log('mouseleave')
     mouse_in = false
     var new_balls: any[] = []
     Array.prototype.forEach.call(balls, function (b) {

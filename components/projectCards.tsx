@@ -5,7 +5,12 @@ const projects = [
   {
     name: 'Project 1',
     description: 'This is a project',
+    site: 'https://www.google.com',
     image: 'https://source.unsplash.com/random/400x200',
+    tecDescription: 'Typescript, Nextjs, Tailwindcss',
+    tecIcon1: 'https://source.unsplash.com/random/100x100',
+    tecIcon2: 'https://source.unsplash.com/random/100x100',
+    tecIcon3: 'https://source.unsplash.com/random/100x100',
   },
   {
     name: 'Project 2',
@@ -278,12 +283,11 @@ function CarrouselCards() {
           </svg>
         </button>
         <div className="mx-auto h-full w-full overflow-x-hidden overflow-y-hidden">
-          {/* map projects here */}
-
           <div
             id="slider"
-            className="flex h-full items-center justify-start gap-14 transition duration-700 ease-out md:gap-6 lg:gap-8"
+            className="flex h-full flex-row items-center justify-start transition duration-700 ease-out"
           >
+            {/* map projects here */}
             {projects.map((project, index) => (
               <div className="relative flex w-full flex-shrink-0 sm:w-auto">
                 <img
@@ -303,7 +307,56 @@ function CarrouselCards() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+        <button
+          aria-label="slide forward"
+          className="absolute right-0 z-30 mr-10 focus:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
+          id="next"
+        >
+          <svg
+            className="dark:text-gray-900"
+            width="8"
+            height="14"
+            viewBox="0 0 8 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 1L7 7L1 13"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  )
+}
 
+export default CarrouselCards
+
+/*               <div className="relative flex w-full flex-shrink-0 sm:w-auto">
+                <img
+                  src={project.image}
+                  alt="black chair and white table"
+                  className="w-full object-cover object-center"
+                />
+                <div className="absolute h-full w-full bg-gray-800 bg-opacity-30 p-6">
+                  <h2 className="text-base leading-4 text-white dark:text-gray-900 lg:text-xl lg:leading-5">
+                    {project.name}
+                  </h2>
+                  <div className="flex h-full items-end pb-6">
+                    <h3 className="text-xl font-semibold leading-5 text-white dark:text-gray-900 lg:text-2xl lg:leading-6">
+                      {project.description}
+                    </h3>
+                  </div>
+                </div>
+              </div> */
+
+/* 
             <div className="relative flex w-full flex-shrink-0 sm:w-auto">
               <img
                 src="https://i.ibb.co/fDngH9G/carosel-1.png"
@@ -507,34 +560,4 @@ function CarrouselCards() {
                   </h3>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <button
-          aria-label="slide forward"
-          className="absolute right-0 z-30 mr-10 focus:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
-          id="next"
-        >
-          <svg
-            className="dark:text-gray-900"
-            width="8"
-            height="14"
-            viewBox="0 0 8 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1 1L7 7L1 13"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
-  )
-}
-
-export default CarrouselCards
+            </div> */
