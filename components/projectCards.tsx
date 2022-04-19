@@ -3,14 +3,14 @@ import { useEffect } from 'react'
 //array of projects
 const projects = [
   {
-    name: 'Project 1',
-    description: 'This is a project',
-    site: 'https://www.google.com',
-    image: 'https://source.unsplash.com/random/400x200',
+    name: 'Adaminter.org',
+    description: 'Nft Creator on Cardano blockchain',
+    site: 'https://www.adaminter.org',
+    image: '/adaminterback.png',
     tecDescription: 'Typescript, Nextjs, Tailwindcss',
-    tecIcon1: 'https://source.unsplash.com/random/100x100',
-    tecIcon2: 'https://source.unsplash.com/random/100x100',
-    tecIcon3: 'https://source.unsplash.com/random/100x100',
+    tecIcon1: '/reacticon.png',
+    tecIcon2: '/djangoicon.png',
+    tecIcon3: '/nodejsicon.png',
   },
   {
     name: 'Project 2',
@@ -102,7 +102,7 @@ function ProjectCards() {
       <a href="https://Adaminter.org" target="_blank">
         <div
           id="image-vessel"
-          className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-[url('/adaminterback.png')]  bg-cover bg-center shadow-xl drop-shadow-xl"
+          className="relative mx-2 mb-6 h-40 w-56 max-w-xs flex-shrink-0 overflow-hidden rounded-lg bg-[url('/adaminterback.png')] bg-cover bg-center shadow-xl drop-shadow-xl"
         >
           <div className="backdrop-blur-[3px] duration-300 hover:opacity-10 hover:backdrop-blur-0">
             <div className="relative flex flex-wrap items-center justify-center px-10 pt-3 dark:text-black">
@@ -331,20 +331,41 @@ function CarrouselCards() {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="relative flex w-full flex-shrink-0 sm:w-auto"
+                className="relative flex w-full flex-shrink-0  sm:w-auto"
               >
-                <a href={project.site} target="_blank">
-                  <img
-                    src={project.image}
-                    alt="black chair and white table"
-                    className="w-full object-cover object-center"
-                  />
+                <img
+                  src={project.image}
+                  alt="black chair and white table"
+                  className="w-full max-w-sm object-cover object-center"
+                />
+                <a
+                  href={project.site}
+                  target="_blank"
+                  className="absolute z-10 h-full w-full backdrop-blur transition duration-300 ease-in-out hover:opacity-10 hover:backdrop-blur-0"
+                >
                   <div className="absolute h-full w-full bg-gray-800 bg-opacity-30 p-6">
                     <h2 className="text-base leading-4 text-white dark:text-gray-900 lg:text-xl lg:leading-5">
                       {project.name}
                     </h2>
                     <div className="flex h-full items-end pb-6">
                       <h3 className="text-xl font-semibold leading-5 text-white dark:text-gray-900 lg:text-2xl lg:leading-6">
+                        <span className="flex items-center bg-transparent bg-white bg-opacity-50 px-5 text-xs font-bold leading-none ">
+                          <img
+                            className="relative w-8 animate-spin-slow"
+                            src="/reacticon.png"
+                            alt="reactjs"
+                          />
+                          <img
+                            className="relative w-9 animate-spin-slow"
+                            src="/djangoicon.png"
+                            alt="reactjs"
+                          />
+                          <img
+                            className="relative -ml-2 w-14 animate-spin-slow"
+                            src="/nodejsicon.png"
+                            alt="nodejs"
+                          />
+                        </span>
                         {project.description}
                       </h3>
                     </div>

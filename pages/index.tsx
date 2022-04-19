@@ -55,7 +55,7 @@ const Home: NextPage = () => {
         <Title />
         <div
           id="projects"
-          className=" flex w-full flex-grow flex-wrap items-center justify-center border-t py-36"
+          className=" flex w-full flex-grow flex-wrap items-center justify-center border-t-2 border-gray-800 py-36 dark:border-gray-400"
         >
           <div className="mb-10 w-full text-center text-3xl font-bold">
             <h1>PROJECTS</h1>
@@ -65,7 +65,7 @@ const Home: NextPage = () => {
 
         <div
           id="github"
-          className="flex w-full flex-wrap items-center justify-center border-t py-10"
+          className="flex w-full flex-wrap items-center justify-center border-t-2 border-gray-800 py-10 dark:border-gray-400"
         >
           <div className="mb-10 w-full text-center text-3xl font-bold">
             <h1>GITHUB</h1>
@@ -97,7 +97,10 @@ const Home: NextPage = () => {
           </a>
         </div>
 
-        <div id="contact" className="w-full border-t py-10">
+        <div
+          id="contact"
+          className="w-full border-t-2 border-gray-800 py-10 dark:border-gray-400"
+        >
           <div className="mb-10 w-full text-center text-3xl font-bold">
             <h1>CONTACT</h1>
           </div>
