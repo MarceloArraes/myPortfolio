@@ -3,100 +3,63 @@ import { useEffect } from 'react'
 //array of projects
 const projects = [
   {
+    name: 'GeoCapital stock Tracker',
+    description: 'A stock tracker for GeoCapital as technical test',
+    site: 'https://geo-capital-online-portfolio.vercel.app/',
+    image: '/GeoCapitalTest.png',
+    siteIcon: '/nutriNotes.png',
+    tecDescription: 'Typescript, Nextjs, Tailwindcss',
+    tecIcon1: '/typescripticon.png',
+    tecIcon2: '/nextjsicon.png',
+    tecIcon3: '/tailwindcssLogo.png',
+  },
+  {
+    name: 'Nutri Notes',
+    description: 'A site for nutritional information for health professionals',
+    site: 'https://nutri-notes.vercel.app/',
+    image: '/nutrinotesbg.png',
+    siteIcon: '/nutriNotes.png',
+    tecDescription: 'Nextjs, Supabase, MaterialUi',
+    tecIcon1: '/nextjsicon.png',
+    tecIcon2: '/supabaseicon.png',
+    tecIcon3: '/muiicon.png',
+  },
+  {
+    name: 'Bem Paggo Form',
+    description: 'A front-end test for Bem Paggo company',
+    site: 'https://bem-pago-form.vercel.app/',
+    image: '/bempagobg.png',
+    siteIcon: '/bempaggoicon2.png',
+    tecDescription: 'Typescript, MaterialUI, Styled Components',
+    tecIcon1: '/typescripticon.png',
+    tecIcon2: '/muiicon.png',
+    tecIcon3: '/styledcomponentsicon3.png',
+  },
+  {
     name: 'Adaminter.org',
     description: 'Nft Creator on Cardano blockchain',
     site: 'https://www.adaminter.org',
     image: '/adaminterback.png',
-    tecDescription: 'Typescript, Nextjs, Tailwindcss',
+    siteIcon: '/adamintericon.svg',
+    tecDescription: 'Nextjs, Django, Nodejs',
     tecIcon1: '/reacticon.png',
     tecIcon2: '/djangoicon.png',
     tecIcon3: '/nodejsicon.png',
   },
   {
-    name: 'Project 2',
-    description: 'This is a project',
-    site: 'https://www.google.com',
-    image: 'https://source.unsplash.com/random/400x200',
+    name: 'My Portfolio',
+    description: 'This site, my first portfolio site.',
+    site: 'https://marcelosportfolio.vercel.app/',
+    image: '/marcelosPortfolioImage.png',
+    siteIcon: '/nutriNotes.png',
     tecDescription: 'Typescript, Nextjs, Tailwindcss',
-    tecIcon1: 'https://source.unsplash.com/random/100x100',
-    tecIcon2: 'https://source.unsplash.com/random/100x100',
-    tecIcon3: 'https://source.unsplash.com/random/100x100',
-  },
-  {
-    name: 'Project 3',
-    description: 'This is a project',
-    site: 'https://www.google.com',
-    image: 'https://source.unsplash.com/random/400x200',
-    tecDescription: 'Typescript, Nextjs, Tailwindcss',
-    tecIcon1: 'https://source.unsplash.com/random/100x100',
-    tecIcon2: 'https://source.unsplash.com/random/100x100',
-    tecIcon3: 'https://source.unsplash.com/random/100x100',
-  },
-  {
-    name: 'Project 4',
-    description: 'This is a project',
-    site: 'https://www.google.com',
-    image: 'https://source.unsplash.com/random/400x200',
-    tecDescription: 'Typescript, Nextjs, Tailwindcss',
-    tecIcon1: 'https://source.unsplash.com/random/100x100',
-    tecIcon2: 'https://source.unsplash.com/random/100x100',
-    tecIcon3: 'https://source.unsplash.com/random/100x100',
-  },
-  {
-    name: 'Project 5',
-    description: 'This is a project',
-    site: 'https://www.google.com',
-    image: 'https://source.unsplash.com/random/400x200',
-    tecDescription: 'Typescript, Nextjs, Tailwindcss',
-    tecIcon1: 'https://source.unsplash.com/random/100x100',
-    tecIcon2: 'https://source.unsplash.com/random/100x100',
-    tecIcon3: 'https://source.unsplash.com/random/100x100',
-  },
-  {
-    name: 'Project 6',
-    description: 'This is a project',
-    site: 'https://www.google.com',
-    image: 'https://source.unsplash.com/random/400x200',
-    tecDescription: 'Typescript, Nextjs, Tailwindcss',
-    tecIcon1: 'https://source.unsplash.com/random/100x100',
-    tecIcon2: 'https://source.unsplash.com/random/100x100',
-    tecIcon3: 'https://source.unsplash.com/random/100x100',
-  },
-  {
-    name: 'Project 7',
-    description: 'This is a project',
-    site: 'https://www.google.com',
-    image: 'https://source.unsplash.com/random/400x200',
-    tecDescription: 'Typescript, Nextjs, Tailwindcss',
-    tecIcon1: 'https://source.unsplash.com/random/100x100',
-    tecIcon2: 'https://source.unsplash.com/random/100x100',
-    tecIcon3: 'https://source.unsplash.com/random/100x100',
-  },
-  {
-    name: 'Project 8',
-    description: 'This is a project',
-    site: 'https://www.google.com',
-    image: 'https://source.unsplash.com/random/400x200',
-    tecDescription: 'Typescript, Nextjs, Tailwindcss',
-    tecIcon1: 'https://source.unsplash.com/random/100x100',
-    tecIcon2: 'https://source.unsplash.com/random/100x100',
-    tecIcon3: 'https://source.unsplash.com/random/100x100',
-  },
-  {
-    name: 'Project 9',
-    description: 'This is a project',
-    site: 'https://www.google.com',
-    image: 'https://source.unsplash.com/random/400x200',
-    tecDescription: 'Typescript, Nextjs, Tailwindcss',
-    tecIcon1: 'https://source.unsplash.com/random/100x100',
-    tecIcon2: 'https://source.unsplash.com/random/100x100',
-    tecIcon3: 'https://source.unsplash.com/random/100x100',
+    tecIcon1: '/typescripticon.png',
+    tecIcon2: '/nextjsicon.png',
+    tecIcon3: '/tailwindcssLogo.png',
   },
 ]
 
 function ProjectCards() {
-  useEffect(() => {}, [])
-
   return (
     <>
       <a href="https://Adaminter.org" target="_blank">
@@ -153,7 +116,7 @@ function ProjectCards() {
                 alt="Nutri Notes icon"
               />
               <div> Nutri Notes </div>
-              <span className="flex-wrap-2 flex items-center bg-transparent bg-white bg-opacity-50 px-5 text-xs font-bold leading-none">
+              <span className="flex-wrap-2 flex items-center space-x-4 bg-transparent bg-white bg-opacity-50 px-5 text-xs font-bold leading-none">
                 <img
                   className="relative w-8 animate-spin-slow"
                   src="/nextjsicon.png"
@@ -278,12 +241,13 @@ function CarrouselCards() {
   useEffect(() => {
     var next = document.getElementById('next')
     var prev = document.getElementById('prev')
+    var projectCard = document.getElementById('projectCard')
 
     let defaultTransform = 0
     function goNext() {
-      defaultTransform = defaultTransform - 398
+      defaultTransform = defaultTransform - projectCard!.clientWidth - 22 //1Rem = 16px im using as space between cards.
       var slider = document.getElementById('slider')
-      if (Math.abs(defaultTransform) >= slider!.scrollWidth / 1.7)
+      if (Math.abs(defaultTransform) >= slider!.scrollWidth / 1.2)
         defaultTransform = 0
       slider!.style.transform = 'translateX(' + defaultTransform + 'px)'
     }
@@ -291,7 +255,7 @@ function CarrouselCards() {
     function goPrev() {
       var slider = document.getElementById('slider')
       if (Math.abs(defaultTransform) === 0) defaultTransform = 0
-      else defaultTransform = defaultTransform + 398
+      else defaultTransform = defaultTransform + projectCard!.clientWidth + 22
       slider!.style.transform = 'translateX(' + defaultTransform + 'px)'
     }
     prev!.addEventListener('click', goPrev)
@@ -300,70 +264,72 @@ function CarrouselCards() {
   return (
     <div className="flex h-full w-full items-center justify-center py-24 px-4 sm:py-8">
       <div className="relative flex w-full items-center justify-center">
+        {/* <span className="absolute left-1 z-20 h-20 w-20 rounded-full bg-gray-600 opacity-40"></span> */}
+        <svg
+          className="absolute left-0 z-20 ml-9 cursor-pointer dark:text-red-600"
+          width="8"
+          height="14"
+          viewBox="0 0 8 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7 1L1 7L7 13"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
         <button
           aria-label="slide backward"
-          className="absolute left-0 z-30 h-full w-1/12 cursor-pointer  focus:outline-none  focus:ring-offset-2"
+          className="absolute left-0 z-30 h-20 w-20 cursor-pointer rounded-full bg-gray-600 opacity-40 hover:bg-gray-400 hover:opacity-60  focus:outline-none "
           id="prev"
-        >
-          <svg
-            className="ml-10 dark:text-gray-900"
-            width="8"
-            height="14"
-            viewBox="0 0 8 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7 1L1 7L7 13"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
-        <div className="mx-auto h-full w-full overflow-x-hidden overflow-y-hidden">
+        ></button>
+        <div className="h-full w-full overflow-x-hidden rounded-lg">
           <div
             id="slider"
-            className="flex h-full flex-row items-center justify-start space-x-4 transition duration-700 ease-out"
+            className="flex h-full flex-row items-center justify-start space-x-4  transition duration-700 ease-out"
           >
             {/* map projects here */}
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="relative flex w-full flex-shrink-0  sm:w-auto"
+                id="projectCard"
+                className="relative flex h-48 w-auto max-w-xs flex-shrink-0
+                "
               >
                 <img
                   src={project.image}
-                  alt="black chair and white table"
-                  className="w-full max-w-sm object-cover object-center"
+                  alt="Project print"
+                  className="w-full rounded-lg object-cover object-center"
                 />
                 <a
                   href={project.site}
                   target="_blank"
-                  className="absolute z-10 h-full w-full backdrop-blur transition duration-300 ease-in-out hover:opacity-10 hover:backdrop-blur-0"
+                  className="absolute z-10 h-full w-full rounded-lg backdrop-blur transition duration-300 ease-in-out hover:opacity-10 hover:backdrop-blur-0"
                 >
-                  <div className="absolute h-full w-full bg-gray-800 bg-opacity-30 p-6">
+                  <div className="absolute h-full w-full rounded-lg bg-gray-800 bg-opacity-30 p-4">
                     <h2 className="text-base leading-4 text-white dark:text-gray-900 lg:text-xl lg:leading-5">
                       {project.name}
                     </h2>
-                    <div className="flex h-full items-end pb-6">
+                    <div className="flex h-full items-end pb-3">
                       <h3 className="text-xl font-semibold leading-5 text-white dark:text-gray-900 lg:text-2xl lg:leading-6">
                         <span className="flex items-center bg-transparent bg-white bg-opacity-50 px-5 text-xs font-bold leading-none ">
                           <img
-                            className="relative w-8 animate-spin-slow"
-                            src="/reacticon.png"
-                            alt="reactjs"
+                            className="relative w-9 animate-spin-slow"
+                            src={project.tecIcon1}
+                            alt={project.tecIcon1}
                           />
                           <img
                             className="relative w-9 animate-spin-slow"
-                            src="/djangoicon.png"
-                            alt="reactjs"
+                            src={project.tecIcon2}
+                            alt={project.tecIcon2}
                           />
                           <img
-                            className="relative -ml-2 w-14 animate-spin-slow"
-                            src="/nodejsicon.png"
-                            alt="nodejs"
+                            className="relative w-9 animate-spin-slow"
+                            src={project.tecIcon3}
+                            alt={project.tecIcon3}
                           />
                         </span>
                         {project.description}
@@ -375,28 +341,27 @@ function CarrouselCards() {
             ))}
           </div>
         </div>
+        <svg
+          className="absolute right-0 z-20 mr-9 cursor-pointer dark:text-red-600"
+          width="8"
+          height="14"
+          viewBox="0 0 8 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1 1L7 7L1 13"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
         <button
           aria-label="slide forward"
-          className="absolute right-0 z-30 h-full w-1/12  focus:outline-none  focus:ring-offset-2"
+          className="absolute right-0 z-30 h-20 w-20 rounded-full bg-gray-600 opacity-40 hover:bg-gray-400 hover:opacity-60 focus:outline-none"
           id="next"
-        >
-          <svg
-            className="mr-10 dark:text-gray-900"
-            width="8"
-            height="14"
-            viewBox="0 0 8 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1 1L7 7L1 13"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
+        ></button>
       </div>
     </div>
   )
