@@ -80,22 +80,23 @@ function Title() {
               rounded-full
               border-2 
               border-gray-500
-              px-6
+              px-3
               py-2
               transition
               duration-200
               ease-in
               hover:bg-gray-700
-              hover:text-white 
-              hover:shadow-lg
-              focus:outline-none"
+              hover:text-white
+              hover:shadow-lg 
+              focus:outline-none
+              sm:px-6"
               >
                 <svg
                   aria-hidden="true"
                   focusable="false"
                   data-prefix="fas"
                   data-icon="download"
-                  className="mt-1 mr-2 w-3 "
+                  className="mt-1 mr-2 w-5 "
                   role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -115,28 +116,29 @@ function Title() {
             >
               <button
                 className="
-              flex
+              flex 
               items-center
               justify-center 
               rounded-full
-              border-2 
+              border-2
               border-gray-500
-              px-6
+              px-3
               py-2
               transition
               duration-200
-              ease-in
+              ease-in 
               hover:bg-gray-700
-              hover:text-white 
+              hover:text-white
               hover:shadow-lg
-              focus:outline-none"
+              focus:outline-none sm:px-6
+              "
               >
                 <svg
                   aria-hidden="true"
                   focusable="false"
                   data-prefix="fas"
                   data-icon="download"
-                  className="mt-1 mr-2 w-3 "
+                  className="mt-1 mr-2 w-5"
                   role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
