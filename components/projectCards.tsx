@@ -3,11 +3,26 @@ import { useEffect } from 'react'
 //array of projects
 const projects = [
   {
+    name: 'Adaminter.org',
+    description: 'Nft Creator on Cardano blockchain',
+    site: 'https://www.adaminter.org',
+    image: '/adaminterback.png',
+    darkimage: false,
+    siteIcon: '/adamintericon.svg',
+
+    tecDescription: 'Blockchain, Nextjs, Django, Nodejs',
+    tecIcon1: '/reacticon.png',
+    tecIcon2: '/djangoicon.png',
+    tecIcon3: '/nodejsicon.png',
+  },
+  {
     name: 'GeoCapital stock Tracker',
-    description: 'A stock tracker for GeoCapital as technical test',
+    description: 'A tracker for GeoCapital a technical test',
     site: 'https://geo-capital-online-portfolio.vercel.app/',
     image: '/GeoCapitalTest.png',
+    darkimage: true,
     siteIcon: '/nutriNotes.png',
+
     tecDescription: 'Typescript, Nextjs, Tailwindcss',
     tecIcon1: '/typescripticon.png',
     tecIcon2: '/nextjsicon.png',
@@ -15,9 +30,10 @@ const projects = [
   },
   {
     name: 'Nutri Notes',
-    description: 'A site for nutritional information for health professionals',
+    description: 'Nutritional information for health professionals',
     site: 'https://nutri-notes.vercel.app/',
     image: '/nutrinotesbg.png',
+    darkimage: false,
     siteIcon: '/nutriNotes.png',
     tecDescription: 'Nextjs, Supabase, MaterialUi',
     tecIcon1: '/nextjsicon.png',
@@ -29,28 +45,21 @@ const projects = [
     description: 'A front-end test for Bem Paggo company',
     site: 'https://bem-pago-form.vercel.app/',
     image: '/bempagobg.png',
+    darkimage: false,
     siteIcon: '/bempaggoicon2.png',
+
     tecDescription: 'Typescript, MaterialUI, Styled Components',
     tecIcon1: '/typescripticon.png',
     tecIcon2: '/muiicon.png',
     tecIcon3: '/styledcomponentsicon3.png',
   },
-  {
-    name: 'Adaminter.org',
-    description: 'Nft Creator on Cardano blockchain',
-    site: 'https://www.adaminter.org',
-    image: '/adaminterback.png',
-    siteIcon: '/adamintericon.svg',
-    tecDescription: 'Nextjs, Django, Nodejs',
-    tecIcon1: '/reacticon.png',
-    tecIcon2: '/djangoicon.png',
-    tecIcon3: '/nodejsicon.png',
-  },
+
   {
     name: 'My Portfolio',
     description: 'This site, my first portfolio site.',
     site: 'https://marcelosportfolio.vercel.app/',
     image: '/marcelosPortfolioImage.png',
+    darkimage: true,
     siteIcon: '/nutriNotes.png',
     tecDescription: 'Typescript, Nextjs, Tailwindcss',
     tecIcon1: '/typescripticon.png',
@@ -245,7 +254,7 @@ function CarrouselCards() {
 
     let defaultTransform = 0
     function goNext() {
-      defaultTransform = defaultTransform - projectCard!.clientWidth - 22 //1Rem = 16px im using as space between cards.
+      defaultTransform = defaultTransform - projectCard!.clientWidth - 16 //1Rem = 16px im using as space between cards.
       var slider = document.getElementById('slider')
       if (Math.abs(defaultTransform) >= slider!.scrollWidth / 1.2)
         defaultTransform = 0
@@ -255,7 +264,7 @@ function CarrouselCards() {
     function goPrev() {
       var slider = document.getElementById('slider')
       if (Math.abs(defaultTransform) === 0) defaultTransform = 0
-      else defaultTransform = defaultTransform + projectCard!.clientWidth + 22
+      else defaultTransform = defaultTransform + projectCard!.clientWidth + 16
       slider!.style.transform = 'translateX(' + defaultTransform + 'px)'
     }
     prev!.addEventListener('click', goPrev)
@@ -286,18 +295,17 @@ function CarrouselCards() {
           className="absolute left-0 z-30 h-20 w-20 cursor-pointer rounded-full bg-gray-600 opacity-40 hover:bg-gray-400 hover:opacity-60  focus:outline-none "
           id="prev"
         ></button>
-        <div className="h-full w-full overflow-x-hidden rounded-lg">
+        <div className="h-full w-full overflow-hidden rounded-lg">
           <div
             id="slider"
-            className="flex h-full flex-row items-center justify-start space-x-4  transition duration-700 ease-out"
+            className="flex h-full flex-row items-center justify-start space-x-4 transition duration-700 ease-out"
           >
             {/* map projects here */}
             {projects.map((project, index) => (
               <div
                 key={index}
                 id="projectCard"
-                className="relative flex h-48 w-auto max-w-xs flex-shrink-0
-                "
+                className="relative flex h-48 w-auto max-w-xs flex-shrink-0"
               >
                 <img
                   src={project.image}
@@ -310,11 +318,22 @@ function CarrouselCards() {
                   className="absolute z-10 h-full w-full rounded-lg backdrop-blur transition duration-300 ease-in-out hover:opacity-10 hover:backdrop-blur-0"
                 >
                   <div className="absolute h-full w-full rounded-lg bg-gray-800 bg-opacity-30 p-4">
-                    <h2 className="text-base leading-4 text-white dark:text-gray-900 lg:text-xl lg:leading-5">
+                    <h2
+                      className={`text-base leading-4 text-gray-900 lg:text-xl lg:leading-5 ${
+                        project.darkimage ? 'text-gray-200' : 'text-gray-900'
+                      }`}
+                    >
                       {project.name}
                     </h2>
                     <div className="flex h-full items-end pb-3">
-                      <h3 className="text-xl font-semibold leading-5 text-white dark:text-gray-900 lg:text-2xl lg:leading-6">
+                      <h3
+                        className={`text-xl font-semibold leading-5 text-gray-900 lg:text-2xl lg:leading-6 ${
+                          project.darkimage ? 'text-gray-200' : 'text-gray-900'
+                        }`}
+                      >
+                        <span className="font-light italic">
+                          {project.tecDescription}
+                        </span>
                         <span className="flex items-center bg-transparent bg-white bg-opacity-50 px-5 text-xs font-bold leading-none ">
                           <img
                             className="relative w-9 animate-spin-slow"

@@ -1,20 +1,20 @@
 function Contact(): JSX.Element {
   return (
-    <form
-      action="https://api.web3forms.com/submit"
-      className="flex flex-col flex-wrap items-center px-10 pt-3 dark:text-black"
-      method="POST"
-    >
-      <div className="z-40 mb-6 shadow-xl drop-shadow-xl">
-        <input
-          type="hidden"
-          name="access_key"
-          value={process.env.NEXT_PUBLIC_EMAIL_KEY}
-        />
-
-        <input
-          type="text"
-          className="form-control
+    <div className="flex w-full flex-row justify-center ">
+      <form
+        action="https://api.web3forms.com/submit"
+        className="flex flex-col flex-wrap items-center justify-center px-10 dark:text-black"
+        method="POST"
+      >
+        <div className="z-40 mb-6 shadow-xl drop-shadow-xl sm:w-96">
+          <input
+            type="hidden"
+            name="access_key"
+            value={process.env.NEXT_PUBLIC_EMAIL_KEY}
+          />
+          <input
+            type="text"
+            className="form-control
           m-0
           block
           w-full
@@ -30,15 +30,15 @@ function Contact(): JSX.Element {
           transition
           ease-in-out
           focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none"
-          name="name"
-          placeholder="Enter Name"
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          required
-          className="
+            name="name"
+            placeholder="Enter Name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            required
+            className="
           form-control
           m-0
           block
@@ -56,13 +56,13 @@ function Contact(): JSX.Element {
           ease-in-out
           focus:border-blue-600
           focus:bg-white focus:text-gray-700 focus:outline-none"
-          id="exampleInputEmail1"
-          aria-describedby="emailHelp"
-          placeholder="Enter email"
-        />
-        <textarea
-          name="message"
-          className="form-control
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+          />
+          <textarea
+            name="message"
+            className="form-control
           m-0
           block
           w-full
@@ -71,24 +71,25 @@ function Contact(): JSX.Element {
           border-solid
           border-gray-300
           bg-white
-          bg-clip-padding px-3
-          py-1.5 text-base font-normal
+          bg-clip-padding
+          px-3 py-1.5
+          text-base font-normal leading-10
           text-gray-700
           placeholder-gray-500
           transition
           ease-in-out
           focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none"
-          required
-          placeholder="Enter Message"
-        ></textarea>
-        <input
-          type="hidden"
-          name="redirect"
-          value="https://web3forms.com/success"
-        />
-        <button
-          type="submit"
-          className="
+            required
+            placeholder="Enter Message"
+          ></textarea>
+          <input
+            type="hidden"
+            name="redirect"
+            value="https://web3forms.com/success"
+          />
+          <button
+            type="submit"
+            className="
             w-full
             rounded
             bg-blue-600
@@ -105,11 +106,15 @@ function Contact(): JSX.Element {
             focus:ring-0
             active:bg-blue-800
             active:shadow-lg"
-        >
-          Submit Contact
-        </button>
+          >
+            Submit Contact
+          </button>
+        </div>
+      </form>
+      <div className="relative h-40 w-80 border-2 border-gray-600 dark:border-gray-200">
+        CARD DE CONTATO COM EMAIL
       </div>
-    </form>
+    </div>
   )
 }
 export default Contact
