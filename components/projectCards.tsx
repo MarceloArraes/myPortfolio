@@ -292,7 +292,7 @@ function CarrouselCards() {
         </svg>
         <button
           aria-label="slide backward"
-          className="absolute left-0 z-30 h-20 w-20 cursor-pointer rounded-full bg-gray-600 opacity-40 hover:bg-gray-400 hover:opacity-60  focus:outline-none "
+          className="absolute left-0 z-30 h-20 w-20  cursor-pointer rounded-full hover:bg-gray-400 hover:opacity-60 focus:outline-none sm:bg-gray-600 sm:opacity-40 "
           id="prev"
         ></button>
         <div className="h-full w-full overflow-hidden rounded-lg">
@@ -378,7 +378,7 @@ function CarrouselCards() {
         </svg>
         <button
           aria-label="slide forward"
-          className="absolute right-0 z-30 h-20 w-20 rounded-full bg-gray-600 opacity-40 hover:bg-gray-400 hover:opacity-60 focus:outline-none"
+          className="absolute right-0 z-30 h-20 w-20 rounded-full hover:bg-gray-400 hover:opacity-60 focus:outline-none sm:bg-gray-600 sm:opacity-40"
           id="next"
         ></button>
       </div>

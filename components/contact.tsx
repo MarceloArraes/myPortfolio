@@ -1,12 +1,12 @@
 function Contact(): JSX.Element {
   return (
-    <div className="flex w-full flex-row justify-center ">
+    <div className="flex w-full flex-row flex-wrap justify-center ">
       <form
         action="https://api.web3forms.com/submit"
-        className="flex flex-col flex-wrap items-center justify-center px-10 dark:text-black"
+        className="flex w-full max-w-md flex-col flex-wrap items-center justify-center px-5 dark:text-black"
         method="POST"
       >
-        <div className="z-40 mb-6 shadow-xl drop-shadow-xl sm:w-96">
+        <div className="z-40 mb-6 w-full shadow-xl drop-shadow-xl ">
           <input
             type="hidden"
             name="access_key"
@@ -111,8 +111,8 @@ function Contact(): JSX.Element {
           </button>
         </div>
       </form>
-      <div className="relative h-40 w-80 border-2 border-gray-600 dark:border-gray-200">
-        CARD DE CONTATO COM EMAIL
+      <div className="relative flex  border-2 border-gray-600 px-10 dark:border-gray-200">
+        Contact me card on building.
       </div>
     </div>
   )
