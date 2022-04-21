@@ -56,7 +56,8 @@ const projects = [
 
   {
     name: 'My Portfolio',
-    description: 'This site, my first portfolio site.',
+    description:
+      'My first portfolio site. First of many. Centralizer of projects.',
     site: 'https://marcelosportfolio.vercel.app/',
     image: '/marcelosPortfolioImage.png',
     darkimage: true,
@@ -317,7 +318,7 @@ function CarrouselCards() {
                   target="_blank"
                   className="absolute z-10 h-full w-full rounded-lg backdrop-blur transition duration-300 ease-in-out hover:opacity-10 hover:backdrop-blur-0"
                 >
-                  <div className="absolute h-full w-full rounded-lg bg-gray-800 bg-opacity-30 p-4">
+                  <div className="absolute h-full w-full rounded-lg bg-gray-800 bg-opacity-30 p-8 sm:p-4">
                     <h2
                       className={`text-base leading-4 text-gray-900 lg:text-xl lg:leading-5 ${
                         project.darkimage ? 'text-gray-200' : 'text-gray-900'
@@ -327,7 +328,7 @@ function CarrouselCards() {
                     </h2>
                     <div className="flex h-full items-end pb-3">
                       <h3
-                        className={`text-xl font-semibold leading-5 text-gray-900 lg:text-2xl lg:leading-6 ${
+                        className={`text-lg font-semibold leading-5 text-gray-900 lg:text-2xl lg:leading-6 ${
                           project.darkimage ? 'text-gray-200' : 'text-gray-900'
                         }`}
                       >
@@ -378,7 +379,7 @@ function CarrouselCards() {
         </svg>
         <button
           aria-label="slide forward"
-          className="absolute right-0 z-30 h-20 w-20 rounded-full hover:bg-gray-400 hover:opacity-60 focus:outline-none sm:bg-gray-600 sm:opacity-40"
+          className="absolute right-0 z-30 h-20 w-20 cursor-pointer rounded-full  hover:bg-gray-400 hover:opacity-60 focus:outline-none sm:bg-gray-600 sm:opacity-40"
           id="next"
         ></button>
       </div>

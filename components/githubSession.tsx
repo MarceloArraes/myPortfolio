@@ -20,10 +20,10 @@ function GitHubSession() {
         <div className="px-6 py-4">
           <div className="mb-2 text-lg font-bold">GitHub</div>
           <p className="text-md text-base text-gray-700 dark:text-gray-200">
-            This is my github profile. Here i have been updating my portfolio
+            This is my github profile. Here I have been updating my portfolio
             and my studies. I try to make a commit everyday. And even as I've
-            not been sucessfull every week, this has been working for me as a
-            incentive.
+            failed some times this exercise still has worked for me as a
+            motivator.
           </p>
         </div>
         <div className="px-6 pt-2 pb-2">
