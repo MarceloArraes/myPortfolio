@@ -306,7 +306,7 @@ function CarrouselCards() {
               <div
                 key={index}
                 id="projectCard"
-                className="relative flex h-48 w-auto max-w-xs flex-shrink-0"
+                className="relative flex h-48 w-auto max-w-xs flex-shrink-0 duration-300 ease-in-out hover:scale-105  "
               >
                 <img
                   src={project.image}
