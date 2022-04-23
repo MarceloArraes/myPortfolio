@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 
 function ContactCard() {
   return (
-    <div className="w-96 cursor-pointer rounded-3xl bg-gray-800 p-8 shadow-md shadow-xl drop-shadow-xl transition duration-300 ease-in-out hover:translate-y-1.5 hover:scale-105 hover:drop-shadow-2xl">
-      <div className="-mb-20 -translate-y-1/2 transform">
+    <div className="w-full max-w-md cursor-pointer rounded-3xl bg-gray-800 p-8 shadow-md shadow-xl drop-shadow-xl transition duration-300 ease-in-out hover:translate-y-1.5 hover:scale-105 hover:drop-shadow-2xl">
+      <div className="-mb-20 min-w-min -translate-y-1/2 transform">
         <img
           src="/MarceloMuseu.png"
           alt="Kobe Bryant"
