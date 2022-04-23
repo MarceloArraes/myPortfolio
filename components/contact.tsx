@@ -5,7 +5,7 @@ function Contact(): JSX.Element {
     <div className="items-top flex w-full flex-row flex-wrap items-start justify-center space-y-20">
       <form
         action="https://api.web3forms.com/submit"
-        className="flex w-full max-w-md flex-col flex-wrap items-center justify-center px-5 dark:text-black"
+        className="my-2 flex w-full max-w-md flex-col flex-wrap items-center justify-center px-5 dark:text-black"
         method="POST"
       >
         <div className="mb-10 text-2xl dark:text-gray-100">
@@ -74,24 +74,27 @@ function Contact(): JSX.Element {
           <textarea
             name="message"
             className="form-control
-            m-0
-            block w-full
+          box-border block 
+          h-32
+          w-full
           rounded
           border
           border-solid
           border-gray-300
           bg-gray-200
-          bg-gray-200
           bg-clip-padding
           px-3
           py-1.5
-          text-base font-normal
+          text-base
+          font-normal
           text-gray-700 placeholder-gray-500 transition
           ease-in-out
           focus:border-blue-600
           focus:bg-white
           focus:text-gray-700
-          focus:outline-none dark:bg-gray-500 dark:text-gray-100 dark:placeholder-gray-200"
+          focus:outline-none dark:bg-gray-500 dark:text-gray-100 
+          dark:placeholder-gray-200 sm:h-80
+          "
             required
             placeholder="Enter Message"
           ></textarea>
