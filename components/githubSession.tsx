@@ -61,6 +61,7 @@ function GitHubSession() {
               #nulla dies sine linea.
             </span>
           </div>
+
           {commitedToday ? (
             <div className="flex px-6 pt-2 pb-2">
               <span className="mr-2 mb-2 inline-block flex rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
@@ -79,9 +80,6 @@ function GitHubSession() {
                   ></path>
                 </svg>
                 <span>Commit made today!</span>
-                <span>
-                  We have a Chain with {commitChainCounter.current} commits!
-                </span>
               </span>
             </div>
           ) : (
@@ -100,14 +98,17 @@ function GitHubSession() {
                   d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
                 ></path>
               </svg>
-              <p className="font-semibold text-amber-900">
+
+              <span className="font-semibold text-amber-900">
                 No Commit made today!(Yet!)
-              </p>
-              <span>
-                We have a Chain with {commitChainCounter.current} commits!
               </span>
             </div>
           )}
+          <div className="px-6 pt-2 pb-2">
+            <span className="mr-2 mb-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
+              #We have a Chain with {commitChainCounter.current} commits!
+            </span>
+          </div>
         </a>
       </div>
       <a
