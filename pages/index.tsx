@@ -9,6 +9,7 @@ import Backgroundgraph from '../components/graphback'
 import Title from '../components/title'
 import ProjectCards from '../components/projectCards'
 import GitHubSession from '../components/githubSession'
+import Footer from '../components/footer'
 
 const Home: NextPage = () => {
   const { theme, setTheme } = useTheme()
@@ -76,26 +77,7 @@ const Home: NextPage = () => {
           <Contact />
         </div>
 
-        <footer
-          id="footer"
-          className=" flex h-24 w-full items-center justify-center border-t py-10"
-        >
-          <p className="flex items-center justify-center gap-2">
-            Powered by{' '}
-            <Image
-              src="/doomguygif.gif"
-              alt="Doom Guy Face"
-              width={56}
-              height={56}
-            />
-            <Image
-              src="/giphy.gif"
-              alt="Doom Guy Face"
-              width={56}
-              height={56}
-            />
-          </p>
-        </footer>
+        <Footer />
       </div>
     </div>
   )
