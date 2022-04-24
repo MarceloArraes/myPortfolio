@@ -2,7 +2,7 @@ import ContactCard from '../components/contactCard'
 
 function Contact(): JSX.Element {
   return (
-    <div className="items-top flex w-full flex-row flex-wrap items-start justify-center space-y-20">
+    <div className="items-top flex w-full flex-row flex-wrap items-start justify-center space-y-20 divide-y-2">
       <form
         action="https://api.web3forms.com/submit"
         className="my-2 flex w-full max-w-md flex-col flex-wrap items-center justify-center px-5 dark:text-black"
@@ -172,6 +172,7 @@ function Contact(): JSX.Element {
       {/*       <div className="relative flex  border-2 border-gray-600 px-10 dark:border-gray-200">
         Contact me card on building.
       </div> */}
+
       <ContactCard />
     </div>
   )

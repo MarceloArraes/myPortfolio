@@ -1,17 +1,29 @@
+import { useRef } from 'react'
 import { useEffect, useState } from 'react'
 
 function GitHubSession() {
   const [commitedToday, setCommitedToday] = useState(false)
+  const commitChainCounter = useRef(26)
+  const [lastUpdateOnCommitChain, setLastUpdateOnCommitChain] = useState(0)
 
   useEffect(() => {
     fetch('https://api.github.com/users/marceloarraes/events/public')
       .then((res) => res.json())
       .then((data) => {
         const lastPush = new Date(data[0].created_at)
+        const beforeLastPush = new Date(data[1].created_at)
         //see if lastPush was in this day
         const now = new Date()
-        if (lastPush.getDate() === now.getDate()) {
+        if (beforeLastPush.getDate() !== now.getDate() - 1) {
+          commitChainCounter.current = 0
+        }
+        if (
+          lastPush.getDate() === now.getDate() &&
+          lastPush.getDate() !== lastUpdateOnCommitChain
+        ) {
           setCommitedToday(true)
+          commitChainCounter.current = commitChainCounter.current + 1
+          setLastUpdateOnCommitChain(lastPush.getTime())
         }
       })
   }, [])
@@ -67,6 +79,9 @@ function GitHubSession() {
                   ></path>
                 </svg>
                 <span>Commit made today!</span>
+                <span>
+                  We have a Chain with {commitChainCounter.current} commits!
+                </span>
               </span>
             </div>
           ) : (
@@ -88,6 +103,9 @@ function GitHubSession() {
               <p className="font-semibold text-amber-900">
                 No Commit made today!(Yet!)
               </p>
+              <span>
+                We have a Chain with {commitChainCounter.current} commits!
+              </span>
             </div>
           )}
         </a>
