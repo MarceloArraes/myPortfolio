@@ -31,7 +31,7 @@ function GitHubSession() {
           target="_blank"
         >
           <img
-            className="w-full"
+            className="w-full grayscale"
             src="https://avatars.githubusercontent.com/u/6797670?v=4"
             alt="Marcelo_profile"
           />

@@ -282,9 +282,9 @@ function Title() {
         </div>
         <p className="max-w-md p-10 font-serif text-xl font-normal sm:w-1/2">
           Hi, I'm Marcelo and I'm a web developer based in Brazil. Reactjs,
-          Nextjs, Typescript, Tailwindcss and Nodejs are my favorite
-          technologies. I'm always open to learn new technologies and I'm always
-          looking for new challenges and opportunities to try new things.
+          Nextjs, Typescript, Tailwindcss, and Nodejs are my favorite
+          technologies. I'm always open to learn new technologies and looking
+          for new challenges and opportunities to try new things.
         </p>
       </div>
     </main>

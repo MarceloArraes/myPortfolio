@@ -9,7 +9,7 @@ function Contact(): JSX.Element {
         method="POST"
       >
         <div className="mb-10 text-2xl dark:text-gray-100">
-          Email me with this:
+          Message me directly:
         </div>
         <div className="z-40 mb-6 w-full shadow-xl drop-shadow-xl ">
           <input
