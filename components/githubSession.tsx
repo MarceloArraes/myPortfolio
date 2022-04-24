@@ -14,7 +14,10 @@ function GitHubSession() {
         const beforeLastPush = new Date(data[1].created_at)
         //see if lastPush was in this day
         const now = new Date()
-        if (beforeLastPush.getDate() !== now.getDate() - 1) {
+        if (
+          beforeLastPush.getDate() !== now.getDate() - 1 &&
+          beforeLastPush.getDate() !== now.getDate()
+        ) {
           commitChainCounter.current = 0
         }
         if (
