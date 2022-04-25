@@ -56,8 +56,7 @@ const projects = [
 
   {
     name: 'My Portfolio',
-    description:
-      'My first portfolio site. First of many. Centralizer of projects.',
+    description: 'My first portfolio site. A center for my projects.',
     site: 'https://marcelosportfolio.vercel.app/',
     image: '/marcelosPortfolioImage.png',
     darkimage: true,
@@ -252,21 +251,126 @@ function CarrouselCards() {
     var next = document.getElementById('next')
     var prev = document.getElementById('prev')
     var projectCard = document.getElementById('projectCard')
+    var slider = document.getElementById('slider')
 
-    let defaultTransform = 0
+    var isDragging = false
+    var currentIndex = 0
+    var startPos = 0
+    var currentTranslate = 0
+    var prevTranslate = 0
+    var animationID = 0
+
+    var allCards = Array.from(document.querySelectorAll('#projectCard'))
+
+    allCards.forEach((card, index) => {
+      card.addEventListener('dragstart', (e) => {
+        e.preventDefault()
+      })
+      //touch events
+      card.addEventListener('touchstart', touchStart(index))
+      card.addEventListener('touchend', touchEnd(card))
+      card.addEventListener('touchmove', touchMove())
+
+      //mouse events
+      card.addEventListener('mousedown', touchStart(index))
+      card.addEventListener('mouseup', touchEnd(card))
+      card.addEventListener('mouseleave', touchEnd(card))
+      card.addEventListener('mousemove', touchMove())
+    })
+    window.oncontextmenu = function (e) {
+      e.preventDefault()
+      e.stopPropagation()
+      return false
+    }
+
+    function touchStart(index: number) {
+      return function (event: any) {
+        currentIndex = index
+        console.log('touchstart index: ', index)
+
+        console.log('touchstart')
+
+        startPos = event.type.includes('mouse')
+          ? event.clientX
+          : event.touches[0].clientX
+
+        isDragging = true
+
+        animationID = requestAnimationFrame(animation)
+        //slider?.classList.add('cursor-grabbing')
+      }
+    }
+
+    function touchEnd(card: Element) {
+      return function (event: any) {
+        if (isDragging) {
+          console.log('touchend')
+          isDragging = false
+          cancelAnimationFrame(animationID)
+          const movedBy = currentTranslate - prevTranslate
+
+          if (movedBy < -100 && currentIndex < allCards.length - 1) {
+            console.log('Entered moveby to right currentIndex', currentIndex)
+            currentIndex += 1
+          }
+          if (movedBy > 100 && currentIndex > 0) {
+            console.log('Entered moveby to left currentIndex', currentIndex)
+            currentIndex = currentIndex - 1
+          }
+          setPositionByIndex(card, movedBy)
+          //slider?.classList.remove('cursor-grabbing')
+        }
+      }
+    }
+
+    function touchMove() {
+      return function (event: any) {
+        const currentPosition = event.type.includes('mouse')
+          ? event.clientX
+          : event.touches[0].clientX
+        if (isDragging) {
+          currentTranslate = prevTranslate + currentPosition - startPos
+        }
+      }
+    }
+    function animation() {
+      if (isDragging) {
+        slider!.style.transform = `translateX(${currentTranslate}px)`
+        requestAnimationFrame(animation)
+      }
+    }
+
+    function setPositionByIndex(card: Element, movedBy: number) {
+      if (movedBy < 0) {
+        currentTranslate = prevTranslate - card.clientWidth - 16
+      } else if (movedBy > 0 && currentIndex === 0) {
+        currentTranslate = 0
+      } else {
+        currentTranslate = prevTranslate + card.clientWidth + 16
+      }
+
+      prevTranslate = currentTranslate
+      if (Math.abs(prevTranslate) >= slider!.scrollWidth / 1.2) {
+        currentTranslate = 0
+        prevTranslate = 0
+      }
+      slider!.style.transform = `translateX(${currentTranslate}px)`
+      //test if the card last card its on the left of the center of the screen
+    }
+
     function goNext() {
-      defaultTransform = defaultTransform - projectCard!.clientWidth - 16 //1Rem = 16px im using as space between cards.
+      prevTranslate = prevTranslate - projectCard!.clientWidth - 16 //1Rem = 16px im using as space between cards.
       var slider = document.getElementById('slider')
-      if (Math.abs(defaultTransform) >= slider!.scrollWidth / 1.2)
-        defaultTransform = 0
-      slider!.style.transform = 'translateX(' + defaultTransform + 'px)'
+      if (Math.abs(prevTranslate) >= slider!.scrollWidth / 1.2)
+        prevTranslate = 0
+      slider!.style.transform = 'translateX(' + prevTranslate + 'px)'
     }
     next!.addEventListener('click', goNext)
     function goPrev() {
       var slider = document.getElementById('slider')
-      if (Math.abs(defaultTransform) === 0) defaultTransform = 0
-      else defaultTransform = defaultTransform + projectCard!.clientWidth + 16
-      slider!.style.transform = 'translateX(' + defaultTransform + 'px)'
+      if (Math.abs(prevTranslate) === 0) prevTranslate = 0
+      else prevTranslate = prevTranslate + projectCard!.clientWidth + 16
+      slider!.style.transform = 'translateX(' + prevTranslate + 'px)'
     }
     prev!.addEventListener('click', goPrev)
   }, [])
