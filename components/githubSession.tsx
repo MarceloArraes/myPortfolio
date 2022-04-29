@@ -32,10 +32,6 @@ function GitHubSession() {
   }, [])
 
   useEffect(() => {
-    console.log('the second useEffect ')
-    console.log('commitChainCounter ', commitChainCounter)
-    console.log('lastUpdateOnCommitChain ', lastUpdateOnCommitChain)
-
     if (lastUpdateOnCommitChain) {
       const datas = async () => {
         const data = await supabase
@@ -152,11 +148,11 @@ function GitHubSession() {
               </span>
             </div>
           )}
-          <div className="px-6 pt-2 pb-2">
+          {/*           <div className="px-6 pt-2 pb-2">
             <span className="mr-2 mb-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
               #We have a Chain with {commitChainCounter} commits!
             </span>
-          </div>
+          </div> */}
         </a>
       </div>
       <a
