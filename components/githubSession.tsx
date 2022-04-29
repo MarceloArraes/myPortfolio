@@ -13,7 +13,6 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
 function GitHubSession() {
   const [commitedToday, setCommitedToday] = useState(false)
-  /* const commitChainCounter = useRef(26) */
   const [commitChainCounter, setCommitChainCounter] = useState(0)
   const [lastUpdateOnCommitChain, setLastUpdateOnCommitChain] = useState(0)
   const [updatedCommit, setUpdatedCommit] = useState(false)
@@ -23,7 +22,7 @@ function GitHubSession() {
     const datas = async () => {
       const data = await supabase.from('commitscounter').select('counter')
       if (data.body) {
-        console.log(data.body[0].counter)
+        console.log('data.body', data.body)
         setCommitChainCounter(data.body[0].counter)
         setLastUpdateOnCommitChain(Date.now())
         setUpdatedCommit(false)
@@ -33,14 +32,20 @@ function GitHubSession() {
   }, [])
 
   useEffect(() => {
-    const datas = async () => {
-      const data = await supabase
-        .from('commitscounter')
-        .update({ id: 1 })
-        .match({ counter: commitChainCounter })
-      console.log(data)
+    console.log('the second useEffect ')
+    console.log('commitChainCounter ', commitChainCounter)
+    console.log('lastUpdateOnCommitChain ', lastUpdateOnCommitChain)
+
+    if (lastUpdateOnCommitChain) {
+      const datas = async () => {
+        const data = await supabase
+          .from('commitscounter')
+          .update({ counter: commitChainCounter })
+          .match({ id: 1 })
+        console.log(data)
+      }
+      datas()
     }
-    datas()
   }, [updatedCommit])
 
   useEffect(() => {
@@ -55,7 +60,6 @@ function GitHubSession() {
           beforeLastPush.getDate() !== now.getDate() - 1 &&
           beforeLastPush.getDate() !== now.getDate()
         ) {
-          //commitChainCounter.current = 0
           setCommitChainCounter(0)
           setUpdatedCommit(true)
         }
@@ -64,9 +68,9 @@ function GitHubSession() {
           lastPush.getDate() !== lastUpdateOnCommitChain
         ) {
           setCommitedToday(true)
-          setUpdatedCommit(true)
-          //commitChainCounter.current = commitChainCounter.current + 1
+
           setCommitChainCounter(commitChainCounter + 1)
+          setUpdatedCommit(true)
           setLastUpdateOnCommitChain(lastPush.getTime())
         }
       })
