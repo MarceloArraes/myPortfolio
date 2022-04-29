@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 function ContactCard() {
   return (
-    <div className="w-[90%] max-w-sm cursor-pointer rounded-3xl bg-gray-800 py-8 shadow-md shadow-xl drop-shadow-xl transition duration-300 ease-in-out hover:translate-y-1.5 hover:scale-105 hover:drop-shadow-2xl">
+    <div className="w-[90%] max-w-sm cursor-pointer rounded-3xl bg-gray-800 py-8 shadow-md shadow-xl drop-shadow-xl transition duration-300 ease-in-out hover:translate-y-1.5  hover:drop-shadow-2xl">
       <div className="-mb-20 min-w-min -translate-y-1/2 transform">
         <img
           src="/MarceloMuseu.png"
@@ -32,21 +32,21 @@ function ContactCard() {
             <a target="_blank" href="https://wa.me/5585992700307" className="">
               <img
                 src="/whatsapp-svgrepo-com.svg"
-                className="w-7"
+                className="w-7 grayscale hover:scale-105 hover:grayscale-0"
                 alt="whatsapp icon"
               />
             </a>
             <a href="https://www.linkedin.com/in/marcelo-arraes" className="">
               <img
                 src="/linkedin-svgrepo-com.svg"
-                className="w-7"
+                className="w-7 grayscale hover:scale-105 hover:grayscale-0"
                 alt="linkedin icon"
               />
             </a>
             <a href="https://www.instagram.com/marcelo.arraess/" className="">
               <img
                 src="/instagram-svgrepo-com.svg"
-                className="w-7"
+                className="w-7 grayscale hover:scale-105 hover:grayscale-0"
                 alt="linkedin icon"
               />
             </a>

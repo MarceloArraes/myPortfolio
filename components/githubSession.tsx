@@ -1,10 +1,47 @@
 import { useRef } from 'react'
 import { useEffect, useState } from 'react'
+import { createClient } from '@supabase/supabase-js'
+
+const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY as string
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL as string
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+
+/* const { data, error } = await supabase
+  .from('commitscounter')
+  .update({ other_column: 'otherValue' })
+  .eq('some_column', 'someValue') */
 
 function GitHubSession() {
   const [commitedToday, setCommitedToday] = useState(false)
-  const commitChainCounter = useRef(26)
+  /* const commitChainCounter = useRef(26) */
+  const [commitChainCounter, setCommitChainCounter] = useState(0)
   const [lastUpdateOnCommitChain, setLastUpdateOnCommitChain] = useState(0)
+  const [updatedCommit, setUpdatedCommit] = useState(false)
+
+  useEffect(() => {
+    //update commitChainCounter using table with id 1
+    const datas = async () => {
+      const data = await supabase.from('commitscounter').select('counter')
+      if (data.body) {
+        console.log(data.body[0].counter)
+        setCommitChainCounter(data.body[0].counter)
+        setLastUpdateOnCommitChain(Date.now())
+        setUpdatedCommit(false)
+      }
+    }
+    datas()
+  }, [])
+
+  useEffect(() => {
+    const datas = async () => {
+      const data = await supabase
+        .from('commitscounter')
+        .update({ id: 1 })
+        .match({ counter: commitChainCounter })
+      console.log(data)
+    }
+    datas()
+  }, [updatedCommit])
 
   useEffect(() => {
     fetch('https://api.github.com/users/marceloarraes/events/public')
@@ -18,14 +55,18 @@ function GitHubSession() {
           beforeLastPush.getDate() !== now.getDate() - 1 &&
           beforeLastPush.getDate() !== now.getDate()
         ) {
-          commitChainCounter.current = 0
+          //commitChainCounter.current = 0
+          setCommitChainCounter(0)
+          setUpdatedCommit(true)
         }
         if (
           lastPush.getDate() === now.getDate() &&
           lastPush.getDate() !== lastUpdateOnCommitChain
         ) {
           setCommitedToday(true)
-          commitChainCounter.current = commitChainCounter.current + 1
+          setUpdatedCommit(true)
+          //commitChainCounter.current = commitChainCounter.current + 1
+          setCommitChainCounter(commitChainCounter + 1)
           setLastUpdateOnCommitChain(lastPush.getTime())
         }
       })
@@ -109,7 +150,7 @@ function GitHubSession() {
           )}
           <div className="px-6 pt-2 pb-2">
             <span className="mr-2 mb-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
-              #We have a Chain with {commitChainCounter.current} commits!
+              #We have a Chain with {commitChainCounter} commits!
             </span>
           </div>
         </a>
