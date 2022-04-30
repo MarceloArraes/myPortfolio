@@ -114,7 +114,7 @@ function GitHubSession() {
 
           {commitedToday ? (
             <div className="flex px-6 pt-2 pb-2">
-              <span className="mr-2 mb-2 inline-block flex rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
+              <span className="mr-2 mb-2 flex rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
                 <svg
                   className="h-6 w-6 stroke-green-700"
                   fill="none"

@@ -1,8 +1,7 @@
 import type { NextPage } from 'next'
 import { useTheme } from 'next-themes'
 import Head from 'next/head'
-import Image from 'next/image'
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import Contact from '../components/contact'
 import Header from '../components/header'
 import Backgroundgraph from '../components/graphback'
@@ -42,7 +41,7 @@ const Home: NextPage = () => {
             <input
               id="toogleA"
               type="checkbox"
-              className=" mb-1 h-4 w-10 appearance-none rounded-full bg-gray-400 shadow-inner shadow transition"
+              className=" mb-1 h-4 w-10 appearance-none rounded-full bg-gray-400 shadow transition"
               onClick={() => {
                 setTheme(theme === 'light' ? 'dark' : 'light')
               }}
