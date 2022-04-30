@@ -1,6 +1,8 @@
 import { useRef } from 'react'
 import { useEffect, useState } from 'react'
 import { createClient } from '@supabase/supabase-js'
+import negativeMockup from '../mockfiles/mocknegativegithubdata.json' assert { type: 'json' }
+import positiveMockup from '../mockfiles/mockpositivegithub.json' assert { type: 'json' }
 
 const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY as string
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL as string
@@ -15,23 +17,25 @@ function GitHubSession() {
   const [commitedToday, setCommitedToday] = useState(false)
   const [commitChainCounter, setCommitChainCounter] = useState(0)
   const [lastUpdateOnCommitChain, setLastUpdateOnCommitChain] = useState(0)
-  const [updatedCommit, setUpdatedCommit] = useState(false)
 
   useEffect(() => {
-    //update commitChainCounter using table with id 1
+    console.log('negativeMockup', negativeMockup)
+    console.log('positiveMockup', positiveMockup)
+
+    //update commitChainCounter using table row with id 1 on table commitscounter
     const datas = async () => {
       const data = await supabase.from('commitscounter').select('counter')
       if (data.body) {
         console.log('data.body', data.body)
         setCommitChainCounter(data.body[0].counter)
         setLastUpdateOnCommitChain(Date.now())
-        setUpdatedCommit(false)
       }
     }
     datas()
   }, [])
 
-  useEffect(() => {
+  /*   useEffect(() => {
+    //updating the table row with id 1 with the new commitChainCounter.
     if (lastUpdateOnCommitChain) {
       const datas = async () => {
         const data = await supabase
@@ -42,31 +46,33 @@ function GitHubSession() {
       }
       datas()
     }
-  }, [updatedCommit])
+  }, [commitChainCounter]) */
 
   useEffect(() => {
     fetch('https://api.github.com/users/marceloarraes/events/public')
       .then((res) => res.json())
       .then((data) => {
+        console.log('data', data)
+        //last push made on the list.
         const lastPush = new Date(data[0].created_at)
+        //the commit made before the last push.
         const beforeLastPush = new Date(data[1].created_at)
-        //see if lastPush was in this day
+        //now is today.
         const now = new Date()
         if (
           beforeLastPush.getDate() !== now.getDate() - 1 &&
           beforeLastPush.getDate() !== now.getDate()
         ) {
-          setCommitChainCounter(0)
-          setUpdatedCommit(true)
+          //There was no commits today or yesterday.
+          console.log('no commits today or yesterday')
         }
         if (
           lastPush.getDate() === now.getDate() &&
           lastPush.getDate() !== lastUpdateOnCommitChain
         ) {
+          //this just update if the last push was made today and it update just once a day.
           setCommitedToday(true)
-
           setCommitChainCounter(commitChainCounter + 1)
-          setUpdatedCommit(true)
           setLastUpdateOnCommitChain(lastPush.getTime())
         }
       })

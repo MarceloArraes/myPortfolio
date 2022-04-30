@@ -1,0 +1,1044 @@
+[{
+    "id": "21550386392",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 487092700,
+      "name": "MarceloArraes/ReactNativeExpoTest",
+      "url": "https://api.github.com/repos/MarceloArraes/ReactNativeExpoTest"
+    },
+    "payload": {
+      "ref": "main",
+      "ref_type": "branch",
+      "master_branch": "main",
+      "description": "First react native prototype for testing.",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2022-04-30T20:25:00Z"
+  },
+  {
+    "id": "21549881122",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 487092700,
+      "name": "MarceloArraes/ReactNativeExpoTest",
+      "url": "https://api.github.com/repos/MarceloArraes/ReactNativeExpoTest"
+    },
+    "payload": {
+      "ref": null,
+      "ref_type": "repository",
+      "master_branch": "master",
+      "description": "First react native prototype for testing.",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2022-04-29T19:46:38Z"
+  },
+  {
+    "id": "21542609518",
+    "type": "PushEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 475612118,
+      "name": "MarceloArraes/myPortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/myPortfolio"
+    },
+    "payload": {
+      "push_id": 9755793002,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "89b0c2b216f4e6c503a4ae3c637e79b2c73a30c7",
+      "before": "19bb8c5daa8cd595f86d0e2249ee786d01873a10",
+      "commits": [{
+        "sha": "89b0c2b216f4e6c503a4ae3c637e79b2c73a30c7",
+        "author": {
+          "email": "marcelo.arraes@gmail.com",
+          "name": "marcelo"
+        },
+        "message": "improv: take out the commit counter for now and fixed the hover behavior of the contact card.",
+        "distinct": true,
+        "url": "https://api.github.com/repos/MarceloArraes/myPortfolio/commits/89b0c2b216f4e6c503a4ae3c637e79b2c73a30c7"
+      }]
+    },
+    "public": true,
+    "created_at": "2022-04-29T13:16:27Z"
+  },
+  {
+    "id": "21542425361",
+    "type": "PushEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 475612118,
+      "name": "MarceloArraes/myPortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/myPortfolio"
+    },
+    "payload": {
+      "push_id": 9755707777,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "19bb8c5daa8cd595f86d0e2249ee786d01873a10",
+      "before": "4a29ad051c72a93d5957363450335705dea3ccb2",
+      "commits": [{
+        "sha": "19bb8c5daa8cd595f86d0e2249ee786d01873a10",
+        "author": {
+          "email": "marcelo.arraes@gmail.com",
+          "name": "marcelo"
+        },
+        "message": "fix: now the update is right, the match and update field were inverted.",
+        "distinct": true,
+        "url": "https://api.github.com/repos/MarceloArraes/myPortfolio/commits/19bb8c5daa8cd595f86d0e2249ee786d01873a10"
+      }]
+    },
+    "public": true,
+    "created_at": "2022-04-29T13:08:03Z"
+  },
+  {
+    "id": "21542195844",
+    "type": "PushEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 475612118,
+      "name": "MarceloArraes/myPortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/myPortfolio"
+    },
+    "payload": {
+      "push_id": 9755599170,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "4a29ad051c72a93d5957363450335705dea3ccb2",
+      "before": "bd0fd9c3b03d3313012c45cef640faedbeb53fcd",
+      "commits": [{
+        "sha": "4a29ad051c72a93d5957363450335705dea3ccb2",
+        "author": {
+          "email": "marcelo.arraes@gmail.com",
+          "name": "marcelo"
+        },
+        "message": "fix: trying to fix the commit counter.",
+        "distinct": true,
+        "url": "https://api.github.com/repos/MarceloArraes/myPortfolio/commits/4a29ad051c72a93d5957363450335705dea3ccb2"
+      }]
+    },
+    "public": true,
+    "created_at": "2022-04-29T12:57:37Z"
+  },
+  {
+    "id": "21522481338",
+    "type": "PushEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 485818477,
+      "name": "MarceloArraes/retroWavePortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/retroWavePortfolio"
+    },
+    "payload": {
+      "push_id": 9746162132,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "825cedca787ce6ac470b04e5f23ccaa54eada365",
+      "before": "f3b1408c4e889278e689b7355e843442d97008bd",
+      "commits": [{
+        "sha": "825cedca787ce6ac470b04e5f23ccaa54eada365",
+        "author": {
+          "email": "marcelo.arraes@gmail.com",
+          "name": "marcelo"
+        },
+        "message": "improv: minor improvements on display of mensages and fixed the place of date.",
+        "distinct": true,
+        "url": "https://api.github.com/repos/MarceloArraes/retroWavePortfolio/commits/825cedca787ce6ac470b04e5f23ccaa54eada365"
+      }]
+    },
+    "public": true,
+    "created_at": "2022-04-28T15:17:45Z"
+  },
+  {
+    "id": "21503443540",
+    "type": "PushEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 485818477,
+      "name": "MarceloArraes/retroWavePortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/retroWavePortfolio"
+    },
+    "payload": {
+      "push_id": 9736779640,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "f3b1408c4e889278e689b7355e843442d97008bd",
+      "before": "4ae9d057b42c9a6f0570e0bcaebff38884c46ea3",
+      "commits": [{
+        "sha": "f3b1408c4e889278e689b7355e843442d97008bd",
+        "author": {
+          "email": "marcelo.arraes@gmail.com",
+          "name": "marcelo"
+        },
+        "message": "improv: a litle more work on the sizes of the component writing wall.",
+        "distinct": true,
+        "url": "https://api.github.com/repos/MarceloArraes/retroWavePortfolio/commits/f3b1408c4e889278e689b7355e843442d97008bd"
+      }]
+    },
+    "public": true,
+    "created_at": "2022-04-27T17:51:30Z"
+  },
+  {
+    "id": "21503244021",
+    "type": "PushEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 485818477,
+      "name": "MarceloArraes/retroWavePortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/retroWavePortfolio"
+    },
+    "payload": {
+      "push_id": 9736681570,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "4ae9d057b42c9a6f0570e0bcaebff38884c46ea3",
+      "before": "373d1bec0aa4c996997b65d3c8b7eee461b89b2c",
+      "commits": [{
+        "sha": "4ae9d057b42c9a6f0570e0bcaebff38884c46ea3",
+        "author": {
+          "email": "marcelo.arraes@gmail.com",
+          "name": "marcelo"
+        },
+        "message": "feat: positioned the writing wall on the center and fixed some organization inside message, and fixed the timestamp",
+        "distinct": true,
+        "url": "https://api.github.com/repos/MarceloArraes/retroWavePortfolio/commits/4ae9d057b42c9a6f0570e0bcaebff38884c46ea3"
+      }]
+    },
+    "public": true,
+    "created_at": "2022-04-27T17:39:15Z"
+  },
+  {
+    "id": "21484170629",
+    "type": "PushEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 485818477,
+      "name": "MarceloArraes/retroWavePortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/retroWavePortfolio"
+    },
+    "payload": {
+      "push_id": 9727359443,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "373d1bec0aa4c996997b65d3c8b7eee461b89b2c",
+      "before": "ded85f90c6f7776281004ff60aaa81c4bf7b86fa",
+      "commits": [{
+        "sha": "373d1bec0aa4c996997b65d3c8b7eee461b89b2c",
+        "author": {
+          "email": "marcelo.arraes@gmail.com",
+          "name": "marcelo"
+        },
+        "message": "improv: add a delete icon, limited the size and add a scroll. A lot to improv but on the right track.",
+        "distinct": true,
+        "url": "https://api.github.com/repos/MarceloArraes/retroWavePortfolio/commits/373d1bec0aa4c996997b65d3c8b7eee461b89b2c"
+      }]
+    },
+    "public": true,
+    "created_at": "2022-04-26T21:00:29Z"
+  },
+  {
+    "id": "21483646862",
+    "type": "PushEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 485818477,
+      "name": "MarceloArraes/retroWavePortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/retroWavePortfolio"
+    },
+    "payload": {
+      "push_id": 9727100903,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "ded85f90c6f7776281004ff60aaa81c4bf7b86fa",
+      "before": "f30fb564be658b97cb05b89076554c12d9b30c1c",
+      "commits": [{
+        "sha": "ded85f90c6f7776281004ff60aaa81c4bf7b86fa",
+        "author": {
+          "email": "marcelo.arraes@gmail.com",
+          "name": "marcelo"
+        },
+        "message": "feat: add chat.js and adapted to typescript using a database on supabase. will make a Wall of anonimous messages.",
+        "distinct": true,
+        "url": "https://api.github.com/repos/MarceloArraes/retroWavePortfolio/commits/ded85f90c6f7776281004ff60aaa81c4bf7b86fa"
+      }]
+    },
+    "public": true,
+    "created_at": "2022-04-26T20:25:27Z"
+  },
+  {
+    "id": "21476890819",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 485818477,
+      "name": "MarceloArraes/retroWavePortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/retroWavePortfolio"
+    },
+    "payload": {
+      "ref": "main",
+      "ref_type": "branch",
+      "master_branch": "main",
+      "description": "My RetroWave Portfolio",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2022-04-26T14:21:16Z"
+  },
+  {
+    "id": "21476875540",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 485818477,
+      "name": "MarceloArraes/retroWavePortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/retroWavePortfolio"
+    },
+    "payload": {
+      "ref": null,
+      "ref_type": "repository",
+      "master_branch": "master",
+      "description": "My RetroWave Portfolio",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2022-04-26T14:20:37Z"
+  },
+  {
+    "id": "21459813179",
+    "type": "PushEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 475612118,
+      "name": "MarceloArraes/myPortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/myPortfolio"
+    },
+    "payload": {
+      "push_id": 9715455083,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "bd0fd9c3b03d3313012c45cef640faedbeb53fcd",
+      "before": "5654d25a9862261786bf1fd68fc77bba0a8c78da",
+      "commits": [{
+        "sha": "bd0fd9c3b03d3313012c45cef640faedbeb53fcd",
+        "author": {
+          "email": "marcelo.arraes@gmail.com",
+          "name": "marcelo"
+        },
+        "message": "feat: now the Carrousel is a dragable swiper component.",
+        "distinct": true,
+        "url": "https://api.github.com/repos/MarceloArraes/myPortfolio/commits/bd0fd9c3b03d3313012c45cef640faedbeb53fcd"
+      }]
+    },
+    "public": true,
+    "created_at": "2022-04-25T19:03:24Z"
+  },
+  {
+    "id": "21439005145",
+    "type": "PushEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 475612118,
+      "name": "MarceloArraes/myPortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/myPortfolio"
+    },
+    "payload": {
+      "push_id": 9704665742,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "5654d25a9862261786bf1fd68fc77bba0a8c78da",
+      "before": "065a6d1bb5a0f554f88b99fa73f33a2d86db6c4f",
+      "commits": [{
+        "sha": "5654d25a9862261786bf1fd68fc77bba0a8c78da",
+        "author": {
+          "email": "marcelo.arraes@gmail.com",
+          "name": "marcelo"
+        },
+        "message": "feat: some minor thing added to the footer like location and justify-between.",
+        "distinct": true,
+        "url": "https://api.github.com/repos/MarceloArraes/myPortfolio/commits/5654d25a9862261786bf1fd68fc77bba0a8c78da"
+      }]
+    },
+    "public": true,
+    "created_at": "2022-04-24T12:51:59Z"
+  },
+  {
+    "id": "21438854098",
+    "type": "PushEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 475612118,
+      "name": "MarceloArraes/myPortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/myPortfolio"
+    },
+    "payload": {
+      "push_id": 9704564727,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "065a6d1bb5a0f554f88b99fa73f33a2d86db6c4f",
+      "before": "cb7a3cd0b8af1b1ca18f3755d74674735c9f8de0",
+      "commits": [{
+        "sha": "065a6d1bb5a0f554f88b99fa73f33a2d86db6c4f",
+        "author": {
+          "email": "marcelo.arraes@gmail.com",
+          "name": "marcelo"
+        },
+        "message": "fix: fixed the counter that was going to zero when there was more than one commit on the same day.",
+        "distinct": true,
+        "url": "https://api.github.com/repos/MarceloArraes/myPortfolio/commits/065a6d1bb5a0f554f88b99fa73f33a2d86db6c4f"
+      }]
+    },
+    "public": true,
+    "created_at": "2022-04-24T12:25:48Z"
+  },
+  {
+    "id": "21438838037",
+    "type": "PushEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 475612118,
+      "name": "MarceloArraes/myPortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/myPortfolio"
+    },
+    "payload": {
+      "push_id": 9704554132,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "cb7a3cd0b8af1b1ca18f3755d74674735c9f8de0",
+      "before": "f9142ec3bfd81761eafed96d9d81a837d7e1ca2b",
+      "commits": [{
+        "sha": "cb7a3cd0b8af1b1ca18f3755d74674735c9f8de0",
+        "author": {
+          "email": "marcelo.arraes@gmail.com",
+          "name": "marcelo"
+        },
+        "message": "improv: showing the commit counter on the githubcard",
+        "distinct": true,
+        "url": "https://api.github.com/repos/MarceloArraes/myPortfolio/commits/cb7a3cd0b8af1b1ca18f3755d74674735c9f8de0"
+      }]
+    },
+    "public": true,
+    "created_at": "2022-04-24T12:22:55Z"
+  },
+  {
+    "id": "21438808782",
+    "type": "PushEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 475612118,
+      "name": "MarceloArraes/myPortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/myPortfolio"
+    },
+    "payload": {
+      "push_id": 9704534307,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "f9142ec3bfd81761eafed96d9d81a837d7e1ca2b",
+      "before": "db7da1b2baab8ee3bbf2c8021cfbdb939bd4bdf7",
+      "commits": [{
+        "sha": "f9142ec3bfd81761eafed96d9d81a837d7e1ca2b",
+        "author": {
+          "email": "marcelo.arraes@gmail.com",
+          "name": "marcelo"
+        },
+        "message": "feat: chain counter on github profile",
+        "distinct": true,
+        "url": "https://api.github.com/repos/MarceloArraes/myPortfolio/commits/f9142ec3bfd81761eafed96d9d81a837d7e1ca2b"
+      }]
+    },
+    "public": true,
+    "created_at": "2022-04-24T12:17:39Z"
+  },
+  {
+    "id": "21435637393",
+    "type": "PushEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 475612118,
+      "name": "MarceloArraes/myPortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/myPortfolio"
+    },
+    "payload": {
+      "push_id": 9702475694,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "db7da1b2baab8ee3bbf2c8021cfbdb939bd4bdf7",
+      "before": "a1490bed559075bca3ecbe1ada00a536983dfa05",
+      "commits": [{
+        "sha": "db7da1b2baab8ee3bbf2c8021cfbdb939bd4bdf7",
+        "author": {
+          "email": "marcelo.arraes@gmail.com",
+          "name": "marcelo"
+        },
+        "message": "feat: finished contact with add of whatsapp, linkedin and instagram. also i made images greyscale.",
+        "distinct": true,
+        "url": "https://api.github.com/repos/MarceloArraes/myPortfolio/commits/db7da1b2baab8ee3bbf2c8021cfbdb939bd4bdf7"
+      }]
+    },
+    "public": true,
+    "created_at": "2022-04-24T00:32:24Z"
+  },
+  {
+    "id": "21435472437",
+    "type": "PushEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 475612118,
+      "name": "MarceloArraes/myPortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/myPortfolio"
+    },
+    "payload": {
+      "push_id": 9702367261,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "a1490bed559075bca3ecbe1ada00a536983dfa05",
+      "before": "5ef5fe3d8da3c5924b6644b1417bf6ca0458ac78",
+      "commits": [{
+        "sha": "a1490bed559075bca3ecbe1ada00a536983dfa05",
+        "author": {
+          "email": "marcelo.arraes@gmail.com",
+          "name": "marcelo"
+        },
+        "message": "improv: started to add some contacts and fixing some responsiveness issues.",
+        "distinct": true,
+        "url": "https://api.github.com/repos/MarceloArraes/myPortfolio/commits/a1490bed559075bca3ecbe1ada00a536983dfa05"
+      }]
+    },
+    "public": true,
+    "created_at": "2022-04-23T23:51:11Z"
+  },
+  {
+    "id": "21435278937",
+    "type": "PushEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 475612118,
+      "name": "MarceloArraes/myPortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/myPortfolio"
+    },
+    "payload": {
+      "push_id": 9702231255,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "5ef5fe3d8da3c5924b6644b1417bf6ca0458ac78",
+      "before": "1c0a3c00fe53633cbc72e8bc28fb84e58ab1b741",
+      "commits": [{
+        "sha": "5ef5fe3d8da3c5924b6644b1417bf6ca0458ac78",
+        "author": {
+          "email": "marcelo.arraes@gmail.com",
+          "name": "marcelo"
+        },
+        "message": "improv: fixing the responsiveness on contact.",
+        "distinct": true,
+        "url": "https://api.github.com/repos/MarceloArraes/myPortfolio/commits/5ef5fe3d8da3c5924b6644b1417bf6ca0458ac78"
+      }]
+    },
+    "public": true,
+    "created_at": "2022-04-23T22:58:10Z"
+  },
+  {
+    "id": "21425310073",
+    "type": "PushEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 475612118,
+      "name": "MarceloArraes/myPortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/myPortfolio"
+    },
+    "payload": {
+      "push_id": 9696722776,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "1c0a3c00fe53633cbc72e8bc28fb84e58ab1b741",
+      "before": "2b1fc23be0072b4b580f10f26ffa4114ca3f10ce",
+      "commits": [{
+        "sha": "1c0a3c00fe53633cbc72e8bc28fb84e58ab1b741",
+        "author": {
+          "email": "marcelo.arraes@gmail.com",
+          "name": "marcelo"
+        },
+        "message": "feat: add a hasCommitedToday tag on github. Add my github contributions. Changed button on contact",
+        "distinct": true,
+        "url": "https://api.github.com/repos/MarceloArraes/myPortfolio/commits/1c0a3c00fe53633cbc72e8bc28fb84e58ab1b741"
+      }]
+    },
+    "public": true,
+    "created_at": "2022-04-22T20:49:15Z"
+  },
+  {
+    "id": "21423639154",
+    "type": "PushEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 475612118,
+      "name": "MarceloArraes/myPortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/myPortfolio"
+    },
+    "payload": {
+      "push_id": 9695881255,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "2b1fc23be0072b4b580f10f26ffa4114ca3f10ce",
+      "before": "87d178dde2757d08df4631219d192d9838599cd8",
+      "commits": [{
+        "sha": "2b1fc23be0072b4b580f10f26ffa4114ca3f10ce",
+        "author": {
+          "email": "marcelo.arraes@gmail.com",
+          "name": "marcelo"
+        },
+        "message": "feat: add kobe card on contact and add a scale-105 on project cards and github.",
+        "distinct": true,
+        "url": "https://api.github.com/repos/MarceloArraes/myPortfolio/commits/2b1fc23be0072b4b580f10f26ffa4114ca3f10ce"
+      }]
+    },
+    "public": true,
+    "created_at": "2022-04-22T18:38:30Z"
+  },
+  {
+    "id": "21407305221",
+    "type": "PushEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 475612118,
+      "name": "MarceloArraes/myPortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/myPortfolio"
+    },
+    "payload": {
+      "push_id": 9687917880,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "87d178dde2757d08df4631219d192d9838599cd8",
+      "before": "93401ad785e38ffe02ed0777131e6c834d62f168",
+      "commits": [{
+        "sha": "87d178dde2757d08df4631219d192d9838599cd8",
+        "author": {
+          "email": "marcelo.arraes@gmail.com",
+          "name": "marcelo"
+        },
+        "message": "improv: minor changes in text",
+        "distinct": true,
+        "url": "https://api.github.com/repos/MarceloArraes/myPortfolio/commits/87d178dde2757d08df4631219d192d9838599cd8"
+      }]
+    },
+    "public": true,
+    "created_at": "2022-04-21T23:06:08Z"
+  },
+  {
+    "id": "21405599921",
+    "type": "PushEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 475612118,
+      "name": "MarceloArraes/myPortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/myPortfolio"
+    },
+    "payload": {
+      "push_id": 9687044892,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "93401ad785e38ffe02ed0777131e6c834d62f168",
+      "before": "5a0793744d3d4cdd2d83a1aca5a22dae6476a9c5",
+      "commits": [{
+        "sha": "93401ad785e38ffe02ed0777131e6c834d62f168",
+        "author": {
+          "email": "marcelo.arraes@gmail.com",
+          "name": "marcelo"
+        },
+        "message": "feat: fixed responsive error on title text. Modularized github session.",
+        "distinct": true,
+        "url": "https://api.github.com/repos/MarceloArraes/myPortfolio/commits/93401ad785e38ffe02ed0777131e6c834d62f168"
+      }]
+    },
+    "public": true,
+    "created_at": "2022-04-21T20:39:42Z"
+  },
+  {
+    "id": "21382862014",
+    "type": "PushEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 475612118,
+      "name": "MarceloArraes/myPortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/myPortfolio"
+    },
+    "payload": {
+      "push_id": 9675810789,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "5a0793744d3d4cdd2d83a1aca5a22dae6476a9c5",
+      "before": "7d77f9ace9fc86f9ec992f8cd6ead633fe104b73",
+      "commits": [{
+        "sha": "5a0793744d3d4cdd2d83a1aca5a22dae6476a9c5",
+        "author": {
+          "email": "marcelo.arraes@gmail.com",
+          "name": "marcelo"
+        },
+        "message": "feat: touches on carrousel, changing color of text based on background been dark or light. Add a initial card on contact",
+        "distinct": true,
+        "url": "https://api.github.com/repos/MarceloArraes/myPortfolio/commits/5a0793744d3d4cdd2d83a1aca5a22dae6476a9c5"
+      }]
+    },
+    "public": true,
+    "created_at": "2022-04-20T18:56:37Z"
+  },
+  {
+    "id": "21363392237",
+    "type": "PushEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 475612118,
+      "name": "MarceloArraes/myPortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/myPortfolio"
+    },
+    "payload": {
+      "push_id": 9666165537,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "7d77f9ace9fc86f9ec992f8cd6ead633fe104b73",
+      "before": "cc2fca3c89973e0525519d0ee7ec50806522a3ac",
+      "commits": [{
+        "sha": "7d77f9ace9fc86f9ec992f8cd6ead633fe104b73",
+        "author": {
+          "email": "marcelo.arraes@gmail.com",
+          "name": "marcelo"
+        },
+        "message": "improv: improved the looks of the cv buttons on small screen",
+        "distinct": true,
+        "url": "https://api.github.com/repos/MarceloArraes/myPortfolio/commits/7d77f9ace9fc86f9ec992f8cd6ead633fe104b73"
+      }]
+    },
+    "public": true,
+    "created_at": "2022-04-19T21:26:43Z"
+  },
+  {
+    "id": "21363215501",
+    "type": "PushEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 475612118,
+      "name": "MarceloArraes/myPortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/myPortfolio"
+    },
+    "payload": {
+      "push_id": 9666077848,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "cc2fca3c89973e0525519d0ee7ec50806522a3ac",
+      "before": "9f9c92b94d02468f0c375ed303072db0d0c4b548",
+      "commits": [{
+        "sha": "cc2fca3c89973e0525519d0ee7ec50806522a3ac",
+        "author": {
+          "email": "marcelo.arraes@gmail.com",
+          "name": "marcelo"
+        },
+        "message": "improv: Improved a lot the carousel and add all the projects. Just minor fixes here to make.",
+        "distinct": true,
+        "url": "https://api.github.com/repos/MarceloArraes/myPortfolio/commits/cc2fca3c89973e0525519d0ee7ec50806522a3ac"
+      }]
+    },
+    "public": true,
+    "created_at": "2022-04-19T21:14:04Z"
+  },
+  {
+    "id": "21359518738",
+    "type": "WatchEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 154170980,
+      "name": "frontend-ce/meetups",
+      "url": "https://api.github.com/repos/frontend-ce/meetups"
+    },
+    "payload": {
+      "action": "started"
+    },
+    "public": true,
+    "created_at": "2022-04-19T17:18:45Z",
+    "org": {
+      "id": 44369466,
+      "login": "frontend-ce",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/frontend-ce",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44369466?"
+    }
+  },
+  {
+    "id": "21345458467",
+    "type": "PushEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 475612118,
+      "name": "MarceloArraes/myPortfolio",
+      "url": "https://api.github.com/repos/MarceloArraes/myPortfolio"
+    },
+    "payload": {
+      "push_id": 9657371681,
+      "size": 1,
+      "distinct_size": 1,
+      "ref": "refs/heads/main",
+      "head": "9f9c92b94d02468f0c375ed303072db0d0c4b548",
+      "before": "d7b1a08f691df65f4d81e2fc0c8094483155f28c",
+      "commits": [{
+        "sha": "9f9c92b94d02468f0c375ed303072db0d0c4b548",
+        "author": {
+          "email": "marcelo.arraes@gmail.com",
+          "name": "marcelo"
+        },
+        "message": "improv: get something working on the carousel. Seems a litle slow with the blur and opacity efects.",
+        "distinct": true,
+        "url": "https://api.github.com/repos/MarceloArraes/myPortfolio/commits/9f9c92b94d02468f0c375ed303072db0d0c4b548"
+      }]
+    },
+    "public": true,
+    "created_at": "2022-04-19T03:32:15Z"
+  },
+  {
+    "id": "21344701920",
+    "type": "WatchEvent",
+    "actor": {
+      "id": 6797670,
+      "login": "MarceloArraes",
+      "display_login": "MarceloArraes",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MarceloArraes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6797670?"
+    },
+    "repo": {
+      "id": 482230065,
+      "name": "paulolimoeirodonorte/meuprimeirosite",
+      "url": "https://api.github.com/repos/paulolimoeirodonorte/meuprimeirosite"
+    },
+    "payload": {
+      "action": "started"
+    },
+    "public": true,
+    "created_at": "2022-04-19T02:09:52Z"
+  }
+]
