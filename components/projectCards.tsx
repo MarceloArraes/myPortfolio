@@ -41,6 +41,19 @@ const projects = [
     tecIcon3: '/muiicon.png',
   },
   {
+    name: 'Web Widget',
+    description: 'A web widget for the web',
+    site: 'https://vercel.com/marceloarraes/web-widget',
+    image: '/webwidgetbg.png',
+    darkimage: true,
+    siteIcon: '/webwidgetIcon.png',
+
+    tecDescription: 'Vite, Typescript, Tailwindcss',
+    tecIcon1: '/vitelogo.svg',
+    tecIcon2: '/typescripticon.png',
+    tecIcon3: '/tailwindcssLogo.png',
+  },
+  {
     name: 'Bem Paggo Form',
     description: 'A front-end test for Bem Paggo company',
     site: 'https://bem-pago-form.vercel.app/',
@@ -403,14 +416,14 @@ function CarrouselCards() {
         <div className="h-full w-full overflow-hidden rounded-lg">
           <div
             id="slider"
-            className="flex h-full flex-row items-center justify-start space-x-4 transition duration-700 ease-out"
+            className="flex h-full max-w-xs flex-row items-center justify-start space-x-4 transition duration-700 ease-out"
           >
             {/* map projects here */}
             {projects.map((project, index) => (
               <div
                 key={index}
                 id="projectCard"
-                className="relative flex h-48 w-auto max-w-xs flex-shrink-0 duration-300 ease-in-out hover:scale-105  "
+                className="relative flex h-48 w-64 sm:w-72 max-w-xs flex-shrink-0 duration-300 ease-in-out hover:scale-105  "
               >
                 <img
                   src={project.image}
@@ -422,7 +435,7 @@ function CarrouselCards() {
                   target="_blank"
                   className="absolute z-10 h-full w-full rounded-lg backdrop-blur transition duration-300 ease-in-out hover:opacity-10 hover:backdrop-blur-0"
                 >
-                  <div className="absolute h-full w-full rounded-lg bg-gray-800 bg-opacity-30 p-8 sm:p-4">
+                  <div className="absolute h-full w-full rounded-lg bg-gray-800 bg-opacity-30 p-6 sm:p-4">
                     <h2
                       className={`text-base leading-4 text-gray-900 lg:text-xl lg:leading-5 ${
                         project.darkimage ? 'text-gray-200' : 'text-gray-900'

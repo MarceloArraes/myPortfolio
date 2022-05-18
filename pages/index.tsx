@@ -29,7 +29,7 @@ const Home: NextPage = () => {
         id="nokey"
         className="z-index-10 absolute top-0  w-full dark:bg-transparent"
       >
-        Your Browser Don't Support Canvas, Please Download Chrome ^_^``
+        Your Browser Don't Support Canvas, Please Download Brave ^_^``
       </canvas>
       <Header />
       <div className="space-y-40">
