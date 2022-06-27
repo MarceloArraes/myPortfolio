@@ -16,6 +16,19 @@ const projects = [
     tecIcon3: '/nodejsicon.png',
   },
   {
+    name: 'Event Platform',
+    description: 'A platform to display a online event',
+    site: 'https://event-platform-etdp6plb8-marceloarraes.vercel.app/',
+    image: '/eventplatform.png',
+    darkimage: false,
+    siteIcon: '/adamintericon.svg',
+
+    tecDescription: 'Reactjs, Vite, Graphql, vime, tailwindcss',
+    tecIcon1: '/reacticon.png',
+    tecIcon2: '/typescripticon.png',
+    tecIcon3: '/tailwindcssLogo.png',
+  },
+  {
     name: 'GeoCapital stock Tracker',
     description: 'A tracker for GeoCapital a technical test',
     site: 'https://geo-capital-online-portfolio.vercel.app/',
