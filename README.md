@@ -1,5 +1,5 @@
-# My personal porfolio with Nextjs+Tailwind
+# My personal responsive porfolio with Nextjs+Tailwind
 
-<img src="./profilevideo.gif" alt="My Project GIF" width="500" height="600">
+![](https://github.com/MarceloArraes/myPortfolio/blob/main/public/profilevideo.gif)
 
 Always evolving and adding some new projects that i'm making. 
