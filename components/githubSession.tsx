@@ -4,9 +4,9 @@ import { createClient } from '@supabase/supabase-js'
 import negativeMockup from '../mockfiles/mocknegativegithubdata.json' assert { type: 'json' }
 import positiveMockup from '../mockfiles/mockpositivegithub.json' assert { type: 'json' }
 
-const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY as string
+/* const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY as string
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL as string
-const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY) */
 
 /* const { data, error } = await supabase
   .from('commitscounter')
@@ -18,7 +18,7 @@ function GitHubSession() {
   const [commitChainCounter, setCommitChainCounter] = useState(0)
   const [lastUpdateOnCommitChain, setLastUpdateOnCommitChain] = useState(0)
 
-  useEffect(() => {
+/*   useEffect(() => {
     console.log('negativeMockup', negativeMockup)
     console.log('positiveMockup', positiveMockup)
 
@@ -32,7 +32,7 @@ function GitHubSession() {
       }
     }
     datas()
-  }, [])
+  }, []) */
 
   /*   useEffect(() => {
     //updating the table row with id 1 with the new commitChainCounter.

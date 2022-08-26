@@ -3,6 +3,19 @@ import { useEffect } from 'react'
 //array of projects
 const projects = [
   {
+    name: 'Nasa Project',
+    description: 'Space mission scheduler',
+    site: 'https://gold-expensive-bream.cyclic.app/',
+    image: '/nasaProjectBack.png',
+    darkimage: true,
+    siteIcon: '/adamintericon.svg',
+
+    tecDescription: 'Nodejs, Reactjs, MongoDb',
+    tecIcon1: '/nodejsicon.png',
+    tecIcon2: '/reacticon.png',
+    tecIcon3: '/nodejsicon.png',
+  },
+  {
     name: 'Adaminter.org',
     description: 'Nft Creator on Cardano blockchain',
     site: 'https://www.adaminter.org',
@@ -30,7 +43,7 @@ const projects = [
   },
   {
     name: 'GeoCapital stock Tracker',
-    description: 'A tracker for GeoCapital a technical test',
+    description: 'A stock tracker for GeoCapital',
     site: 'https://geo-capital-online-portfolio.vercel.app/',
     image: '/GeoCapitalTest.png',
     darkimage: true,
@@ -82,7 +95,7 @@ const projects = [
 
   {
     name: 'My Portfolio',
-    description: 'My first portfolio site. A center for my projects.',
+    description: 'My portfolio with some projects.',
     site: 'https://marcelosportfolio.vercel.app/',
     image: '/marcelosPortfolioImage.png',
     darkimage: true,
@@ -537,7 +550,7 @@ export default CarrouselCards
                 </div>
               </div> */
 
-/* 
+/*
             <div className="relative flex w-full flex-shrink-0 sm:w-auto">
               <img
                 src="https://i.ibb.co/fDngH9G/carosel-1.png"
