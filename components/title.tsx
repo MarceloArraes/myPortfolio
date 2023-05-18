@@ -22,63 +22,18 @@ function Title() {
 
         <div className="z-10 m-10 flex-row space-x-4">
           <p className="mt-3 mb-5 text-2xl">download my resume here:</p>
-          <div className="flex space-x-5">
-            {/*             <a
-              href="Curriculo Marcelo Arraes Teixeira.pdf"
-              download="Curriculum_Marcelo_Arraes"
-            >
-              <button
-                className="
-                flex
-                h-12 
-                w-36
-                items-center
-                justify-center 
-                rounded-lg
-                bg-white
-                p-3 
-                leading-tight
-                text-black
-                transition
-                duration-150
-                ease-in-out 
-                hover:shadow-lg
-                focus:shadow-lg
-                focus:outline-none
-                focus:ring-0
-                active:shadow-lg"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  data-prefix="fas"
-                  data-icon="download"
-                  className="mt-1 mr-2 w-3 "
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"
-                  ></path>
-                </svg>
-                Resume pt-br
-                <span className="absolute h-12 w-36 rounded-lg"></span>
-              </button>
-            </a> */}
+          <div className="flex space-x-5 justify-center">
             <a
-              href="Curriculo Marcelo Arraes Teixeira.pdf"
+              href="Marcelo's Resume.pdf"
               download="Curriculum_Marcelo_Arraes"
             >
               <button
                 className="
               flex
               items-center
-              justify-center 
+              justify-center
               rounded-full
-              border-2 
+              border-2
               border-gray-500
               px-3
               py-2
@@ -87,7 +42,7 @@ function Title() {
               ease-in
               hover:bg-gray-700
               hover:text-white
-              hover:shadow-lg 
+              hover:shadow-lg
               focus:outline-none
               sm:px-6"
               >
@@ -110,181 +65,30 @@ function Title() {
                 <span className="absolute h-12 w-36 rounded-lg"></span>
               </button>
             </a>
-            <a
-              href="Curriculum - en - Marcelo Arraes Teixeira.pdf"
-              download="Curriculum_en_Marcelo_Arraes"
-            >
-              <button
-                className="
-              flex 
-              items-center
-              justify-center 
-              rounded-full
-              border-2
-              border-gray-500
-              px-3
-              py-2
-              transition
-              duration-200
-              ease-in 
-              hover:bg-gray-700
-              hover:text-white
-              hover:shadow-lg
-              focus:outline-none sm:px-6
-              "
-              >
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  data-prefix="fas"
-                  data-icon="download"
-                  className="mt-1 mr-2 w-5"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"
-                  ></path>
-                </svg>
-                CV en-US
-                <span className="absolute h-12 w-36 rounded-lg"></span>
-              </button>
-            </a>
-
-            {/*             <a
-              href="Curriculum - en - Marcelo Arraes Teixeira.pdf"
-              download="Resume_en_Marcelo_Arraes"
-            >
-              <button
-                className="
-              flex 
-              items-center
-              justify-center
-              rounded-full
-              border-2 
-              border-gray-500
-              bg-[length:300px] 
-              px-6
-              py-2
-              backdrop-blur-lg
-              transition
-              duration-200
-              ease-in
-              hover:text-white
-              hover:dark:text-black
-              "
-              >
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  data-prefix="fas"
-                  data-icon="download"
-                  className=" mr-2 w-3"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"
-                  ></path>
-                </svg>
-                <span
-                  className="
-                  absolute
-                  -z-10
-                  flex
-                  h-16
-                  w-40
-                  rounded-full
-                  duration-150
-                  ease-in-out
-                  hover:bg-gray-800
-                  hover:blur
-                  focus:outline-none
-                  hover:dark:bg-gray-200
-                  "
-                ></span>
-                <span className="pointer-events-none">CV en-US</span>
-              </button>
-            </a>
-
-            <a
-              href="Curriculum - en - Marcelo Arraes Teixeira.pdf"
-              download="Curriculum_en_Marcelo_Arraes"
-              className="
-
-              "
-            >
-              <button
-                id="download-button"
-                className="
-                flex
-                h-12
-                w-36
-                items-center
-                justify-center 
-                rounded-lg 
-                bg-white 
-                bg-[length:300px]
-                p-3
-                leading-tight
-                text-white
-                backdrop-blur-lg
-                transition
-                duration-150
-                ease-in-out
-                hover:text-white
-                dark:text-black
-                "
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  data-prefix="fas"
-                  data-icon="download"
-                  className="mt-1 mr-2 w-3"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"
-                  ></path>
-                </svg>
-                <span
-                  className="
-                  hover:
-                  absolute
-                  -z-10
-                  flex
-                  h-16
-                  w-40
-                  rounded-lg
-                  bg-gray-500
-                  duration-150
-                  ease-in-out
-                  hover:bg-gray-800
-                  hover:blur
-                  hover:dark:bg-white
-                  "
-                ></span>
-                <span className="pointer-events-none text-white dark:text-black">
-                  Resume en-us
-                </span>
-              </button>
-            </a> */}
           </div>
         </div>
-        <p className="max-w-md p-10 font-serif text-xl font-normal sm:w-1/2">
-          Hi, I'm Marcelo and I'm a web developer based in Brazil. Reactjs,
-          Nextjs, Typescript, Tailwindcss, and Nodejs are my favorite
-          technologies. I'm always open to learn new technologies and looking
-          for new challenges and opportunities to try new things.
+        <p className="text-start max-w-lg p-10 font-serif text-xl font-normal sm:w-1/3">
+          Hi, I'm Marcelo, a passionate web developer based in Australia.
+          I specialize in utilizing technologies such as React-Native,
+          ReactJS, NextJS, TypeScript, TailwindCSS, and Node.js to create
+          engaging and dynamic web applications.<br/>
+          I am always eager to learn and adopt new technologies and frameworks
+          <br/>
+          My journey as a web developer has taught me the value of clean and
+          efficient code, and I take pride in writing maintainable and scalable
+          solutions.<br/>
+          Throughout my career, I have collaborated with diverse teams, working
+          in Agile/Scrum environments, and utilizing collaboration tools like
+          GitHub, Bitbucket, Jira, Monday, and Slack. This experience has honed
+          my ability to communicate effectively and work harmoniously.<br/>
+          I am driven by a genuine passion for technology and a dedication to
+          continuous learning. I am excited about the prospect of contributing
+          my skills and expertise to new projects. If you have
+          an exciting opportunity or a project in mind, I would love to connect
+          and explore how we can work together to bring your ideas to life.<br/>
+          Thank you for visiting my portfolio website. Feel free to browse
+          through my projects and reach out to me for any inquiries or
+          collaborations. Let's create amazing web experiences together!
         </p>
       </div>
     </main>
