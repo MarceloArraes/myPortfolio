@@ -72,8 +72,6 @@ function Title() {
           I specialize in utilizing technologies such as React-Native,
           ReactJS, NextJS, TypeScript, TailwindCSS, and Node.js to create
           engaging and dynamic web applications.<br/>
-          I am always eager to learn and adopt new technologies and frameworks
-          <br/>
           My journey as a web developer has taught me the value of clean and
           efficient code, and I take pride in writing maintainable and scalable
           solutions.<br/>

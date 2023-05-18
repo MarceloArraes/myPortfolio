@@ -6,7 +6,7 @@ import Contact from '../components/contact'
 import Header from '../components/header'
 import Backgroundgraph from '../components/graphback'
 import Title from '../components/title'
-import {CarrouselCards, ProjectCards, SwiperCards} from '../components/projectCards'
+import {CarrouselCards, ProjectCards} from '../components/projectCards'
 import GitHubSession from '../components/githubSession'
 import Footer from '../components/footer'
 
@@ -64,7 +64,6 @@ const Home: NextPage = () => {
           <div className="mb-10 w-full text-center text-3xl font-bold">
             <h1>PROJECTS</h1>
             <CarrouselCards />
-            <SwiperCards />
             <text>Teste</text>
           </div>
         </div>
