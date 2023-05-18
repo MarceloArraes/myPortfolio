@@ -1,5 +1,3 @@
-import { Fragment } from 'react'
-
 function Title() {
   return (
     <main id="home" className="py-30">
@@ -67,7 +65,7 @@ function Title() {
             </a>
           </div>
         </div>
-        <p className="text-start max-w-lg p-10 font-serif text-xl font-normal sm:w-1/3">
+        <p className="text-start max-w-lg p-10 font-serif text-xl font-normal sm:w-3/4">
           Hi, I'm Marcelo, a passionate web developer based in Australia.
           I specialize in utilizing technologies such as React-Native,
           ReactJS, NextJS, TypeScript, TailwindCSS, and Node.js to create

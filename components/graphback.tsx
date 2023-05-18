@@ -300,4 +300,4 @@ function Backgroundgraph(theme: string) {
     // console.log(mouse_ball);
   })
 }
-export default Backgroundgraph
+export {Backgroundgraph}

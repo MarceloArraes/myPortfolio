@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import 'swiper/swiper.min.css';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
+import { Carousel } from "react-responsive-carousel"; // Import carousel component
+
 
 //array of projects
 const projects = [
@@ -12,6 +13,7 @@ const projects = [
     darkimage: true,
     siteIcon: '/adamintericon.svg',
 
+    active: false,
     tecDescription: 'Nodejs, Reactjs, MongoDb',
     tecIcon1: '/nodejsicon.png',
     tecIcon2: '/reacticon.png',
@@ -25,6 +27,7 @@ const projects = [
     darkimage: false,
     siteIcon: '/adamintericon.svg',
 
+    active: false,
     tecDescription: 'Blockchain, Nextjs, Django, Nodejs',
     tecIcon1: '/reacticon.png',
     tecIcon2: '/djangoicon.png',
@@ -38,6 +41,7 @@ const projects = [
     darkimage: false,
     siteIcon: '/adamintericon.svg',
 
+    active: false,
     tecDescription: 'Reactjs, Vite, Graphql, vime, tailwindcss',
     tecIcon1: '/reacticon.png',
     tecIcon2: '/typescripticon.png',
@@ -51,6 +55,7 @@ const projects = [
     darkimage: true,
     siteIcon: '/nutriNotes.png',
 
+    active: false,
     tecDescription: 'Typescript, Nextjs, Tailwindcss',
     tecIcon1: '/typescripticon.png',
     tecIcon2: '/nextjsicon.png',
@@ -62,7 +67,8 @@ const projects = [
     site: 'https://nutri-notes.vercel.app/',
     image: '/nutrinotesbg.png',
     darkimage: false,
-    siteIcon: '/nutriNotes.png',
+
+    active: false,siteIcon: '/nutriNotes.png',
     tecDescription: 'Nextjs, Supabase, MaterialUi',
     tecIcon1: '/nextjsicon.png',
     tecIcon2: '/supabaseicon.png',
@@ -76,6 +82,7 @@ const projects = [
     darkimage: true,
     siteIcon: '/webwidgetIcon.png',
 
+    active: false,
     tecDescription: 'Vite, Typescript, Tailwindcss',
     tecIcon1: '/vitelogo.svg',
     tecIcon2: '/typescripticon.png',
@@ -89,6 +96,7 @@ const projects = [
     darkimage: false,
     siteIcon: '/bempaggoicon2.png',
 
+    active: false,
     tecDescription: 'Typescript, MaterialUI, Styled Components',
     tecIcon1: '/typescripticon.png',
     tecIcon2: '/muiicon.png',
@@ -101,7 +109,8 @@ const projects = [
     site: 'https://marcelosportfolio.vercel.app/',
     image: '/marcelosPortfolioImage.png',
     darkimage: true,
-    siteIcon: '/nutriNotes.png',
+
+    active: false,siteIcon: '/nutriNotes.png',
     tecDescription: 'Typescript, Nextjs, Tailwindcss',
     tecIcon1: '/typescripticon.png',
     tecIcon2: '/nextjsicon.png',
@@ -532,20 +541,24 @@ function CarrouselCards() {
   )
 }
 
-// function SwiperCards() {
-//   return (
-//     <Swiper
-//       spaceBetween={50}
-//       slidesPerView={3}
-//       onSlideChange={() => console.log('slide change')}
-//       onSwiper={(swiper) => console.log(swiper)}
-//     >
-//         <SwiperSlide>Slide 1</SwiperSlide>
-//         <SwiperSlide>Slide 2</SwiperSlide>
-//         <SwiperSlide>Slide 3</SwiperSlide>
-//         <SwiperSlide>Slide 4</SwiperSlide>
-//     </Swiper>
-//   );
-// }
+const MyCarousel = () => {
+  return (
+    <div className='w-1/2 '>
+    <Carousel>
+      {projects.map((project, index) => (
+          <div className='-m-100 ' key={`index${index}`}>
+              <img
+                  src={project.image}
+                  alt={`Image ${index}`}
 
-export {CarrouselCards, ProjectCards}
+            />
+            <p className="legend">Caption {index}</p>
+            </div>
+        ))}
+      </Carousel>
+      </div>
+  );
+};
+
+
+export {CarrouselCards, ProjectCards, MyCarousel}

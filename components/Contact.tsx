@@ -54,7 +54,6 @@ function Contact(): JSX.Element {
           border-solid
           border-gray-300
           bg-gray-200
-          bg-gray-200
           bg-clip-padding
           px-3
           py-1.5
@@ -74,7 +73,7 @@ function Contact(): JSX.Element {
           <textarea
             name="message"
             className="form-control
-          box-border block 
+          box-border block
           h-32
           w-full
           rounded
@@ -92,7 +91,7 @@ function Contact(): JSX.Element {
           focus:border-blue-600
           focus:bg-white
           focus:text-gray-700
-          focus:outline-none dark:bg-gray-500 dark:text-gray-100 
+          focus:outline-none dark:bg-gray-500 dark:text-gray-100
           dark:placeholder-gray-200 sm:h-80
           "
             required
@@ -112,7 +111,7 @@ function Contact(): JSX.Element {
             py-2.5
             text-xs
             font-medium
-            uppercase 
+            uppercase
             leading-tight
             text-white
             shadow-md
@@ -132,9 +131,9 @@ function Contact(): JSX.Element {
               w-full
               justify-center
               rounded-lg
-              border-2 
+              border-2
               border-gray-500
-              px-3 
+              px-3
               py-2
               text-black
               transition
@@ -145,7 +144,7 @@ function Contact(): JSX.Element {
               hover:shadow-lg
               focus:outline-none
               dark:items-center
-              dark:text-white 
+              dark:text-white
               dark:hover:text-black
               sm:px-6"
           >
@@ -177,4 +176,4 @@ function Contact(): JSX.Element {
     </div>
   )
 }
-export default Contact
+export {Contact}
