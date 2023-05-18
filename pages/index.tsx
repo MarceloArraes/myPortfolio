@@ -6,7 +6,7 @@ import Contact from '../components/contact'
 import Header from '../components/header'
 import Backgroundgraph from '../components/graphback'
 import Title from '../components/title'
-import ProjectCards from '../components/projectCards'
+import {CarrouselCards, ProjectCards, SwiperCards} from '../components/projectCards'
 import GitHubSession from '../components/githubSession'
 import Footer from '../components/footer'
 
@@ -15,6 +15,9 @@ const Home: NextPage = () => {
 
   //Here im redrawing everytime i change the theme
   //another way to do it is making a especial function on graphback that change only the colors.. maybe..
+  useEffect(() => {
+    setTheme('light')
+  },[])
   useEffect(() => {
     Backgroundgraph(theme)
   }, [theme])
@@ -60,8 +63,10 @@ const Home: NextPage = () => {
         >
           <div className="mb-10 w-full text-center text-3xl font-bold">
             <h1>PROJECTS</h1>
+            <CarrouselCards />
+            <SwiperCards />
+            <text>Teste</text>
           </div>
-          <ProjectCards />
         </div>
 
         <GitHubSession />
