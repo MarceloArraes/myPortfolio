@@ -543,17 +543,17 @@ function CarrouselCards() {
 
 const MyCarousel = () => {
   return (
-    <div className='w-1/2 '>
-    <Carousel>
+    <div className='w-1/2' >
+    <Carousel autoPlay infiniteLoop>
       {projects.map((project, index) => (
-          <div className='-m-100 ' key={`index${index}`}>
+          <div className='' key={`index${index}`}>
               <img
                   src={project.image}
                   alt={`Image ${index}`}
-
+                  // className='h-80'
             />
-            <p className="legend">Caption {index}</p>
-            </div>
+            <p className='legend absolute overflow-hidden text-ellipsis w-full text-center'>Caption {index}</p>
+          </div>
         ))}
       </Carousel>
       </div>
