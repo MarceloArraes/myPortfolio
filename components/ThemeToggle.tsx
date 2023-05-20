@@ -6,7 +6,7 @@ const ThemeToggle = () => {
   const { theme, setTheme } = useTheme()
     const [toggleText, setToggleText] = useState('Light')
     useEffect(() => {
-    setTheme('light')
+    setTheme('dark')
     }, [])
     useEffect(() => {
     setToggleText(theme === 'light' ? 'Dark' : 'Light')
