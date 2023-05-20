@@ -22,9 +22,18 @@ const Home: NextPage = () => {
           className=" flex w-full flex-grow flex-wrap items-center justify-center border-t-2 border-gray-800 py-36 dark:border-gray-400"
         >
           <div className="mb-10 w-full text-center items-center justify-center text-3xl font-bold">
-            <h1>PROJECTS</h1>
+            <h1>WEB PROJECTS</h1>
           </div>
           <MyCarousel />
+        </div>
+        <div
+          id="mobile_projects"
+          className=" flex w-full flex-grow flex-wrap items-center justify-center border-t-2 border-gray-800 py-36 dark:border-gray-400"
+        >
+          <div className="mb-10 w-full text-center items-center justify-center text-3xl font-bold">
+            <h1>MOBILE PROJECTS</h1>
+          </div>
+          <text>Here soon... </text>
         </div>
 
         <GitHubSession />

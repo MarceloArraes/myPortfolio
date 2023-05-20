@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 function ContactCard() {
   return (
-    <div className="w-[90%] max-w-sm cursor-pointer rounded-3xl bg-gray-800 py-8 shadow-md shadow-xl drop-shadow-xl transition duration-300 ease-in-out hover:scale-105  hover:drop-shadow-2xl">
+    <div className="w-[90%] max-w-sm cursor-pointer rounded-3xl bg-gray-800 py-8 shadow-xl drop-shadow-xl transition duration-300 ease-in-out hover:scale-105  hover:drop-shadow-2xl">
       <div className="-mb-20 min-w-min -translate-y-1/2 transform">
         <img
           src="/MarceloMuseu.png"
