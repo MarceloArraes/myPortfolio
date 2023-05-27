@@ -18,41 +18,10 @@ function GitHubSession() {
   const [commitChainCounter, setCommitChainCounter] = useState(0)
   const [lastUpdateOnCommitChain, setLastUpdateOnCommitChain] = useState(0)
 
-/*   useEffect(() => {
-    console.log('negativeMockup', negativeMockup)
-    console.log('positiveMockup', positiveMockup)
-
-    //update commitChainCounter using table row with id 1 on table commitscounter
-    const datas = async () => {
-      const data = await supabase.from('commitscounter').select('counter')
-      if (data.body) {
-        console.log('data.body', data.body)
-        setCommitChainCounter(data.body[0].counter)
-        setLastUpdateOnCommitChain(Date.now())
-      }
-    }
-    datas()
-  }, []) */
-
-  /*   useEffect(() => {
-    //updating the table row with id 1 with the new commitChainCounter.
-    if (lastUpdateOnCommitChain) {
-      const datas = async () => {
-        const data = await supabase
-          .from('commitscounter')
-          .update({ counter: commitChainCounter })
-          .match({ id: 1 })
-        console.log(data)
-      }
-      datas()
-    }
-  }, [commitChainCounter]) */
-
   useEffect(() => {
     fetch('https://api.github.com/users/marceloarraes/events/public')
       .then((res) => res.json())
       .then((data) => {
-        console.log('data', data)
         //last push made on the list.
         const lastPush = new Date(data[0].created_at)
         //the commit made before the last push.

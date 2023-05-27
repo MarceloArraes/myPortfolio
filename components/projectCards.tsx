@@ -3,22 +3,21 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carous
 import { Carousel } from "react-responsive-carousel"; // Import carousel component
 import { AlertOctagon } from 'react-feather';
 
+type Project = {
+  name: string;
+  description: string;
+  site: string;
+  image: string;
+  darkimage: boolean;
+  siteIcon: string;
+  active: boolean;
+  tecDescription: string;
+  tecIcon1: string;
+  tecIcon2: string;
+  tecIcon3: string;
+};
 //array of projects
-const projects = [
-  // {
-  //   name: 'Event Platform',
-  //   description: 'A platform to display a online event',
-  //   site: 'https://event-platform-etdp6plb8-marceloarraes.vercel.app/',
-  //   image: '/eventplatform.png',
-  //   darkimage: true,
-  //   siteIcon: '/adamintericon.svg',
-
-  //   active: true,
-  //   tecDescription: 'Reactjs, Vite, Graphql, vime, tailwindcss',
-  //   tecIcon1: '/reacticon.png',
-  //   tecIcon2: '/typescripticon.png',
-  //   tecIcon3: '/tailwindcssLogo.png',
-  // },
+const mainProjects = [
   {
     name: 'GeoCapital stock Tracker',
     description: 'A stock tracker for GeoCapital',
@@ -47,20 +46,23 @@ const projects = [
     tecIcon2: '/supabaseicon.png',
     tecIcon3: '/muiicon.png',
   },
-  // {
-  //   name: 'Web Widget',
-  //   description: 'A web widget for the web',
-  //   site: 'https://vercel.com/marceloarraes/web-widget',
-  //   image: '/webwidgetbg.png',
-  //   darkimage: true,
-  //   siteIcon: '/webwidgetIcon.png',
+  {
+    name: 'Web Widget',
+    description: 'A web widget for the web',
+    site: 'https://vercel.com/marceloarraes/web-widget',
+    image: '/webwidget_gif.gif',
+    darkimage: true,
+    siteIcon: '/webwidgetIcon.png',
 
-  //   active: false,
-  //   tecDescription: 'Vite, Typescript, Tailwindcss',
-  //   tecIcon1: '/vitelogo.svg',
-  //   tecIcon2: '/typescripticon.png',
-  //   tecIcon3: '/tailwindcssLogo.png',
-  // },
+    active: false,
+    tecDescription: 'Vite, Typescript, Tailwindcss',
+    tecIcon1: '/vitelogo.svg',
+    tecIcon2: '/typescripticon.png',
+    tecIcon3: '/tailwindcssLogo.png',
+  },
+]
+
+const secondProjects = [
   {
     name: 'Bem Paggo Form',
     description: 'A front-end site for Bem Paggo company',
@@ -75,48 +77,65 @@ const projects = [
     tecIcon2: '/muiicon.png',
     tecIcon3: '/styledcomponentsicon3.png',
   },
-  // {
-  //   name: 'My Portfolio',
-  //   description: 'My portfolio with some projects.',
-  //   site: 'https://marcelosportfolio.vercel.app/',
-  //   image: '/marcelosPortfolioImage.png',
-  //   darkimage: true,
+  {
+    name: 'Event Platform',
+    description: 'A platform to display a online event',
+    site: 'https://event-platform-etdp6plb8-marceloarraes.vercel.app/',
+    image: '/eventplatform.png',
+    darkimage: true,
+    siteIcon: '/adamintericon.svg',
 
-  //   active: true,
-  //   siteIcon: '/nutriNotes.png',
-  //   tecDescription: 'Typescript, Nextjs, Tailwindcss',
-  //   tecIcon1: '/typescripticon.png',
-  //   tecIcon2: '/nextjsicon.png',
-  //   tecIcon3: '/tailwindcssLogo.png',
-  // },
-  // {
-  //   name: 'Nasa Project',
-  //   description: 'Space mission scheduler',
-  //   site: 'https://gold-expensive-bream.cyclic.app/',
-  //   image: '/nasaProjectBack.png',
-  //   darkimage: true,
-  //   siteIcon: '/adamintericon.svg',
+    active: true,
+    tecDescription: 'Reactjs, Vite, Graphql, vime, tailwindcss',
+    tecIcon1: '/reacticon.png',
+    tecIcon2: '/typescripticon.png',
+    tecIcon3: '/tailwindcssLogo.png',
+  },
+  {
+    name: 'My Portfolio',
+    description: 'My portfolio with some projects.',
+    site: 'https://marcelosportfolio.vercel.app/',
+    image: '/marcelosPortfolioImage.png',
+    darkimage: true,
 
-  //   active: false,
-  //   tecDescription: 'Nodejs, Reactjs, MongoDb',
-  //   tecIcon1: '/nodejsicon.png',
-  //   tecIcon2: '/reacticon.png',
-  //   tecIcon3: '/nodejsicon.png',
-  // },
-  // {
-  //   name: 'Adaminter.org',
-  //   description: 'Nft Creator on Cardano blockchain',
-  //   site: 'https://www.adaminter.org',
-  //   image: '/adaminterback.png',
-  //   darkimage: false,
-  //   siteIcon: '/adamintericon.svg',
+    active: true,
+    siteIcon: '/nutriNotes.png',
+    tecDescription: 'Typescript, Nextjs, Tailwindcss',
+    tecIcon1: '/typescripticon.png',
+    tecIcon2: '/nextjsicon.png',
+    tecIcon3: '/tailwindcssLogo.png',
+  },
+]
 
-  //   active: false,
-  //   tecDescription: 'Blockchain, Nextjs, Django, Nodejs',
-  //   tecIcon1: '/reacticon.png',
-  //   tecIcon2: '/djangoicon.png',
-  //   tecIcon3: '/nodejsicon.png',
-  // }
+const oldProjects = [
+  {
+    name: 'Nasa Project',
+    description: 'Space mission scheduler',
+    site: 'https://gold-expensive-bream.cyclic.app/',
+    image: '/nasaProjectBack.png',
+    darkimage: true,
+    siteIcon: '/adamintericon.svg',
+
+    active: false,
+    tecDescription: 'Nodejs, Reactjs, MongoDb',
+    tecIcon1: '/nodejsicon.png',
+    tecIcon2: '/reacticon.png',
+    tecIcon3: '/nodejsicon.png',
+  },
+  {
+    name: 'Adaminter.org',
+    description: 'Nft Creator on Cardano blockchain',
+    site: 'https://www.adaminter.org',
+    image: '/adaminterback.png',
+    darkimage: false,
+    siteIcon: '/adamintericon.svg',
+
+    active: false,
+    tecDescription: 'Blockchain, Nextjs, Django, Nodejs',
+    tecIcon1: '/reacticon.png',
+    tecIcon2: '/djangoicon.png',
+    tecIcon3: '/nodejsicon.png',
+  }
 ]
 const mobileProjects = [
   {
@@ -164,9 +183,19 @@ const mobileProjects = [
 ]
 
 
-const MyCarousel = () => {
+const MyCarousel = ({projectType = 'main'}) => {
   const [inactive, setInactive] = useState(false);
+  let projects: Project[] = [];
 
+  if (projectType === 'main') {
+    projects = mainProjects;
+  } else if (projectType === 'second') {
+    projects = secondProjects;
+  } else if (projectType === 'old') {
+    projects = oldProjects;
+  } else if (projectType === 'mobile') {
+    projects = mobileProjects;
+  }
   const handleClick = (props: any) => {
     if (projects[props].active) {
       window.open(projects[props].site, '_blank');
@@ -190,7 +219,7 @@ const MyCarousel = () => {
         {projects.map((project, index) => {
           let inactiveLabelColor = project.darkimage ? 'text-red-800' : 'text-black';
           return (
-            <div className='max-w-fit justify-center items-center' key={`index${index}`}>
+            <div className='justify-center items-center' key={`index${index}`}>
               <img src={project.image} alt={`Image ${index}`}/>
               {inactive && (
                 <div className='absolute inset-0 flex items-center justify-center animate-pulse delay-500 opacity-0 transition-opacity duration-300'>
@@ -214,7 +243,7 @@ const MyMobileCarousel = () => {
 
   const handleClick = (props: any) => {
     if (mobileProjects[props].active) {
-      window.open(projects[props].site, '_blank');
+      window.open(mobileProjects[props].site, '_blank');
     } else {
       setInactive(!inactive);
     }

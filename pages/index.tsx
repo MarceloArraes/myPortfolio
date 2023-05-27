@@ -24,7 +24,18 @@ const Home: NextPage = () => {
           <div className="mb-10 w-full text-center items-center justify-center text-3xl font-bold">
             <h1>WEB PROJECTS</h1>
           </div>
-          <MyCarousel />
+          <div>
+          <h2>Firt Tier</h2>
+          <MyCarousel projectType={'main'} />
+          </div>
+          <div>
+          <h2>Second Tier</h2>
+          <MyCarousel projectType={'second'} />
+          </div>
+          <div>
+          <h2>Older Tier</h2>
+            <MyCarousel projectType={'old'} />
+          </div>
         </div>
         <div
           id="mobile_projects"
@@ -33,7 +44,7 @@ const Home: NextPage = () => {
           <div className="mb-10 w-full text-center items-center justify-center text-3xl font-bold">
             <h1>MOBILE PROJECTS</h1>
           </div>
-          <MyMobileCarousel />
+          <MyCarousel projectType={'mobile'} />
         </div>
 
         <GitHubSession />

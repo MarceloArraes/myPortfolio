@@ -82,7 +82,6 @@ function Header() {
     }
 
     window.addEventListener('scroll', onScroll)
-    console.log(scrollDir)
 
     return () => window.removeEventListener('scroll', onScroll)
   }, [scrollDir])
