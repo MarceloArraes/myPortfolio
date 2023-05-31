@@ -3,7 +3,8 @@ import {Contact} from '../components/Contact'
 import {Header} from '../components/Header'
 import {Header2} from '../components/header2'
 import Title from '../components/title'
-import { MyCarousel, MyMobileCarousel} from '../components/projectCards'
+import { CarouselLight } from '../components/projectCards'
+import { MyCarousel, MyMobileCarousel } from '../components/CarouselReactResponsive'
 import GitHubSession from '../components/githubSession'
 import Footer from '../components/footer'
 import { ThemeToggle } from '../components/ThemeToggle'
@@ -24,7 +25,10 @@ const Home: NextPage = () => {
           <div className="mb-10 w-full text-center items-center justify-center text-3xl font-bold">
             <h1>WEB PROJECTS</h1>
           </div>
-          <div>
+          <div className='w-full'>
+            <CarouselLight />
+          </div>
+{/*           <div>
           <h2>Firt Tier</h2>
           <MyCarousel projectType={'main'} />
           </div>
@@ -35,7 +39,7 @@ const Home: NextPage = () => {
           <div>
           <h2>Older Tier</h2>
             <MyCarousel projectType={'old'} />
-          </div>
+          </div> */}
         </div>
         <div
           id="mobile_projects"

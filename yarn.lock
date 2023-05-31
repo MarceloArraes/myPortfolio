@@ -857,11 +857,6 @@ react-responsive-carousel@^3.2.23:
     prop-types "^15.5.8"
     react-easy-swipe "^0.0.21"
 
-react-snap-carousel@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/react-snap-carousel/-/react-snap-carousel-0.3.2.tgz#91bad605692cb41c88181cb6f1217e97c65ce875"
-  integrity sha512-3o4pA+k/OhphCNWt3gVxddSzp98XQ3e9+JtVeU3js2cStfysBQDj45L1dhO0kSh4PBAnuhXB+gsQjDDzIVU10g==
-
 react@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"
@@ -1092,6 +1087,11 @@ yaml@^2.1.1:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.2.2.tgz#ec551ef37326e6d42872dad1970300f8eb83a073"
   integrity sha512-CBKFWExMn46Foo4cldiChEzn7S7SRV+wqiluAb6xmueD/fGyRHIhX8m14vVGgeFWjN540nKCNVj6P21eQjgTuA==
+
+yet-another-react-lightbox@^3.10.0:
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/yet-another-react-lightbox/-/yet-another-react-lightbox-3.10.0.tgz#646dc538d80a97d76893461bf477383240c12a7d"
+  integrity sha512-OFUL0cYGwvt4u66CLyzVZLVVpV5RgO3RbcCKUGn3FlOYqO2T97RaQG5hFUIJ2rNKoOAM7uKaF4pMTcnzSpijww==
 
 zod@3.21.4:
   version "3.21.4"

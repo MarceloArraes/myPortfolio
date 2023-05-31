@@ -1,13 +1,70 @@
-import { useEffect, useState } from 'react'
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
-import { Carousel } from "react-responsive-carousel"; // Import carousel component
-import { AlertOctagon } from 'react-feather';
+import { useRef, useState } from 'react'
+import Lightbox from "yet-another-react-lightbox";
+import Inline from "yet-another-react-lightbox/plugins/inline";
+import Captions from "yet-another-react-lightbox/plugins/captions";
+import "yet-another-react-lightbox/styles.css";
+import "yet-another-react-lightbox/plugins/captions.css";
+import Image from "next/image";
+import {
+  isImageFitCover,
+  isImageSlide,
+  useLightboxProps,
+} from "yet-another-react-lightbox";
+
+
+function isNextJsImage(slide: any) {
+  return (
+    isImageSlide(slide) &&
+    typeof slide.width === "number" &&
+    typeof slide.height === "number"
+  );
+}
+
+function NextJsImage({ slide, rect }: any) {
+  console.log('slide:', slide); // Check if the slide object is passed correctly
+
+  const { imageFit } = useLightboxProps().carousel;
+  const cover = isImageSlide(slide.src) && isImageFitCover(slide.src, imageFit);
+
+  if (!isNextJsImage(slide.src)) return undefined;
+
+  const width = !cover
+    ? Math.round(
+        Math.min(rect.width, (rect.height / slide.src.height) * slide.src.width)
+      )
+    : rect.width;
+
+  const height = !cover
+    ? Math.round(
+        Math.min(rect.height, (rect.width / slide.src.width) * slide.src.height)
+      )
+    : rect.height;
+
+  return (
+    <div className="" style={{ width, height }}>
+      <Image
+        fill
+        alt=""
+        src={slide.src}
+        loading="eager"
+        draggable={false}
+        placeholder={slide.src.blurDataURL ? "blur" : undefined}
+        style={{ objectFit: cover ? "cover" : "contain" }}
+        sizes={`${Math.ceil((width / window.innerWidth) * 100)}vw`}
+      />
+      <p className="overflow-hidden text-ellipsis w-full text-center text-black">
+        {slide.description} using {slide.tecDescription}
+      </p>
+      <br />
+    </div>
+  );
+}
 
 type Project = {
   name: string;
   description: string;
   site: string;
-  image: string;
+  src: string;
   darkimage: boolean;
   siteIcon: string;
   active: boolean;
@@ -16,13 +73,13 @@ type Project = {
   tecIcon2: string;
   tecIcon3: string;
 };
-//array of projects
-const mainProjects = [
+
+const allProjects = [
   {
     name: 'GeoCapital stock Tracker',
     description: 'A stock tracker for GeoCapital',
     site: 'https://geo-capital-online-portfolio.vercel.app/',
-    image: '/GeoCapitalTest.png',
+    src: '/GeoCapitalTest.png',
     darkimage: true,
     siteIcon: '/nutriNotes.png',
 
@@ -36,7 +93,7 @@ const mainProjects = [
     name: 'Nutri Notes',
     description: 'Nutritional information for health professionals',
     site: 'https://nutri-notes.vercel.app/',
-    image: '/nutrinotesbg.png',
+    src: '/nutrinotesbg.png',
     darkimage: false,
 
     active: true,
@@ -50,7 +107,7 @@ const mainProjects = [
     name: 'Web Widget',
     description: 'A web widget for the web',
     site: 'https://vercel.com/marceloarraes/web-widget',
-    image: '/webwidget_gif.gif',
+    src: '/webwidget_gif2.gif',
     darkimage: true,
     siteIcon: '/webwidgetIcon.png',
 
@@ -60,14 +117,11 @@ const mainProjects = [
     tecIcon2: '/typescripticon.png',
     tecIcon3: '/tailwindcssLogo.png',
   },
-]
-
-const secondProjects = [
   {
     name: 'Bem Paggo Form',
     description: 'A front-end site for Bem Paggo company',
     site: 'https://bem-pago-form.vercel.app/',
-    image: '/bempagobg.png',
+    src: '/bempagobg.png',
     darkimage: false,
     siteIcon: '/bempaggoicon2.png',
 
@@ -81,7 +135,7 @@ const secondProjects = [
     name: 'Event Platform',
     description: 'A platform to display a online event',
     site: 'https://event-platform-etdp6plb8-marceloarraes.vercel.app/',
-    image: '/eventplatform.png',
+    src: '/eventplatform.png',
     darkimage: true,
     siteIcon: '/adamintericon.svg',
 
@@ -95,7 +149,7 @@ const secondProjects = [
     name: 'My Portfolio',
     description: 'My portfolio with some projects.',
     site: 'https://marcelosportfolio.vercel.app/',
-    image: '/marcelosPortfolioImage.png',
+    src: '/marcelosPortfolioImage.png',
     darkimage: true,
 
     active: true,
@@ -105,14 +159,11 @@ const secondProjects = [
     tecIcon2: '/nextjsicon.png',
     tecIcon3: '/tailwindcssLogo.png',
   },
-]
-
-const oldProjects = [
-  {
+    {
     name: 'Nasa Project',
     description: 'Space mission scheduler',
     site: 'https://gold-expensive-bream.cyclic.app/',
-    image: '/nasaProjectBack.png',
+    src: '/nasaProjectBack.png',
     darkimage: true,
     siteIcon: '/adamintericon.svg',
 
@@ -126,7 +177,7 @@ const oldProjects = [
     name: 'Adaminter.org',
     description: 'Nft Creator on Cardano blockchain',
     site: 'https://www.adaminter.org',
-    image: '/adaminterback.png',
+    src: '/adaminterback.png',
     darkimage: false,
     siteIcon: '/adamintericon.svg',
 
@@ -137,154 +188,31 @@ const oldProjects = [
     tecIcon3: '/nodejsicon.png',
   }
 ]
-const mobileProjects = [
-  {
-    name: 'App Helper',
-    description: 'A tickering platform for technical support',
-    site: '',
-    image: '/144203-720x1604_AdobeExpress.gif',
-    darkimage: true,
-    siteIcon: '',
 
-    active: false,
-    tecDescription: 'React-Native, native-base, MongoDB, firestore',
-    tecIcon1: '/reacticon.png',
-    tecIcon2: '/typescripticon.png',
-    tecIcon3: '/tailwindcssLogo.png',
-  },
-  // {
-  //   name: 'App Helper',
-  //   description: 'A tickering platform for technical support',
-  //   site: '',
-  //   image: '/144203-720x1604_AdobeExpress.gif',
-  //   darkimage: true,
-  //   siteIcon: '',
-
-  //   active: false,
-  //   tecDescription: 'React-Native, native-base, MongoDB, firestore',
-  //   tecIcon1: '/reacticon.png',
-  //   tecIcon2: '/typescripticon.png',
-  //   tecIcon3: '/tailwindcssLogo.png',
-  // },
-  // {
-  //   name: 'App Helper',
-  //   description: 'A tickering platform for technical support',
-  //   site: '',
-  //   image: '/144203-720x1604_AdobeExpress.gif',
-  //   darkimage: true,
-  //   siteIcon: '',
-
-  //   active: false,
-  //   tecDescription: 'React-Native, native-base, MongoDB, firestore',
-  //   tecIcon1: '/reacticon.png',
-  //   tecIcon2: '/typescripticon.png',
-  //   tecIcon3: '/tailwindcssLogo.png',
-  // },
-]
-
-
-const MyCarousel = ({projectType = 'main'}) => {
-  const [inactive, setInactive] = useState(false);
-  let projects: Project[] = [];
-
-  if (projectType === 'main') {
-    projects = mainProjects;
-  } else if (projectType === 'second') {
-    projects = secondProjects;
-  } else if (projectType === 'old') {
-    projects = oldProjects;
-  } else if (projectType === 'mobile') {
-    projects = mobileProjects;
-  }
-  const handleClick = (props: any) => {
-    if (projects[props].active) {
-      window.open(projects[props].site, '_blank');
-    } else {
-      setInactive(!inactive);
-    }
-  };
-
-  const renderSlides = projects.map((project, index) => {
-    let inactiveLabelColor = project.darkimage ? 'text-red-800' : 'text-black';
-  return (<div key={`index${index}`} className=''>
-    <img src={project.image} alt={`Image`} />
-    <p className="legend">{project.description} using {project.tecDescription}</p>
-  </div>)
-});
-
+const CarouselLight = () => {
+  const [open, setOpen] = useState(true);
+  const [showToggle, setShowToggle] = useState(true);
+  const [descriptionMaxLines, setDescriptionMaxLines] = useState(3);
+  const [descriptionTextAlign, setDescriptionTextAlign] = useState<
+    "start" | "end" | "center"
+  >("start");
   return (
-    <div className='max-w-lg'>
-      <Carousel autoPlay infiniteLoop onClickItem={handleClick} onChange={() => setInactive(false)} preventMovementUntilSwipeScrollTolerance={true}
-        swipeScrollTolerance={50} className="carousel-container">
-        {projects.map((project, index) => {
-          let inactiveLabelColor = project.darkimage ? 'text-red-800' : 'text-black';
-          return (
-            <div className='justify-center items-center' key={`index${index}`}>
-              <img src={project.image} alt={`Image ${index}`}/>
-              {inactive && (
-                <div className='absolute inset-0 flex items-center justify-center animate-pulse delay-500 opacity-0 transition-opacity duration-300'>
-                  <div className='flex items-center justify-center'>
-                    <AlertOctagon size={200} className={`flex ${inactiveLabelColor}`} />
-                    <p className={`${inactiveLabelColor} font-bold text-lg `}>Deployment offline :/</p>
-                  </div>
-                </div>
-              )}
-              <p className='legend absolute overflow-hidden text-ellipsis w-full text-center'>{project.description} using {project.tecDescription}</p>
-            </div>
-          );
+    <div className='w-full aspect-video'>
+    <Lightbox
+      open={open}
+      captions={{ showToggle, descriptionTextAlign, descriptionMaxLines }}
+      plugins={[Inline, Captions]}
+      close={() => setOpen(false)}
+      slides={allProjects.map((project) => {
+        return ({
+          ...project, src: project.src, title: project.name,
+          description: project.description
+        })
         })}
-      </Carousel>
+      // render={{ slide: NextJsImage }}
+      />
     </div>
-  );
-};
+  )
+}
 
-const MyMobileCarousel = () => {
-  const [inactive, setInactive] = useState(false);
-
-  const handleClick = (props: any) => {
-    if (mobileProjects[props].active) {
-      window.open(mobileProjects[props].site, '_blank');
-    } else {
-      setInactive(!inactive);
-    }
-  };
-
-  const renderSlides = mobileProjects.map((project, index) => {
-    let inactiveLabelColor = project.darkimage ? 'text-red-800' : 'text-black';
-  return (<div key={`index${index}`} className=''>
-    <img src={project.image} alt={`Image`} />
-    <p className="legend">{project.description} using {project.tecDescription}</p>
-  </div>)
-});
-
-
-  return (
-    <div className='h-1/4'>
-      <Carousel autoPlay infiniteLoop onClickItem={handleClick} onChange={() => setInactive(false)} preventMovementUntilSwipeScrollTolerance={true}
-          swipeScrollTolerance={50} className="carousel-container">
-        {mobileProjects.map((project, index) => {
-          let inactiveLabelColor = project.darkimage ? 'text-red-800' : 'text-black';
-          return (
-            <div className='justify-center items-center' key={`index${index}`}>
-              <img src={project.image} alt={`Image ${index}`}/>
-              {inactive && (
-                <div className='absolute inset-0 flex items-center justify-center animate-pulse delay-500 opacity-0 transition-opacity duration-300'>
-                  <div className='flex items-center justify-center'>
-                    <AlertOctagon size={200} className={`flex ${inactiveLabelColor}`} />
-                    <p className={`${inactiveLabelColor} font-bold text-lg `}>Deployment offline :/</p>
-                  </div>
-                </div>
-              )}
-              <p className='legend absolute overflow-hidden text-ellipsis w-full text-center'>{project.description} using {project.tecDescription}</p>
-            </div>
-          );
-        })}
-
-      </Carousel>
-    </div>
-  );
-};
-
-
-
-export { MyCarousel, MyMobileCarousel}
+export { CarouselLight}
