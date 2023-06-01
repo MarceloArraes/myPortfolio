@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import Lightbox from "yet-another-react-lightbox";
 import Inline from "yet-another-react-lightbox/plugins/inline";
 import Captions from "yet-another-react-lightbox/plugins/captions";
+import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 import Image from "next/image";
@@ -10,6 +11,7 @@ import {
   isImageSlide,
   useLightboxProps,
 } from "yet-another-react-lightbox";
+import { AlertOctagon } from 'react-feather';
 
 
 function isNextJsImage(slide: any) {
@@ -191,17 +193,41 @@ const allProjects = [
 
 const CarouselLight = () => {
   const [open, setOpen] = useState(true);
+  const [inactive, setInactive] = useState(false);
   const [showToggle, setShowToggle] = useState(true);
   const [descriptionMaxLines, setDescriptionMaxLines] = useState(3);
   const [descriptionTextAlign, setDescriptionTextAlign] = useState<
     "start" | "end" | "center"
-  >("start");
+    >("start");
   return (
-    <div className='w-full aspect-video'>
+    <div className='relative w-full aspect-video'>
+      {inactive && (
+      <div className='z-10 border-2 border-red-700 absolute inset-0 flex items-center justify-center animate-pulse delay-500 opacity-0 transition-opacity duration-300'>
+        <div className='flex items-center justify-center'>
+          <AlertOctagon size={200} className={`flex text-red-800`} />
+          <p className={`text-red-800 font-bold text-lg `}>Deployment offline :/</p>
+        </div>
+      </div>
+        )}
     <Lightbox
-      open={open}
-      captions={{ showToggle, descriptionTextAlign, descriptionMaxLines }}
-      plugins={[Inline, Captions]}
+        open={open}
+        captions={{ showToggle, descriptionTextAlign, descriptionMaxLines }}
+      slideshow={{ autoplay: true, delay:4000 }}
+        plugins={[Inline, Captions, Slideshow]}
+        carousel={{ preload: 3 }}
+      on={{
+        click: (elemnt) => {
+          if (!allProjects[elemnt.index].active) {
+            return;
+          }
+          else {
+          window.open(allProjects[elemnt.index].site, '_blank');}
+        },
+        view: () => {
+          setInactive(false);
+          console.log('view');
+        }
+      }}
       close={() => setOpen(false)}
       slides={allProjects.map((project) => {
         return ({

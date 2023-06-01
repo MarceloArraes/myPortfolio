@@ -28,21 +28,9 @@ const Home: NextPage = () => {
           <div className='w-full'>
             <CarouselLight />
           </div>
-{/*           <div>
-          <h2>Firt Tier</h2>
-          <MyCarousel projectType={'main'} />
-          </div>
-          <div>
-          <h2>Second Tier</h2>
-          <MyCarousel projectType={'second'} />
-          </div>
-          <div>
-          <h2>Older Tier</h2>
-            <MyCarousel projectType={'old'} />
-          </div> */}
         </div>
         <div
-          id="mobile_projects"
+          id="projects"
           className="flex w-full flex-grow flex-wrap items-center justify-center border-t-2 border-gray-800 py-36 dark:border-gray-400"
         >
           <div className="mb-10 w-full text-center items-center justify-center text-3xl font-bold">
