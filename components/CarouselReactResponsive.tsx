@@ -1,21 +1,22 @@
 import { useEffect, useState } from 'react'
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
-import { Carousel } from "react-responsive-carousel"; // Import carousel component
-import { AlertOctagon } from 'react-feather';
+import 'react-responsive-carousel/lib/styles/carousel.min.css' // Import carousel styles
+import { Carousel } from 'react-responsive-carousel' // Import carousel component
+import { AlertOctagon } from 'react-feather'
+import Image from 'next/image'
 
 type Project = {
-  name: string;
-  description: string;
-  site: string;
-  src: string;
-  darkimage: boolean;
-  siteIcon: string;
-  active: boolean;
-  tecDescription: string;
-  tecIcon1: string;
-  tecIcon2: string;
-  tecIcon3: string;
-};
+  name: string
+  description: string
+  site: string
+  src: string
+  darkimage: boolean
+  siteIcon: string
+  active: boolean
+  tecDescription: string
+  tecIcon1: string
+  tecIcon2: string
+  tecIcon3: string
+}
 //array of projects
 const mainProjects = [
   {
@@ -135,7 +136,7 @@ const oldProjects = [
     tecIcon1: '/reacticon.png',
     tecIcon2: '/djangoicon.png',
     tecIcon3: '/nodejsicon.png',
-  }
+  },
 ]
 const mobileProjects = [
   {
@@ -182,107 +183,131 @@ const mobileProjects = [
   // },
 ]
 
-
-const renderSlides = mainProjects.map((project, index) => {
-    let inactiveLabelColor = project.darkimage ? 'text-red-800' : 'text-black';
-  return (<div key={`index${index}`} className='keen-slider__slide max-w-full h-auto' >
-    <img src={project.src} alt={`Image`} className='max-w-full h-auto object-contain'/>
-    {/* <p className="bg-white text-black">{project.description} using {project.tecDescription}</p> */}
-  </div>)
-});
-
-const MyCarousel = ({projectType = 'main'}) => {
-  const [inactive, setInactive] = useState(false);
-  let projects: Project[] = [];
+const MyCarousel = ({ projectType = 'main' }) => {
+  const [inactive, setInactive] = useState(false)
+  let projects: Project[] = []
 
   if (projectType === 'main') {
-    projects = mainProjects;
+    projects = mainProjects
   } else if (projectType === 'second') {
-    projects = secondProjects;
+    projects = secondProjects
   } else if (projectType === 'old') {
-    projects = oldProjects;
+    projects = oldProjects
   } else if (projectType === 'mobile') {
-    projects = mobileProjects;
+    projects = mobileProjects
   }
   const handleClick = (props: any) => {
     if (projects[props].active) {
-      window.open(projects[props].site, '_blank');
+      window.open(projects[props].site, '_blank')
     } else {
-      setInactive(!inactive);
+      setInactive(!inactive)
     }
-  };
+  }
 
   return (
-    <div className='max-w-lg'>
-      <Carousel autoPlay infiniteLoop onClickItem={handleClick} onChange={() => setInactive(false)} preventMovementUntilSwipeScrollTolerance={true}
-        swipeScrollTolerance={50} className="carousel-container">
+    <div className="max-w-lg">
+      <Carousel
+        autoPlay
+        infiniteLoop
+        onClickItem={handleClick}
+        onChange={() => setInactive(false)}
+        preventMovementUntilSwipeScrollTolerance={true}
+        swipeScrollTolerance={50}
+        className="carousel-container"
+      >
         {projects.map((project, index) => {
-          let inactiveLabelColor = project.darkimage ? 'text-red-800' : 'text-black';
+          let inactiveLabelColor = project.darkimage
+            ? 'text-red-800'
+            : 'text-black'
           return (
-            <div className='justify-center items-center' key={`index${index}`}>
-              <img src={project.src} alt={`Image ${index}`}/>
+            <div className="items-center justify-center" key={`index${index}`}>
+              <Image
+                src={project.src}
+                alt={`Image ${index}`}
+                width={300}
+                height={300}
+              />
               {inactive && (
-                <div className='absolute inset-0 flex items-center justify-center animate-pulse delay-500 opacity-0 transition-opacity duration-300'>
-                  <div className='flex items-center justify-center'>
-                    <AlertOctagon size={200} className={`flex ${inactiveLabelColor}`} />
-                    <p className={`${inactiveLabelColor} font-bold text-lg `}>Deployment offline :/</p>
+                <div className="absolute inset-0 flex animate-pulse items-center justify-center opacity-0 transition-opacity delay-500 duration-300">
+                  <div className="flex items-center justify-center">
+                    <AlertOctagon
+                      size={200}
+                      className={`flex ${inactiveLabelColor}`}
+                    />
+                    <p className={`${inactiveLabelColor} text-lg font-bold `}>
+                      Deployment offline :/
+                    </p>
                   </div>
                 </div>
               )}
-              <p className='legend absolute overflow-hidden text-ellipsis w-full text-center'>{project.description} using {project.tecDescription}</p>
+              <p className="legend absolute w-full overflow-hidden text-ellipsis text-center">
+                {project.description} using {project.tecDescription}
+              </p>
             </div>
-          );
+          )
         })}
       </Carousel>
     </div>
-  );
-};
+  )
+}
 
 const MyMobileCarousel = () => {
-  const [inactive, setInactive] = useState(false);
+  const [inactive, setInactive] = useState(false)
 
   const handleClick = (props: any) => {
     if (mobileProjects[props].active) {
-      window.open(mobileProjects[props].site, '_blank');
+      window.open(mobileProjects[props].site, '_blank')
     } else {
-      setInactive(!inactive);
+      setInactive(!inactive)
     }
-  };
-
-  const renderSlides = mobileProjects.map((project, index) => {
-    let inactiveLabelColor = project.darkimage ? 'text-red-800' : 'text-black';
-  return (<div key={`index${index}`} className=''>
-    <img src={project.src} alt={`Image`} />
-    <p className="legend">{project.description} using {project.tecDescription}</p>
-  </div>)
-});
-
+  }
 
   return (
-    <div className='h-1/4'>
-      <Carousel autoPlay infiniteLoop onClickItem={handleClick} onChange={() => setInactive(false)} preventMovementUntilSwipeScrollTolerance={true}
-          swipeScrollTolerance={50} className="carousel-container">
+    <div className="h-1/4">
+      <Carousel
+        autoPlay
+        infiniteLoop
+        showThumbs={false}
+        onClickItem={handleClick}
+        onChange={() => setInactive(false)}
+        preventMovementUntilSwipeScrollTolerance={true}
+        swipeScrollTolerance={50}
+        className="carousel-container"
+      >
         {mobileProjects.map((project, index) => {
-          let inactiveLabelColor = project.darkimage ? 'text-red-800' : 'text-black';
+          let inactiveLabelColor = project.darkimage
+            ? 'text-red-800'
+            : 'text-black'
           return (
-            <div className='justify-center items-center' key={`index${index}`}>
-              <img src={project.src} alt={`Image ${index}`}/>
+            <div className="items-center justify-center" key={`index${index}`}>
+              <Image
+                src={project.src}
+                alt={`Image ${index}`}
+                width={300}
+                height={300}
+              />
               {inactive && (
-                <div className='absolute inset-0 flex items-center justify-center animate-pulse delay-500 opacity-0 transition-opacity duration-300'>
-                  <div className='flex items-center justify-center'>
-                    <AlertOctagon size={200} className={`flex ${inactiveLabelColor}`} />
-                    <p className={`${inactiveLabelColor} font-bold text-lg `}>Deployment offline :/</p>
+                <div className="absolute inset-0 flex animate-pulse items-center justify-center opacity-0 transition-opacity delay-500 duration-300">
+                  <div className="flex items-center justify-center">
+                    <AlertOctagon
+                      size={200}
+                      className={`flex ${inactiveLabelColor}`}
+                    />
+                    <p className={`${inactiveLabelColor} text-lg font-bold `}>
+                      Deployment offline :/
+                    </p>
                   </div>
                 </div>
               )}
-              <p className='legend absolute overflow-hidden text-ellipsis w-full text-center'>{project.description} using {project.tecDescription}</p>
+              <p className="legend absolute w-full overflow-hidden text-ellipsis text-center">
+                {project.description} using {project.tecDescription}
+              </p>
             </div>
-          );
+          )
         })}
-
       </Carousel>
     </div>
-  );
-};
+  )
+}
 
-export {MyCarousel, MyMobileCarousel}
+export { MyCarousel, MyMobileCarousel }
