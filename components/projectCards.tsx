@@ -1,46 +1,45 @@
 import { useRef, useState } from 'react'
-import Lightbox from "yet-another-react-lightbox";
-import Inline from "yet-another-react-lightbox/plugins/inline";
-import Captions from "yet-another-react-lightbox/plugins/captions";
-import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
-import "yet-another-react-lightbox/styles.css";
-import "yet-another-react-lightbox/plugins/captions.css";
-import Image from "next/image";
+import Lightbox from 'yet-another-react-lightbox'
+import Inline from 'yet-another-react-lightbox/plugins/inline'
+import Captions from 'yet-another-react-lightbox/plugins/captions'
+import Slideshow from 'yet-another-react-lightbox/plugins/slideshow'
+import 'yet-another-react-lightbox/styles.css'
+import 'yet-another-react-lightbox/plugins/captions.css'
+import Image from 'next/image'
 import {
   isImageFitCover,
   isImageSlide,
   useLightboxProps,
-} from "yet-another-react-lightbox";
-import { AlertOctagon } from 'react-feather';
-
+} from 'yet-another-react-lightbox'
+import { AlertOctagon } from 'react-feather'
 
 function isNextJsImage(slide: any) {
   return (
     isImageSlide(slide) &&
-    typeof slide.width === "number" &&
-    typeof slide.height === "number"
-  );
+    typeof slide.width === 'number' &&
+    typeof slide.height === 'number'
+  )
 }
 
 function NextJsImage({ slide, rect }: any) {
-  console.log('slide:', slide); // Check if the slide object is passed correctly
+  console.log('slide:', slide) // Check if the slide object is passed correctly
 
-  const { imageFit } = useLightboxProps().carousel;
-  const cover = isImageSlide(slide.src) && isImageFitCover(slide.src, imageFit);
+  const { imageFit } = useLightboxProps().carousel
+  const cover = isImageSlide(slide.src) && isImageFitCover(slide.src, imageFit)
 
-  if (!isNextJsImage(slide.src)) return undefined;
+  if (!isNextJsImage(slide.src)) return undefined
 
   const width = !cover
     ? Math.round(
         Math.min(rect.width, (rect.height / slide.src.height) * slide.src.width)
       )
-    : rect.width;
+    : rect.width
 
   const height = !cover
     ? Math.round(
         Math.min(rect.height, (rect.width / slide.src.width) * slide.src.height)
       )
-    : rect.height;
+    : rect.height
 
   return (
     <div className="" style={{ width, height }}>
@@ -50,31 +49,31 @@ function NextJsImage({ slide, rect }: any) {
         src={slide.src}
         loading="eager"
         draggable={false}
-        placeholder={slide.src.blurDataURL ? "blur" : undefined}
-        style={{ objectFit: cover ? "cover" : "contain" }}
+        placeholder={slide.src.blurDataURL ? 'blur' : undefined}
+        style={{ objectFit: cover ? 'cover' : 'contain' }}
         sizes={`${Math.ceil((width / window.innerWidth) * 100)}vw`}
       />
-      <p className="overflow-hidden text-ellipsis w-full text-center text-black">
+      <p className="w-full overflow-hidden text-ellipsis text-center text-black">
         {slide.description} using {slide.tecDescription}
       </p>
       <br />
     </div>
-  );
+  )
 }
 
 type Project = {
-  name: string;
-  description: string;
-  site: string;
-  src: string;
-  darkimage: boolean;
-  siteIcon: string;
-  active: boolean;
-  tecDescription: string;
-  tecIcon1: string;
-  tecIcon2: string;
-  tecIcon3: string;
-};
+  name: string
+  description: string
+  site: string
+  src: string
+  darkimage: boolean
+  siteIcon: string
+  active: boolean
+  tecDescription: string
+  tecIcon1: string
+  tecIcon2: string
+  tecIcon3: string
+}
 
 const allProjects = [
   {
@@ -161,7 +160,7 @@ const allProjects = [
     tecIcon2: '/nextjsicon.png',
     tecIcon3: '/tailwindcssLogo.png',
   },
-    {
+  {
     name: 'Nasa Project',
     description: 'Space mission scheduler',
     site: 'https://gold-expensive-bream.cyclic.app/',
@@ -188,57 +187,61 @@ const allProjects = [
     tecIcon1: '/reacticon.png',
     tecIcon2: '/djangoicon.png',
     tecIcon3: '/nodejsicon.png',
-  }
+  },
 ]
 
 const CarouselLight = () => {
-  const [open, setOpen] = useState(true);
-  const [inactive, setInactive] = useState(false);
-  const [showToggle, setShowToggle] = useState(true);
-  const [descriptionMaxLines, setDescriptionMaxLines] = useState(3);
+  const [open, setOpen] = useState(true)
+  const [inactive, setInactive] = useState(false)
+  const [showToggle, setShowToggle] = useState(true)
+  const [descriptionMaxLines, setDescriptionMaxLines] = useState(3)
   const [descriptionTextAlign, setDescriptionTextAlign] = useState<
-    "start" | "end" | "center"
-    >("start");
+    'start' | 'end' | 'center'
+  >('start')
   return (
-    <div className='relative w-full aspect-video'>
+    <div className="aspect-video w-full sm:w-3/5">
       {inactive && (
-      <div className='z-10 border-2 border-red-700 absolute inset-0 flex items-center justify-center animate-pulse delay-500 opacity-0 transition-opacity duration-300'>
-        <div className='flex items-center justify-center'>
-          <AlertOctagon size={200} className={`flex text-red-800`} />
-          <p className={`text-red-800 font-bold text-lg `}>Deployment offline :/</p>
+        <div className="absolute inset-0 z-10 flex animate-pulse items-center justify-center border-2 border-red-700 opacity-0 transition-opacity delay-500 duration-300">
+          <div className="flex items-center justify-center">
+            <AlertOctagon size={200} className={`flex text-red-800`} />
+            <p className={`text-lg font-bold text-red-800 `}>
+              Deployment offline :/
+            </p>
+          </div>
         </div>
-      </div>
-        )}
-    <Lightbox
+      )}
+      <Lightbox
         open={open}
         captions={{ showToggle, descriptionTextAlign, descriptionMaxLines }}
-      slideshow={{ autoplay: true, delay:4000 }}
+        slideshow={{ autoplay: true, delay: 4000 }}
         plugins={[Inline, Captions, Slideshow]}
         carousel={{ preload: 3 }}
-      on={{
-        click: (elemnt) => {
-          if (!allProjects[elemnt.index].active) {
-            return;
+        on={{
+          click: (elemnt) => {
+            if (!allProjects[elemnt.index].active) {
+              return
+            } else {
+              window.open(allProjects[elemnt.index].site, '_blank')
+            }
+          },
+          view: () => {
+            setInactive(false)
+            console.log('view')
+          },
+        }}
+        close={() => setOpen(false)}
+        slides={allProjects.map((project) => {
+          return {
+            ...project,
+            src: project.src,
+            title: project.name,
+            description: project.description,
           }
-          else {
-          window.open(allProjects[elemnt.index].site, '_blank');}
-        },
-        view: () => {
-          setInactive(false);
-          console.log('view');
-        }
-      }}
-      close={() => setOpen(false)}
-      slides={allProjects.map((project) => {
-        return ({
-          ...project, src: project.src, title: project.name,
-          description: project.description
-        })
         })}
-      // render={{ slide: NextJsImage }}
+        // render={{ slide: NextJsImage }}
       />
     </div>
   )
 }
 
-export { CarouselLight}
+export { CarouselLight }
