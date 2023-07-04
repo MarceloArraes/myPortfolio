@@ -155,6 +155,20 @@ const mobileProjects = [
     tecIcon2: '/typescripticon.png',
     tecIcon3: '/tailwindcssLogo.png',
   },
+  {
+    name: 'Time Capsule',
+    description: 'A app to save your memories',
+    site: '',
+    src: '/timeCapsule.gif',
+    darkimage: true,
+    siteIcon: '',
+
+    active: false,
+    tecDescription: 'React-Native, nativewind, prisma and expo-router',
+    tecIcon1: '/reacticon.png',
+    tecIcon2: '/typescripticon.png',
+    tecIcon3: '/tailwindcssLogo.png',
+  },
   // {
   //   name: 'App Helper',
   //   description: 'A tickering platform for technical support',
@@ -207,7 +221,7 @@ const MyCarousel = ({ projectType = 'main' }) => {
   }
 
   return (
-    <div className="max-w-lg">
+    <div className="w-1/2 sm:w-1/3 lg:w-1/6">
       <Carousel
         autoPlay
         infiniteLoop
@@ -226,8 +240,9 @@ const MyCarousel = ({ projectType = 'main' }) => {
               <Image
                 src={project.src}
                 alt={`Image ${index}`}
-                width={300}
-                height={300}
+                width={100}
+                height={50}
+                priority={true}
               />
               {inactive && (
                 <div className="absolute inset-0 flex animate-pulse items-center justify-center opacity-0 transition-opacity delay-500 duration-300">
@@ -265,10 +280,11 @@ const MyMobileCarousel = () => {
   }
 
   return (
-    <div className="h-1/4">
+    <div>
       <Carousel
         autoPlay
         infiniteLoop
+        dynamicHeight={false}
         showThumbs={false}
         onClickItem={handleClick}
         onChange={() => setInactive(false)}
@@ -285,8 +301,9 @@ const MyMobileCarousel = () => {
               <Image
                 src={project.src}
                 alt={`Image ${index}`}
-                width={300}
-                height={300}
+                width={150}
+                height={150}
+                priority={true}
               />
               {inactive && (
                 <div className="absolute inset-0 flex animate-pulse items-center justify-center opacity-0 transition-opacity delay-500 duration-300">
