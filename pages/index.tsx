@@ -27,12 +27,7 @@ const Home: NextPage = () => {
           <div className="mb-10 w-full items-center justify-center text-center text-3xl font-bold">
             <h1>WEB PROJECTS</h1>
           </div>
-          {/* <div
-            className="w-full items-center justify-center"
-            style={{ alignItems: 'center' }}
-          > */}
           <CarouselLight />
-          {/* </div> */}
         </div>
         <div
           id="projects"

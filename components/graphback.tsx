@@ -295,9 +295,12 @@ function Backgroundgraph(theme: string) {
   })
   canvas.addEventListener('mousemove', function (e) {
     var e = e || window.event
-    mouse_ball.x = e.pageX
-    mouse_ball.y = e.pageY
+    var rect = canvas.getBoundingClientRect()
+    // mouse_ball.x = e.pageX
+    // mouse_ball.y = e.pageY
+    mouse_ball.x = e.clientX - rect.left
+    mouse_ball.y = e.clientY - rect.top
     // console.log(mouse_ball);
   })
 }
-export {Backgroundgraph}
+export { Backgroundgraph }

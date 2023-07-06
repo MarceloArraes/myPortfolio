@@ -88,68 +88,67 @@ function Header() {
 
   return (
     <>
-      <Head >
+      <Head>
         <title>Marcelo Portfolio Page</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <canvas
         id="nokey"
-        className="z-index-10 absolute top-0  w-full dark:bg-transparent"
+        className="z-index-10 absolute top-0 w-screen dark:bg-transparent"
       >
         Your Browser Don't Support Canvas, Please Download Brave ^_^``
       </canvas>
-    <nav className="fixed top-0 z-50">
-      <div className="container flex h-16 w-screen justify-center rounded-lg bg-gray-300 py-3 text-black bg-blend-multiply shadow-xl drop-shadow-xl">
-        <div className="flex flex-row justify-items-center">
-          <a
-            href="#home"
-            id="nav-home"
-            onClick={handleClick}
-            className="home -mb-1 p-2"
-          >
-            Home
-          </a>
-          <a
-            href="#projects"
-            className="projects -mb-1 p-2"
-            id="nav-projects"
-            onClick={handleClick}
-          >
-            Projects
-          </a>
+      <nav className="fixed top-0 z-50">
+        <div className="container flex h-16 w-screen justify-center rounded-lg bg-gray-300 py-3 text-black bg-blend-multiply shadow-xl drop-shadow-xl">
+          <div className="flex flex-row justify-items-center">
+            <a
+              href="#home"
+              id="nav-home"
+              onClick={handleClick}
+              className="home -mb-1 p-2"
+            >
+              Home
+            </a>
+            <a
+              href="#projects"
+              className="projects -mb-1 p-2"
+              id="nav-projects"
+              onClick={handleClick}
+            >
+              Projects
+            </a>
 
-          <a
-            href="#github"
-            className="github -mb-1 p-2"
-            id="nav-github"
-            onClick={handleClick}
-          >
-            Github
-          </a>
+            <a
+              href="#github"
+              className="github -mb-1 p-2"
+              id="nav-github"
+              onClick={handleClick}
+            >
+              Github
+            </a>
 
-          <a
-            href="#contact"
-            className="contact -mb-1 p-2"
-            id="nav-contact"
-            onClick={handleClick}
-          >
-            Contact
-          </a>
+            <a
+              href="#contact"
+              className="contact -mb-1 p-2"
+              id="nav-contact"
+              onClick={handleClick}
+            >
+              Contact
+            </a>
 
-          <a
-            href="#footer"
-            className="footer -mb-1 p-2"
-            id="nav-footer"
-            onClick={handleClick}
-          >
-            Footer
-          </a>
+            <a
+              href="#footer"
+              className="footer -mb-1 p-2"
+              id="nav-footer"
+              onClick={handleClick}
+            >
+              Footer
+            </a>
+          </div>
         </div>
-      </div>
       </nav>
-      </>
+    </>
   )
 }
 
-export {Header}
-
+export { Header }
