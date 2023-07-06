@@ -226,6 +226,7 @@ const MyCarousel = ({ projectType = 'main' }) => {
         autoPlay
         infiniteLoop
         onClickItem={handleClick}
+        showThumbs={false}
         onChange={() => setInactive(false)}
         preventMovementUntilSwipeScrollTolerance={true}
         swipeScrollTolerance={50}
