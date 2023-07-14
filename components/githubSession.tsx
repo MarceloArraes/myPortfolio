@@ -1,50 +1,51 @@
-import { useRef } from 'react'
-import { useEffect, useState } from 'react'
-import { createClient } from '@supabase/supabase-js'
-import negativeMockup from '../mockfiles/mocknegativegithubdata.json' assert { type: 'json' }
-import positiveMockup from '../mockfiles/mockpositivegithub.json' assert { type: 'json' }
+import { SetStateAction, useEffect, useState } from 'react'
+import { GitContributions } from './GitContributionsComponent'
+interface GitHubEvent {
+  id: string
+  type: string
+  actor: {
+    id: number
+    login: string
+    display_login: string
+    gravatar_id: string
+    url: string
+  }
+  repo: {
+    id: number
+    name: string
+    url: string
+  }
+  payload: {
+    repository_id: number
+    push_id: number
+    size: number
+    distinct_size: number
+    ref: string
+  }
+  created_at: string
+  public: boolean
+}
 
-/* const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY as string
-const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL as string
-const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY) */
-
-/* const { data, error } = await supabase
-  .from('commitscounter')
-  .update({ other_column: 'otherValue' })
-  .eq('some_column', 'someValue') */
+const fetchFromGit = async (setCommitedToday: {
+  (value: SetStateAction<Boolean>): void
+  (arg0: boolean): void
+}) => {
+  fetch('https://api.github.com/users/marceloarraes/events/public')
+    .then((res) => res.json())
+    .then((data) => {
+      console.log('Data123 ', data)
+      const lastPush = new Date(data[0].created_at)
+      if (lastPush.getDate() === new Date().getDate()) {
+        setCommitedToday(true)
+      }
+    })
+}
 
 function GitHubSession() {
-  const [commitedToday, setCommitedToday] = useState(false)
-  const [commitChainCounter, setCommitChainCounter] = useState(0)
-  const [lastUpdateOnCommitChain, setLastUpdateOnCommitChain] = useState(0)
+  const [commitedToday, setCommitedToday] = useState<Boolean>(false)
 
   useEffect(() => {
-    fetch('https://api.github.com/users/marceloarraes/events/public')
-      .then((res) => res.json())
-      .then((data) => {
-        //last push made on the list.
-        const lastPush = new Date(data[0].created_at)
-        //the commit made before the last push.
-        const beforeLastPush = new Date(data[1].created_at)
-        //now is today.
-        const now = new Date()
-        if (
-          beforeLastPush.getDate() !== now.getDate() - 1 &&
-          beforeLastPush.getDate() !== now.getDate()
-        ) {
-          //There was no commits today or yesterday.
-          console.log('no commits today or yesterday')
-        }
-        if (
-          lastPush.getDate() === now.getDate() &&
-          lastPush.getDate() !== lastUpdateOnCommitChain
-        ) {
-          //this just update if the last push was made today and it update just once a day.
-          setCommitedToday(true)
-          setCommitChainCounter(commitChainCounter + 1)
-          setLastUpdateOnCommitChain(lastPush.getTime())
-        }
-      })
+    fetchFromGit(setCommitedToday)
   }, [])
 
   return (
@@ -75,15 +76,15 @@ function GitHubSession() {
               motivator.
             </p>
           </div>
-          <div className="px-6 pt-2 pb-2">
-            <span className="mr-2 mb-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
+          <div className="px-6 pb-2 pt-2">
+            <span className="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
               #nulla dies sine linea.
             </span>
           </div>
 
           {commitedToday ? (
-            <div className="flex px-6 pt-2 pb-2">
-              <span className="mr-2 mb-2 flex rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
+            <div className="flex px-6 pb-2 pt-2">
+              <span className="mb-2 mr-2 flex rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
                 <svg
                   className="h-6 w-6 stroke-green-700"
                   fill="none"
@@ -102,7 +103,7 @@ function GitHubSession() {
               </span>
             </div>
           ) : (
-            <div className="flex px-6 pt-2 pb-2">
+            <div className="flex px-6 pb-2 pt-2">
               <svg
                 className="h-6 w-6 stroke-amber-700"
                 fill="none"
@@ -123,11 +124,6 @@ function GitHubSession() {
               </span>
             </div>
           )}
-          {/*           <div className="px-6 pt-2 pb-2">
-            <span className="mr-2 mb-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
-              #We have a Chain with {commitChainCounter} commits!
-            </span>
-          </div> */}
         </a>
       </div>
       <a
@@ -136,7 +132,7 @@ function GitHubSession() {
       >
         <img
           src="https://ghchart.rshah.org/MarceloArraes"
-          alt="2022 Marcelo's Github chart"
+          alt="2023 Marcelo's Github chart"
         />
       </a>
     </div>
