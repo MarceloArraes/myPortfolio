@@ -1,5 +1,4 @@
 import { SetStateAction, useEffect, useState } from 'react'
-import { GitContributions } from './GitContributionsComponent'
 interface GitHubEvent {
   id: string
   type: string
